@@ -1,0 +1,116 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background: #ffffff;
+	font-family: 'Noto Sans', sans-serif;
+	margin-bottom: 60px;/* Margin bottom by footer height */
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin-top: 0;
+}
+
+.banner .row {
+	padding-top: 20px;
+}
+
+.banner .row div {
+	margin-top: 30px;
+}
+
+.banner ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.banner ul li {
+	display: inline-block;
+	margin-right: 1.5em;
+	line-height: 180%;
+}
+
+.banner a:link,
+.banner a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+
+.banner a:hover,
+.banner a:active {
+	color: #333333;
+	text-decoration: none;
+}
+
+.banner .current {
+	color: #333333;
+	font-weight: bold;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;/* Set the fixed height of the footer here */
+	background-color: #f8f8f8;
+	border-top: 1px solid #e7e7e7;
+}
+
+.footer p {
+	margin: 10px 0;
+}
+
+.img-with-wrap-left img {
+	float: left;
+	margin-right: 20px;
+}
+
+.img-with-wrap-right img {
+	float: right;
+	margin-left: 20px;
+}
+
+.red {
+	background-color: #d9534f;
+}
+
+.green {
+	background-color: #5cb85c;
+}
+
+.blue {
+	background-color: #428bca;
+}
+
+.cyan {
+	background-color: #5bc0de;
+}
+
+.magenta {
+	background-color: #d94fa0;
+}
+
+.orange {
+	background-color: #f0ad4e;
+}
+
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
