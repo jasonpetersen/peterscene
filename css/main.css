@@ -5,8 +5,21 @@ html {
 
 body {
 	background: #ffffff;
+	color: #6a5858;
 	font-family: 'Noto Sans', sans-serif;
-	margin-bottom: 60px;/* Margin bottom by footer height */
+	margin-bottom: 100px;/* Margin bottom by footer height */
+}
+
+a:link,
+a:visited {
+	color: #b73336;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #7c2324;
+	text-decoration: underline;
 }
 
 h1, .h1,
@@ -40,18 +53,18 @@ h6, .h6 {
 
 .banner a:link,
 .banner a:visited {
-	color: #999999;
+	color: #957c7c;
 	text-decoration: none;
 }
 
 .banner a:hover,
 .banner a:active {
-	color: #333333;
+	color: #302828;
 	text-decoration: none;
 }
 
 .banner .current {
-	color: #333333;
+	color: #302828;
 	font-weight: bold;
 }
 
@@ -59,9 +72,7 @@ h6, .h6 {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 60px;/* Set the fixed height of the footer here */
-	background-color: #f8f8f8;
-	border-top: 1px solid #e7e7e7;
+	height: 100px;/* Set the fixed height of the footer here */
 }
 
 .footer p {
@@ -71,11 +82,13 @@ h6, .h6 {
 .img-with-wrap-left img {
 	float: left;
 	margin-right: 20px;
+	margin-bottom: 20px;
 }
 
 .img-with-wrap-right img {
 	float: right;
 	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 .red {
