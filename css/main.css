@@ -5,6 +5,9 @@ html {
 
 body {
 	background: #ffffff;
+}
+
+.bright-body {
 	color: #6a5858;
 	font-family: 'Noto Sans', sans-serif;
 	margin-bottom: 100px;/* Margin bottom by footer height */
@@ -79,6 +82,25 @@ h6, .h6 {
 	margin: 10px 0;
 }
 
+.spacious0 p {
+	margin: 0;
+}
+
+.spacious1 p {
+	line-height: 150%;
+	margin-bottom: 1.1em;
+}
+
+.spacious2 p {
+	line-height: 200%;
+	margin-bottom: 1.3em;
+}
+
+.spacious3 p {
+	line-height: 250%;
+	margin-bottom: 1.5em;
+}
+
 .img-with-wrap-left img {
 	float: left;
 	margin-right: 20px;
@@ -89,6 +111,41 @@ h6, .h6 {
 	float: right;
 	margin-left: 20px;
 	margin-bottom: 20px;
+}
+
+.cv {
+	font-family: 'Bitter', serif;
+	color: #000000;
+	padding: 10px;
+}
+
+.cv-item {
+	margin-bottom: 20px;
+}
+
+.cv h2 {
+	text-decoration: underline;
+	margin-bottom: 1em;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.cv h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.cv h4 {
+	font-size: 16px;
+}
+
+.cv h5 {
+	font-size: 14px;
+	font-style: italic;
+}
+
+.cv ul {
+	list-style-type: square;
 }
 
 .red {
