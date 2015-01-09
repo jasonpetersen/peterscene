@@ -22,7 +22,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 spacious0">
 					<h5><strong>WORK</strong></h5>
-					<p><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=800, height=600'); return false;">Full CV</a></p>
+					<p><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600'); return false;">Full CV</a></p>
 					<p><a href="https://github.com/jasonpetersen" target="_blank">GitHub</a></p>
 					<br />
 					<h5><strong>SOCIAL</strong></h5>
