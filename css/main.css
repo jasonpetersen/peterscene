@@ -7,7 +7,7 @@ body {
 	background: #ffffff;
 }
 
-.bright-body {
+.body-bright {
 	color: #6a5858;
 	font-family: 'Noto Sans', sans-serif;
 	margin-bottom: 100px;/* Margin bottom by footer height */
@@ -66,7 +66,13 @@ h6, .h6 {
 	text-decoration: none;
 }
 
-.banner .current {
+#bio .bio,
+#mission .mission,
+#blog .blog,
+#portfolio .portfolio,
+#video .video,
+#photos .photos,
+#experiments .experiments {
 	color: #302828;
 	font-weight: bold;
 }

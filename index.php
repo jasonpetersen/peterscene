@@ -5,9 +5,9 @@
 		<title>The online residence of Jason Petersen</title>
 		<meta name="description" content="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.">
 	</head>
-	<body class="bright-body">
+	<body id="bio" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
-		<div class="bio container">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 spacious2">
 					<span class="img-with-wrap-left">
