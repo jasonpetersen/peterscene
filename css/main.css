@@ -46,7 +46,7 @@ h6, .h6 {
     font-style: italic;
 }
 
-.hr-top-bottom {
+.hr-banner-footer {
 	background: #eeeeee;
 	height: 1pt;
 	margin: 20px 0;
@@ -127,12 +127,16 @@ h6, .h6 {
 	margin: 10px 0;
 }
 
-.sidebar p {
-    margin: 0;
-}
-
 .sidebar h5 {
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0 0 2em 0;
+	padding: 0;
 }
 
 .spacious0 p {

@@ -19,6 +19,6 @@
 					<p>The online residence of <span class="stress">Jason Petersen</span>, a&nbsp;web developer, <br class="visible-sm" />videographer, IT professional, and wordsmith.</p>
 				</div>
 			</div>
-			<div class="hr-top-bottom"></div>
+			<div class="hr-banner-footer"></div>
 		</div>
 		<br />

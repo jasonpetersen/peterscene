@@ -18,20 +18,24 @@
 					<p>In Asia I became caught up in the Tibetan cause and followed my newfound interest in Tibetan Buddhism to Woodstock NY, home of world-renowned <a href="http://www.kagyu.org/" target="_blank">KTD Monastery</a>. I work there today, serving all IT and videography functions for the large community.</p>
 					<p>I'm also a web developer, dedicated to clean, mobile-first designs.</p>
 					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent the prior summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
-					<hr class="visible-xs" />
+					<div class="hr-small visible-xs"></div>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
-					<h5>WORK</h5>
-					<p><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600'); return false;">Full CV</a></p>
-					<p><a href="https://github.com/jasonpetersen" target="_blank">GitHub</a></p>
-					<br />
-					<h5>SOCIAL</h5>
-					<p><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn</a></p>
-					<p><a href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr</a></p>
-					<p><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter</a></p>
-					<br />
-					<h5>CONTACT</h5>
-					<p><a href="mailto:contact@peterscene.com">contact@peterscene.com</a></p>
+					<h5>Work</h5>
+					<ul>
+						<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600'); return false;">Full CV</a></li>
+						<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub</a></li>
+					</ul>
+					<h5>Social</h5>
+					<ul>
+						<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn</a></li>
+						<li><a href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr</a></li>
+						<li><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter</a></li>
+					</ul>
+					<h5>Contact</h5>
+					<ul>
+						<li><a href="mailto:contact@peterscene.com">contact@peterscene.com</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

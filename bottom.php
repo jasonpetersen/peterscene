@@ -1,6 +1,6 @@
 		<footer class="footer">
 			<div class="container">
-				<div class="hr-top-bottom"></div>
+				<div class="hr-banner-footer"></div>
 				<p>&copy; 2015 Jason Petersen</p>
 			</div>
 		</footer>
