@@ -14,7 +14,7 @@ body {
 .body-bright {
 	color: #6a5858;
 	font-family: 'Noto Sans', sans-serif;
-	margin-bottom: 100px;/* Margin bottom by footer height */
+	margin-bottom: 90px;/* Margin bottom by footer height */
 }
 
 a:link,
@@ -47,11 +47,12 @@ h6, .h6 {
 }
 
 .banner .row {
-	padding-top: 20px;
+	margin-top: 10px;
+	min-height: 90px;
 }
 
 .banner .row div {
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .banner {
@@ -106,7 +107,7 @@ h6, .h6 {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 100px;/* Set the fixed height of the footer here */
+	height: 90px;/* Set the fixed height of the footer here - must correspond to body margin */
 }
 
 .footer p {
@@ -134,19 +135,36 @@ h6, .h6 {
 	line-height: 200%;
 	margin-bottom: 1.2em;
 }
-.spacious2 h1,
-.spacious2 h2,
-.spacious2 h3,
-.spacious2 h4 {
-    font-weight: bold;
-}
-.spacious2 h5 {
-    font-style: italic;
-}
 
 .spacious3 p {
 	line-height: 250%;
 	margin-bottom: 1.5em;
+}
+
+.spacious0 h1,
+.spacious0 h2,
+.spacious0 h3,
+.spacious0 h4,
+.spacious1 h1,
+.spacious1 h2,
+.spacious1 h3,
+.spacious1 h4,
+.spacious2 h1,
+.spacious2 h2,
+.spacious2 h3,
+.spacious2 h4,
+.spacious3 h1,
+.spacious3 h2,
+.spacious3 h3,
+.spacious3 h4 {
+    font-weight: bold;
+}
+
+.spacious0 h5,
+.spacious1 h5,
+.spacious2 h5,
+.spacious3 h5 {
+    font-style: italic;
 }
 
 .img-with-wrap-left img {
