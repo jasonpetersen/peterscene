@@ -20,22 +20,21 @@
 					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent the prior summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
 					<hr class="visible-xs" />
 				</div>
-				<div class="col-xs-12 col-sm-3 col-sm-offset-1 spacious0">
-					<h5><strong>WORK</strong></h5>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
+					<h5>WORK</h5>
 					<p><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600'); return false;">Full CV</a></p>
 					<p><a href="https://github.com/jasonpetersen" target="_blank">GitHub</a></p>
 					<br />
-					<h5><strong>SOCIAL</strong></h5>
+					<h5>SOCIAL</h5>
 					<p><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn</a></p>
 					<p><a href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr</a></p>
 					<p><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter</a></p>
 					<br />
-					<h5><strong>CONTACT</strong></h5>
+					<h5>CONTACT</h5>
 					<p><a href="mailto:contact@peterscene.com">contact@peterscene.com</a></p>
 				</div>
 			</div>
 		</div>
-		<div class="spacer20"></div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 	</body>
 </html>

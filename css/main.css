@@ -7,6 +7,10 @@ body {
 	background: #ffffff;
 }
 
+#cv {
+	background: #f3f3f3 url('/images/paper.gif');
+}
+
 .body-bright {
 	color: #6a5858;
 	font-family: 'Noto Sans', sans-serif;
@@ -34,12 +38,24 @@ h6, .h6 {
 	margin-top: 0;
 }
 
+.stress {
+    font-weight: bold;
+}
+
+.emphasis {
+    font-style: italic;
+}
+
 .banner .row {
 	padding-top: 20px;
 }
 
 .banner .row div {
 	margin-top: 30px;
+}
+
+.banner {
+    font-size: 1em;
 }
 
 .banner ul {
@@ -51,7 +67,7 @@ h6, .h6 {
 .banner ul li {
 	display: inline-block;
 	margin-right: 1.5em;
-	line-height: 180%;
+	line-height: 200%;
 }
 
 .banner a:link,
@@ -67,7 +83,7 @@ h6, .h6 {
 }
 
 #bio .bio,
-#mission .mission,
+#purpose .purpose,
 #blog .blog,
 #portfolio .portfolio,
 #video .video,
@@ -75,6 +91,15 @@ h6, .h6 {
 #experiments .experiments {
 	color: #302828;
 	font-weight: bold;
+}
+
+#purpose .logline,
+#blog .logline,
+#portfolio .logline,
+#video .logline,
+#photos .logline,
+#experiments .logline {
+    display: none;
 }
 
 .footer {
@@ -88,18 +113,35 @@ h6, .h6 {
 	margin: 10px 0;
 }
 
+.sidebar p {
+    margin: 0;
+}
+
+.sidebar h5 {
+    font-weight: bold;
+}
+
 .spacious0 p {
 	margin: 0;
 }
 
 .spacious1 p {
 	line-height: 150%;
-	margin-bottom: 1.1em;
+	margin-bottom: 1em;
 }
 
 .spacious2 p {
 	line-height: 200%;
-	margin-bottom: 1.3em;
+	margin-bottom: 1.2em;
+}
+.spacious2 h1,
+.spacious2 h2,
+.spacious2 h3,
+.spacious2 h4 {
+    font-weight: bold;
+}
+.spacious2 h5 {
+    font-style: italic;
 }
 
 .spacious3 p {
