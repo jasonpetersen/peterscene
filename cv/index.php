@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>Jason Petersen | CV</title>
+		<title>CV | Jason Petersen</title>
 		<meta name="description" content="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.">
 	</head>
 	<body id="cv">

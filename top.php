@@ -7,7 +7,7 @@
 					<ul role="menu">
 						<li><a class="bio" href="/">Bio</a></li>
 						<li><a class="purpose" href="/purpose">Purpose</a></li>
-						<li><a class="blog" href="#">Blog</a></li>
+						<li><a class="blog" href="/blog">Blog</a></li>
 						<li><a class="portfolio" href="#">Portfolio</a></li>
 						<br class="visible-sm" />
 						<li><a class="video" href="#">Video</a></li>
@@ -16,7 +16,7 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-5 col-md-6 logline">
-					<p>The online residence of <span class="stress">Jason Petersen</span>, a&nbsp;web developer, <br class="visible-sm" />videographer, IT professional, and wordsmith.</p>
+					<p>The online residence of <span class="bold">Jason Petersen</span>, a&nbsp;web developer, <br class="visible-sm" />videographer, IT professional, and wordsmith.</p>
 				</div>
 			</div>
 			<div class="hr-banner-footer"></div>
