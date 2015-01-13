@@ -23,12 +23,9 @@ function validateDate($inputDate, $inputFormat = 'Y-m-d')
 
 if ($_POST["submit"]) {
 	$title = $_POST['title'];
-	$titleFormatted = str_replace("'", "''", $title);
 	$titlelink = $_POST['titlelink'];
 	$body = $_POST['body'];
-	$bodyFormatted = str_replace("'", "''", $body);
 	$extract = $_POST['extract'];
-	$extractFormatted = str_replace("'", "''", $extract);
 	if ($_POST['today'] == "true") {
 		$today = "true";
 		$date = null;
@@ -80,7 +77,7 @@ if ($_POST["submit"]) {
 	}
 	
 	//Check if password is correct
-	if ($password !== 'password123') {
+	if ($password !== 'pwJP') {
 		$errPassword = 'The password is incorrect.';
 	}
 
@@ -91,7 +88,7 @@ if ($_POST["submit"]) {
 		if ($db->connect_errno) {
 			$result='<div class="alert alert-danger">Error connecting to database: "' . $db->connect_error . '"</div>';
 		} else {
-			$sql = "INSERT INTO `" . $dbname . "`.`" . $usertable . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $titleFormatted . "', '" . $titlelink . "', '" . $bodyFormatted . "', '" . $extractFormatted . "', " . $live . ")";
+			$sql = "INSERT INTO `" . $dbname . "`.`" . $usertable . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $title . "', '" . $titlelink . "', '" . $body . "', '" . $extract . "', " . $live . ")";
 			if (!$result = $db->query($sql)) {
 				$result='<div class="alert alert-danger">Error with SQL syntax: "' . $db->error . '"</div>';
 			} else {
