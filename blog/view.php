@@ -65,7 +65,7 @@ if ($error != false) {
 } else {
 	echo '
 					<h5>' . $displayDate . '</h5>
-					<h3>' . $entryTitle  . '</h3>
+					<h2>' . $entryTitle  . '</h2>
 					' . $entryBody . '
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
 	';

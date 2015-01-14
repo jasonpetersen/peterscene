@@ -38,6 +38,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
 	margin-top: 0;
+	margin-bottom: 1em;
 }
 
 .bold {
@@ -48,6 +49,7 @@ h6, .h6 {
     font-style: italic;
 }
 
+.hr-full,
 .hr-banner-footer {
 	background: #eeeeee;
 	height: 1pt;
@@ -139,6 +141,18 @@ h6, .h6 {
 	list-style-position: inside;
 	margin: 0 0 2em 0;
 	padding: 0;
+}
+
+.blog-extract:link,
+.blog-extract:visited {
+	color: #6a5858;
+	text-decoration: none;
+}
+
+.blog-extract:hover,
+.blog-extract:active {
+	color: #7c2324;
+	text-decoration: none;
 }
 
 .spacious0 p {

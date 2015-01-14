@@ -202,7 +202,7 @@ if ($_POST["submit"]) {
 					</form>
 				</div>
 			</div>
-			<div class="hr-banner-footer preview-hr" style="display: none;"></div>
+			<div class="hr-full preview-hr" style="display: none;"></div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 spacious2 preview">
 				</div>

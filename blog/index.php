@@ -20,21 +20,32 @@ $usertable="entries";
 
 $db = new mysqli($hostname, $username, $dbpassword, $dbname);
 
-if($db->connect_errno > 0){
-	die('Unable to connect to database [' . $db->connect_error . ']');
-}
-
-$sql = <<<SQL
-	SELECT *
-	FROM $usertable
-SQL;
-
-if(!$result = $db->query($sql)){
-	die('There was an error running the query [' . $db->error . ']');
-}
-
-while($row = $result->fetch_assoc()){
-	echo '<h2>'.date("F j, Y", strtotime($row['date'])).'</h2>';
+if ($db->connect_errno) {
+	echo '<p>Error connecting to database: \"' . $db->connect_error . '\"</p>';
+} else {
+	$sql = "SELECT * FROM `" . $usertable . "` ORDER BY `" . $usertable . "`.`date` DESC";
+	if (!$result = $db->query($sql)) {
+		echo '<p>Error with SQL query: \"' . $db->error . '\"</p>';
+	} else {
+		$i = 0;
+		while ($row = $result->fetch_assoc()) {
+			$i++;
+			if ($i == 1) {
+				echo '
+					<h5>' . date("F j, Y", strtotime($row['date'])) . '</h5>
+					<h2>' . $row["title"] . '</h2>
+					' . $row['body'] . '
+				';
+			} else {
+				echo '
+					<div class="hr-full"></div>
+					<a class="blog-extract" href="/blog/view.php?id=' . $row["titlelink"] . '"><h5>' . date("F j, Y", strtotime($row['date'])) . '</h5>
+					<h4>' . $row["title"] . '</h4>
+					' . $row['extract'] . '</a>
+				';
+			}
+		}
+	}
 }
 
 $db->close();
