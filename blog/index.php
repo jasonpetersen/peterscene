@@ -3,7 +3,7 @@
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
 		<title>Blog | Jason Petersen</title>
-		<meta name="description" content="Adjectives on the typewriter. He moves his words like a prizefighter.">
+		<meta name="description" content="I enjoy writing about science, technology, literature, film, and highfalutin philosophical nonsense.">
 	</head>
 	<body id="blog" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
@@ -33,15 +33,19 @@ if ($db->connect_errno) {
 			if ($i == 1) {
 				echo '
 					<h5>' . date("F j, Y", strtotime($row['date'])) . '</h5>
-					<h2>' . $row["title"] . '</h2>
+					<a class="blog-link" href="/blog/' . $row["titlelink"] . '"><h2>' . $row["title"] . '</h2></a>
 					' . $row['body'] . '
 				';
 			} else {
 				echo '
 					<div class="hr-full"></div>
-					<a class="blog-extract" href="/blog/view.php?id=' . $row["titlelink"] . '"><h5>' . date("F j, Y", strtotime($row['date'])) . '</h5>
-					<h4>' . $row["title"] . '</h4>
-					' . $row['extract'] . '</a>
+					<a class="blog-link" href="/blog/' . $row["titlelink"] . '">
+						<div>
+							<h5>' . date("F j, Y", strtotime($row['date'])) . '</h5>
+							<h4>' . $row["title"] . '</h4>
+							' . $row['extract'] . '
+						</div>
+					</a>
 				';
 			}
 		}

@@ -143,14 +143,14 @@ h6, .h6 {
 	padding: 0;
 }
 
-.blog-extract:link,
-.blog-extract:visited {
+.blog-link:link,
+.blog-link:visited {
 	color: #6a5858;
 	text-decoration: none;
 }
 
-.blog-extract:hover,
-.blog-extract:active {
+.blog-link:hover,
+.blog-link:active {
 	color: #7c2324;
 	text-decoration: none;
 }
