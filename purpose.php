@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>Purpose | Jason Petersen</title>
-		<meta name="description" content="The 'why' is more important than the 'what'. Read why this site exists at all.">
-	</head>
-	<body id="purpose" class="body-bright">
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 spacious2">
@@ -51,6 +42,3 @@
 				</div>
 			</div>
 		</div>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
-	</body>
-</html>

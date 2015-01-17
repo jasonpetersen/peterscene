@@ -104,7 +104,7 @@ if ($_POST["submit"]) {
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>Add blog entry | Jason Petersen</title>
+		<title>Add entry | Jason Petersen</title>
 		<meta name="description" content="Adjectives on the typewriter, he moves his words like a prizefighter.">
 	</head>
 	<body id="blog" class="body-bright">
@@ -112,7 +112,7 @@ if ($_POST["submit"]) {
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<form class="form-horizontal" role="form" method="post" action="/blog/add/">
+					<form class="form-horizontal" role="form" method="post" action="/blog-add/">
 						<div class="form-group">
 							<label for="title" class="col-sm-2 control-label">Title</label>
 							<div class="col-sm-10">
