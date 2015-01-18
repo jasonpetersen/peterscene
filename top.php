@@ -15,7 +15,7 @@
 						<li><a class="experiments" href="#">Experiments</a></li>
 					</ul>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-5 col-md-6 logline">
+				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-offset-1 col-lg-4 logline">
 					<p>The online residence of <span class="bold">Jason Petersen</span>, a&nbsp;web developer, <br class="visible-sm" />videographer, IT professional, and wordsmith.</p>
 				</div>
 			</div>
