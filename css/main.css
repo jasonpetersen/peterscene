@@ -31,6 +31,18 @@ a:active {
 	text-decoration: underline;
 }
 
+.btn-default:link,
+.btn-default:visited {
+	color: #ffffff;
+	background-color: #b73336;
+}
+
+.btn-default:hover,
+.btn-default:active {
+	color: #ffffff;
+	background-color: #000000;
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
