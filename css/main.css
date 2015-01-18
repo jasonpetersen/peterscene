@@ -253,6 +253,11 @@ h6, .h6 {
 	list-style-type: square;
 }
 
+.modal {
+	overflow: auto;
+	color: #333;
+}
+
 .red {
 	background-color: #d9534f;
 }

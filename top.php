@@ -1,4 +1,4 @@
-		<div class="banner container">
+﻿		<div class="banner container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-md-3 logo">
 					<a href="/"><img src="/images/banner-V1-small-indexed.gif" alt="Peterscene" width="200" height="57"></a>
@@ -11,7 +11,7 @@
 						<li><a class="portfolio" href="#">Portfolio</a></li>
 						<br class="visible-sm" />
 						<li><a class="video" href="#">Video</a></li>
-						<li><a class="photos" href="#">Photos</a></li>
+						<li><a class="photos" href="/photos">Photos</a></li>
 						<li><a class="experiments" href="#">Experiments</a></li>
 					</ul>
 				</div>
@@ -21,4 +21,3 @@
 			</div>
 			<div class="hr-banner-footer"></div>
 		</div>
-		<br />

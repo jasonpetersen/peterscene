@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Report simple running errors
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
@@ -112,7 +112,7 @@ if ($_POST["submit"]) {
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<form class="form-horizontal" role="form" method="post" action="/blog-add/">
+					<form class="form-horizontal" role="form" method="post" action="/blog-add">
 						<div class="form-group">
 							<label for="title" class="col-sm-2 control-label">Title</label>
 							<div class="col-sm-10">

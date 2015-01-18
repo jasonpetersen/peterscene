@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 error_reporting(0);
 
@@ -53,6 +53,10 @@ if ($_GET['id'] == "") {
 		case "blog-add":
 			$template=false;
 			$id="blog-add";
+			break;
+		case "photos":
+			$template=false;
+			$id="photos";
 			break;
 		case "404":
 			$template=true;
