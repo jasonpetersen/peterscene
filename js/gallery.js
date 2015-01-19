@@ -47,6 +47,11 @@ $(function () {
 		$('#blueimp-gallery').data('fullScreen', $(this).is(':checked'));
 		$('#fullscreen-btn').toggleClass('btn-danger', !fullscreen);
 		$('#fullscreen-btn').toggleClass('btn-success', fullscreen);
+		if (fullscreen == true) {
+			$('#fsBtnTxt').html('Fullscreen On');
+		} else {
+			$('#fsBtnTxt').html('Fullscreen Off');
+		}
 	});
 
 	$('#image-gallery-button').on('click', function (event) {

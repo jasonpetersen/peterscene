@@ -260,6 +260,14 @@ h6, .h6 {
 	color: #333;
 }
 
+.fa-flickr {
+	color: #fff;
+	background-image: linear-gradient(to right, #0062da 50%, #ff0084 50%);
+	background-size: 80% 80%;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
 .red {
 	background-color: #d9534f;
 }
