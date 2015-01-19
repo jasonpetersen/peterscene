@@ -5,6 +5,7 @@ html {
 
 body {
 	font-family: 'Bitter', serif;
+	font-size: 15px;
 }
 
 #cv {
@@ -144,6 +145,7 @@ h6, .h6 {
 }
 
 .sidebar h5 {
+	font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
 }
