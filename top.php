@@ -10,7 +10,7 @@
 						<li><a class="blog" href="/blog">Blog</a></li>
 						<li><a class="portfolio" href="#">Portfolio</a></li>
 						<br class="visible-sm" />
-						<li><a class="video" href="#">Video</a></li>
+						<li><a class="video" href="/video">Video</a></li>
 						<li><a class="photos" href="/photos">Photos</a></li>
 						<li><a class="experiments" href="#">Experiments</a></li>
 					</ul>
