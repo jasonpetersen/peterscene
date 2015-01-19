@@ -30,6 +30,10 @@ if ($_GET['id'] == "") {
 		case "cv":
 			$template=false;
 			$id="cv";
+			$title="CV | Jason Petersen";
+			$desc=$defaultDesc;
+			define("NONTEMPLATETITLE", $title);
+			define("NONTEMPLATEDESC", $desc);
 			break;
 		case "purpose":
 			$template=true;
@@ -53,10 +57,18 @@ if ($_GET['id'] == "") {
 		case "blog-add":
 			$template=false;
 			$id="blog-add";
+			$title="Add entry | Jason Petersen";
+			$desc="Adjectives on the typewriter, he moves his words like a prizefighter.";
+			define("NONTEMPLATETITLE", $title);
+			define("NONTEMPLATEDESC", $desc);
 			break;
 		case "photos":
 			$template=false;
 			$id="photos";
+			$title="Photos | Jason Petersen";
+			$desc="I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.";
+			define("NONTEMPLATETITLE", $title);
+			define("NONTEMPLATEDESC", $desc);
 			break;
 		case "404":
 			$template=true;

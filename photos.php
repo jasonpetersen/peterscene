@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>Photos | Jason Petersen</title>
-		<meta name="description" content="">
+		<title><?php echo NONTEMPLATETITLE; ?></title>
+		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
 		<link rel="stylesheet" href="/css/blueimp-gallery.min.css">
 		<link rel="stylesheet" href="/css/bootstrap-image-gallery.min.css">
 	</head>

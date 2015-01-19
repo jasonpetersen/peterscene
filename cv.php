@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>CV | Jason Petersen</title>
-		<meta name="description" content="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.">
+		<title><?php echo NONTEMPLATETITLE; ?></title>
+		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
 	</head>
 	<body id="cv">
 		<div class="cv">

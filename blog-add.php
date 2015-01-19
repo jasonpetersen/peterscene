@@ -104,8 +104,8 @@ if ($_POST["submit"]) {
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title>Add entry | Jason Petersen</title>
-		<meta name="description" content="Adjectives on the typewriter, he moves his words like a prizefighter.">
+		<title><?php echo NONTEMPLATETITLE; ?></title>
+		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
 	</head>
 	<body id="blog" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
