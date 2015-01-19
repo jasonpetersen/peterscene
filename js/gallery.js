@@ -13,15 +13,16 @@
 /*global blueimp, $ */
 
 $(function () {
-	'use strict';
+	//'use strict';
 
 	// Load demo images from flickr:
     $.ajax({
         url: 'https://api.flickr.com/services/rest/',
         data: {
             format: 'json',
-            method: 'flickr.interestingness.getList',
-            api_key: '7617adae70159d09ba78cfec73c13be3'
+            method: 'flickr.people.getPublicPhotos',
+            api_key: 'f6df78a7a3c8d3ae6bc1e6b5f07ee03b',
+			user_id: '53810078@N07'
         },
         dataType: 'jsonp',
         jsonp: 'jsoncallback'
