@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>

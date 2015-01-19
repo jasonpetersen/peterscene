@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $error=false;
 $pageTitleGood="Blog | Jason Petersen";
 $pageTitleError="Oops! | Jason Petersen";

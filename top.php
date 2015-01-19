@@ -1,4 +1,4 @@
-﻿		<div class="banner container">
+		<div class="banner container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-md-3 logo">
 					<a href="/"><img src="/images/banner-V1-small-indexed.gif" alt="Peterscene" width="200" height="57"></a>
@@ -21,3 +21,4 @@
 			</div>
 			<div class="hr-banner-footer"></div>
 		</div>
+		<div class="spacer20"></div>
