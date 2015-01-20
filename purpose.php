@@ -38,7 +38,16 @@
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/sidebar.php'; ?>
+					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
+					<div class="spacer20"></div>
+					<h5>About</h5>
+					<ul>
+						<li><?php echo STOCKPLUG; ?></li>
+					</ul>
+					<h5>Connect</h5>
+					<ul>
+						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

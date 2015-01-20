@@ -15,17 +15,20 @@
 					<h5>Work</h5>
 					<ul>
 						<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600, scrollbars=yes'); return false;">Full CV</a></li>
-						<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub</a></li>
+						<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub <i class="fa fa-external-link"></i></a></li>
 					</ul>
 					<h5>Social</h5>
 					<ul>
-						<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn</a></li>
-						<li><a href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr</a></li>
-						<li><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter</a></li>
+						<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn <i class="fa fa-external-link"></i></a></li>
+						<li>
+							<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a>
+							<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a>
+						</li>
+						<li><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter <i class="fa fa-external-link"></i></a></li>
 					</ul>
 					<h5>Contact</h5>
 					<ul>
-						<li><a href="mailto:contact@peterscene.com">contact@peterscene.com</a></li>
+						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><?php echo CONTACTEMAIL; ?></a></li>
 					</ul>
 				</div>
 			</div>

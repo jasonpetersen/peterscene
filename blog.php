@@ -8,6 +8,9 @@ $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorMajor="<p>Something rather serious has resulted in this error.</p>";
 
+$thisURL =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
+
 $db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 
 if ($db->connect_errno) {
@@ -68,6 +71,14 @@ echo '
 		<meta name="description" content="' . $pageDescription . '">
 	</head>
 	<body id="blog" class="body-bright">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, \'script\', \'facebook-jssdk\'));</script>
 ';
 include $_SERVER['DOCUMENT_ROOT'] . '/top.php';
 echo '
@@ -137,15 +148,30 @@ echo '
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
-';
-include $_SERVER['DOCUMENT_ROOT'] . '/sidebar-blog.php';
-echo '
+					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
+					<div class="spacer20"></div>
+					<h5>About</h5>
+					<ul>
+						<li>' . STOCKPLUG . '</li>
+					</ul>
+					<h5>Share</h5>
+					<ul class="hArrange">
+						<li><a class="twitter-share-button" href="https://twitter.com/share" data-count="none" data-dnt="true" data-via="JasonPetersen">Tweet</a></li>
+						<li><div class="fb-share-button" data-href="' . $escapedURL . '" data-layout="button"></div></li>
+					</ul>
+					<h5>Connect</h5>
+					<ul>
+						<li><a href="mailto:' . CONTACTEMAIL . '"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 ';
 include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php';
 echo '
+	<script>
+	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	</script>
 	</body>
 </html>
 ';

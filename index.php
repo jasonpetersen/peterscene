@@ -2,6 +2,9 @@
 
 error_reporting(0);
 
+define("CONTACTEMAIL", "contact@peterscene.com");
+define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT&nbsp;professional, and wordsmith living in Woodstock, NY.");
+
 define("HOSTNAME", "localhost");
 define("USERNAME", "jpete13_sql");
 define("DBPASSWORD", "C@3rlion");
@@ -106,21 +109,21 @@ if ($template == false) {
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	';
+';
 	include $_SERVER['DOCUMENT_ROOT'] . '/head.php';
 	echo '
 		<title>' . $title . '</title>
 		<meta name="description" content="' . $desc . '">
 	</head>
 	<body id="' . $id . '" class="body-bright">
-	';
+';
 	include $_SERVER['DOCUMENT_ROOT'] . '/top.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/' . $id . '.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php';
 	echo '
 	</body>
 </html>
-	';
+';
 }
 
 ?>
