@@ -149,7 +149,7 @@ echo '
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
-					<div class="spacer20"></div>
+					<div class="spacer10"></div>
 					<h5>About</h5>
 					<ul>
 						<li>' . STOCKPLUG . '</li>
