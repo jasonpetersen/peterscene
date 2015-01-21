@@ -1,4 +1,5 @@
 <?php
+
 $error=false;
 $pageTitleGood="Blog | Jason Petersen";
 $pageTitleError="Oops! | Jason Petersen";
@@ -19,56 +20,67 @@ if ($db->connect_errno) {
 	$errorDisplayMsg=$bodyErrorMajor;
 	$pageTitle=$pageTitleError;
 	$pageDescription=$pageDescriptionError;
-}
-
-switch (BLOGAVENUE) {
-	case "main":
-		$pageTitle=$pageTitleGood;
-		$pageDescription=$pageDescriptionGood;
-		$sql="SELECT * FROM `" . USERTABLE . "` ORDER BY `" . USERTABLE . "`.`date` DESC";
+} else {
+	$sql="SELECT * FROM `" . USERTABLE . "` ORDER BY `" . USERTABLE . "`.`date` DESC";
+	if (!$result = $db->query($sql)) {
+		$error=true;
+		$errorTechMsg=$db->error;
+		$errorDisplayMsg=$bodyErrorMajor;
+		$pageTitle=$pageTitleError;
+		$pageDescription=$pageDescriptionError;
 		break;
-	case "entry":
-		$sql="SELECT * FROM " . USERTABLE;
-		if (!$result = $db->query($sql)) {
-			$error=true;
-			$errorTechMsg=$db->error;
-			$errorDisplayMsg=$bodyErrorMajor;
-			$pageTitle=$pageTitleError;
-			$pageDescription=$pageDescriptionError;
-		} else {
-			// Default to error. Overwrite if information found.
-			$error=true;
-			$errorDisplayMsg=$bodyErrorNoEntry;
-			$pageTitle=$pageTitleNoEntry;
-			$pageDescription=$pageDescriptionError;
-			while ($row = $result->fetch_assoc()) {
-				if ($row['titlelink'] == BLOGENTRY) {
-					$error=false;
-					$errorDisplayMsg=null;
-					$entryDate=$row['date'];
-					$displayDate=date("F j, Y", strtotime($row['date']));
-					$entryTitle=$row['title'];
-					$pageTitle=$row['title'] . " | Jason Petersen";
-					$entryBody=$row['body'];
-					$pageDescription=$row['extract'];
-				}
+	} else {
+		$i = 0;
+		while ($row = $result->fetch_assoc()) {
+			$i++;
+			if ($i == 1) {
+				$d = array(1 => date("F j, Y", strtotime($row["date"])));
+				$t = array(1 => $row["title"]);
+				$l = array(1 => $row["titlelink"]);
+				$b = array(1 => $row["body"]);
+				$e = array(1 => $row["extract"]);
+			} else {
+				$d[] = date("F j, Y", strtotime($row["date"]));
+				$t[] = $row["title"];
+				$l[] = $row["titlelink"];
+				$b[] = $row["body"];
+				$e[] = $row["extract"];
 			}
 		}
-		break;
-	case "tag":
-		//
-		break;
-}
+		switch (BLOGAVENUE) {
+			case "main":
+				$pageTitle=$pageTitleGood;
+				$pageDescription=$pageDescriptionGood;
+				break;
+			case "entry":
+				if (in_array(BLOGENTRY, $l)) {
+					$key = array_search(BLOGENTRY, $l);
+					$pageTitle=$t[$key] . " | Jason Petersen";
+					$pageDescription=$e[$key];
+				} else {
+					$error=true;
+					$errorDisplayMsg=$bodyErrorNoEntry;
+					$pageTitle=$pageTitleNoEntry;
+					$pageDescription=$pageDescriptionError;
+				}
+				break;
+			case "tag":
+				//
+				break;
+		}
+	}
+}		
 
-echo '
+$db->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-';
-include $_SERVER['DOCUMENT_ROOT'] . '/head.php';
-echo '
-		<title>' . $pageTitle . '</title>
-		<meta name="description" content="' . $pageDescription . '">
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
+		<title><?php echo $pageTitle; ?></title>
+		<meta name="description" content="<?php echo $pageDescription; ?>">
 	</head>
 	<body id="blog" class="body-bright">
 		<div id="fb-root"></div>
@@ -78,14 +90,12 @@ echo '
 			js = d.createElement(s); js.id = id;
 			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
 			fjs.parentNode.insertBefore(js, fjs);
-		}(document, \'script\', \'facebook-jssdk\'));</script>
-';
-include $_SERVER['DOCUMENT_ROOT'] . '/top.php';
-echo '
+		}(document, 'script', 'facebook-jssdk'));</script>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 spacious2">
-';
+<?php
 
 if ($error == true) {
 	echo '
@@ -96,86 +106,75 @@ if ($error == true) {
 } else {
 	switch (BLOGAVENUE) {
 		case "main":
-			if (!$result = $db->query($sql)) {
-				$error=true;
-				$errorTechMsg=$db->error;
-				$errorDisplayMsg=$bodyErrorMajor;
+			echo '
+					<h5>' . $d[1] . '</h5>
+					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
+					' . $b[1] . '
+			';
+			$x = 2;
+			while ($x <= $i) {
 				echo '
-					' . $errorDisplayMsg . '
-					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
-					<a class="btn btn-default" href="/" role="button">Homepage</a>
-				';
-				break;
-			} else {
-				$i = 0;
-				while ($row = $result->fetch_assoc()) {
-					$i++;
-					if ($i == 1) {
-						echo '
-					<h5>' . date("F j, Y", strtotime($row["date"])) . '</h5>
-					<a class="blog-link" href="/blog/' . $row["titlelink"] . '"><h2>' . $row["title"] . '</h2></a>
-					' . $row['body'] . '
-						';
-					} else {
-						echo '
 					<div class="hr-full"></div>
-					<a class="blog-link" href="/blog/' . $row["titlelink"] . '">
+					<a class="blog-link" href="/blog/' . $l[$x] . '">
 						<div>
-							<h5>' . date("F j, Y", strtotime($row["date"])) . '</h5>
-							<h4>' . $row["title"] . '</h4>
-							' . $row["extract"] . '
+							<h5>' . $d[$x] . '</h5>
+							<h4>' . $t[$x] . '</h4>
+							' . $e[$x] . '
 						</div>
 					</a>
-						';
-					}
-				}
+				';
+				$x++;
 			}
 			break;
 		case "entry":
 			echo '
-					<h5>' . $displayDate . '</h5>
-					<h2>' . $entryTitle  . '</h2>
-					' . $entryBody . '
+					<h5>' . $d[$key] . '</h5>
+					<h2>' . $t[$key]  . '</h2>
+					' . $b[$key] . '
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
 			';
 			break;
 		case "tag":
 			//
+			break;
 	}
 }
 
-echo '
+?>
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
-					<h5>About</h5>
-					<ul>
-						<li>' . STOCKPLUG . '</li>
-					</ul>
 					<h5>Share</h5>
 					<ul class="hArrange">
 						<li><a class="twitter-share-button" href="https://twitter.com/share" data-count="none" data-dnt="true" data-via="JasonPetersen">Tweet</a></li>
-						<li><div class="fb-share-button" data-href="' . $escapedURL . '" data-layout="button"></div></li>
+						<li><div class="fb-share-button" data-href="<?php echo $escapedURL; ?>" data-layout="button"></div></li>
 					</ul>
 					<h5>Connect</h5>
 					<ul>
-						<li><a href="mailto:' . CONTACTEMAIL . '"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+					</ul>
+					<h5>All Entries</h5>
+					<ul>
+<?php
+
+$x = 1;
+while ($x <= $i) {
+	echo '
+						<li><a href="/blog/' . $l[$x] . '">' . $t[$x] . '</a></li>
+	';
+	$x++;
+}
+
+?>
 					</ul>
 				</div>
 			</div>
 		</div>
-';
-include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php';
-echo '
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 	<script>
 	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 	</script>
 	</body>
 </html>
-';
-
-$db->close();
-
-?>
