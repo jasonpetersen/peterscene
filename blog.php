@@ -31,20 +31,43 @@ if ($db->connect_errno) {
 		break;
 	} else {
 		$i = 0;
+		$currYear = 1;
 		while ($row = $result->fetch_assoc()) {
 			$i++;
 			if ($i == 1) {
-				$d = array(1 => date("F j, Y", strtotime($row["date"])));
+				$d = array(1 => $row["date"]);
+				$dY = array(1 => date("Y", strtotime($d[1])));
+				$dM = array(1 => date("F", strtotime($d[1])));
+				$dDisp = array(1 => date("F j, Y", strtotime($d[1])));
 				$t = array(1 => $row["title"]);
 				$l = array(1 => $row["titlelink"]);
 				$b = array(1 => $row["body"]);
 				$e = array(1 => $row["extract"]);
+				$blogNav = array();
+				$blogNav[$currYear] = array("year" => $dY[1]);
+				$blogNav[$currYear]["months"] = array();
+				$blogNav[$currYear]["months"][$dM[1]] = array($l[1] => $t[1]);
 			} else {
-				$d[] = date("F j, Y", strtotime($row["date"]));
+				$d[] = $row["date"];
+				$dY[] = date("Y", strtotime($d[$i]));
+				$dM[] = date("F", strtotime($d[$i]));
+				$dDisp[] = date("F j, Y", strtotime($d[$i]));
 				$t[] = $row["title"];
 				$l[] = $row["titlelink"];
 				$b[] = $row["body"];
 				$e[] = $row["extract"];
+				if ($dY[$i] != $blogNav[$currYear]["year"]) {
+					$currYear++;
+					$blogNav[$currYear] = array("year" => $dY[$i]);
+					$blogNav[$currYear]["months"] = array();
+					$blogNav[$currYear]["months"][$dM[$i]] = array($l[$i] => $t[$i]);
+				} else {
+					if (!array_key_exists($dM[$i], $blogNav[$currYear]["months"])) {
+						$blogNav[$currYear]["months"][$dM[$i]] = array($l[$i] => $t[$i]);
+					} else {
+						$blogNav[$currYear]["months"][$dM[$i]][$l[$i]] = $t[$i];
+					}
+				}
 			}
 		}
 		switch (BLOGAVENUE) {
@@ -107,28 +130,23 @@ if ($error == true) {
 	switch (BLOGAVENUE) {
 		case "main":
 			echo '
-					<h5>' . $d[1] . '</h5>
+					<h5>' . $dDisp[1] . '</h5>
 					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
 					' . $b[1] . '
-			';
-			$x = 2;
-			while ($x <= $i) {
-				echo '
-					<div class="hr-full"></div>
-					<a class="blog-link" href="/blog/' . $l[$x] . '">
+					<div class="hr-small"></div>
+					<h3>Previous entry:</h3>
+					<a class="blog-link" href="/blog/' . $l[2] . '">
 						<div>
-							<h5>' . $d[$x] . '</h5>
-							<h4>' . $t[$x] . '</h4>
-							' . $e[$x] . '
+							<h5>' . $dDisp[2] . '</h5>
+							<h4>' . $t[2] . '</h4>
+							' . $e[2] . '
 						</div>
 					</a>
 				';
-				$x++;
-			}
 			break;
 		case "entry":
 			echo '
-					<h5>' . $d[$key] . '</h5>
+					<h5>' . $dDisp[$key] . '</h5>
 					<h2>' . $t[$key]  . '</h2>
 					' . $b[$key] . '
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
@@ -147,24 +165,38 @@ if ($error == true) {
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>Share</h5>
-					<ul class="hArrange">
+					<ul class="sideH">
 						<li><a class="twitter-share-button" href="https://twitter.com/share" data-count="none" data-dnt="true" data-via="JasonPetersen">Tweet</a></li>
 						<li><div class="fb-share-button" data-href="<?php echo $escapedURL; ?>" data-layout="button"></div></li>
 					</ul>
 					<h5>Connect</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 					</ul>
 					<h5>All Entries</h5>
-					<ul>
+					<ul id="blogNav">
 <?php
 
-$x = 1;
-while ($x <= $i) {
+foreach ($blogNav as $level1) {
 	echo '
-						<li><a href="/blog/' . $l[$x] . '">' . $t[$x] . '</a></li>
-	';
-	$x++;
+						<li><i id="' . $level1["year"] . '" class="fa fa-minus-square-o"></i> ' . $level1["year"] . '
+							<ul>';
+	foreach ($level1["months"] as $level2key => $level2) {
+		echo '
+								<li><i id="' . $level1["year"] . '-' . $level2key . '" class="fa fa-minus-square-o"></i> ' . $level2key . '
+									<ul>';
+		foreach ($level2 as $level3key => $level3) {
+			echo '
+										<li><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+		}
+		echo '
+									</ul>
+								</li>';
+	}
+	echo '
+							</ul>
+						</li>
+';
 }
 
 ?>

@@ -87,7 +87,7 @@
 					<p><img src="/images/hvar.jpg" alt="Hvar, Croatia" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>My Flickr page</h5>
-					<ul>
+					<ul class="sideV">
 						<li>
 							<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
 							<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
@@ -98,7 +98,7 @@
 						</li>
 					</ul>
 					<h5>Connect</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 					</ul>
 				</div>

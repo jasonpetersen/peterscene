@@ -150,16 +150,35 @@ h6, .h6 {
     text-transform: uppercase;
 }
 
-.sidebar ul {
+.sidebar .sideH,
+.sidebar .sideV {
 	list-style-type: none;
 	list-style-position: inside;
 	margin: 0 0 1em 0;
 	padding: 0;
 }
 
-.sidebar .hArrange li {
+.sidebar .sideH li {
 	display: inline-block;
 	margin-right: 1em;
+}
+
+.sidebar #blogNav,
+.sidebar #blogNav ul {
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+.sidebar #blogNav {
+	padding: 0;
+}
+
+.sidebar #blogNav ul {
+	padding-left: 20px;
+}
+
+.sidebar #blogNav ul ul {
+	padding-left: 20px;
 }
 
 .blog-link:link,

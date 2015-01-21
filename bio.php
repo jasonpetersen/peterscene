@@ -13,12 +13,12 @@
 				</div>
 				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
 					<h5>Work</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600, scrollbars=yes'); return false;">Full CV</a></li>
 						<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub <i class="fa fa-external-link"></i></a></li>
 					</ul>
 					<h5>Social</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn <i class="fa fa-external-link"></i></a></li>
 						<li>
 							<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a>
@@ -27,7 +27,7 @@
 						<li><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter <i class="fa fa-external-link"></i></a></li>
 					</ul>
 					<h5>Contact</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><?php echo CONTACTEMAIL; ?></a></li>
 					</ul>
 				</div>

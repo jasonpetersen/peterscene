@@ -41,11 +41,11 @@
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>About</h5>
-					<ul>
+					<ul class="sideV">
 						<li><?php echo STOCKPLUG; ?></li>
 					</ul>
 					<h5>Connect</h5>
-					<ul>
+					<ul class="sideV">
 						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 					</ul>
 				</div>
