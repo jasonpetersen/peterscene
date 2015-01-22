@@ -4,7 +4,7 @@ $error=false;
 $pageTitleGood="Blog | Jason Petersen";
 $pageTitleError="Oops! | Jason Petersen";
 $pageTitleNoEntry="Blog entry not found | Jason Petersen";
-$pageDescriptionGood="I enjoy writing about science, technology, literature, film, and highfalutin philosophical nonsense.";
+$pageDescriptionGood="Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.";
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorMajor="<p>Something rather serious has resulted in this error.</p>";
@@ -164,6 +164,8 @@ if ($error == true) {
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
+					<h5>About</h5>
+					<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
 					<h5>Share</h5>
 					<ul class="sideH">
 						<li><a class="twitter-share-button" href="https://twitter.com/share" data-count="none" data-dnt="true" data-via="JasonPetersen">Tweet</a></li>
@@ -206,10 +208,26 @@ foreach ($blogNav as $level1) {
 
 ?>
 					</ul>
+					<!--<h5>Alternate</h5>
+					<div data-collapse>
+						<p>Fruits</p>
+						<ul>
+							<li>Apple</li>
+							<li>Pear</li>
+							<li>Orange</li>
+						</ul>
+						<p>Info</p>
+						<div>
+							<p>You can use any container you like (in this case a div element)</p>
+						</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
+	<!-- additional JS goes here -->
+	<script src="/js/jquery.collapse.js"></script>
+	<script src="/js/jquery.collapse_storage.js"></script>
 	<script>
 	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 	$('.archive_month ul').hide();

@@ -105,6 +105,7 @@
 			</div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
+		<!-- additional JS goes here -->
 		<script src="/js/jquery.blueimp-gallery.min.js"></script>
 		<script src="/js/bootstrap-image-gallery.min.js"></script>
 		<script src="/js/gallery.js"></script>
