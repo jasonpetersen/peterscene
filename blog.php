@@ -174,20 +174,25 @@ if ($error == true) {
 						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 					</ul>
 					<h5>All Entries</h5>
-					<ul id="blogNav">
+					<ul id="blogNav" class="archive_year">
 <?php
 
 foreach ($blogNav as $level1) {
 	echo '
-						<li><i id="' . $level1["year"] . '" class="fa fa-minus-square-o"></i> ' . $level1["year"] . '
-							<ul>';
+						<li class="years">' . $level1["year"] . '
+							<ul class="archive_month">';
 	foreach ($level1["months"] as $level2key => $level2) {
 		echo '
-								<li><i id="' . $level1["year"] . '-' . $level2key . '" class="fa fa-minus-square-o"></i> ' . $level2key . '
-									<ul>';
+								<li class="months"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')
+									<ul class="archive_posts">';
 		foreach ($level2 as $level3key => $level3) {
-			echo '
-										<li><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+			if ($_SERVER["REQUEST_URI"] == ("/blog/" . $level3key)) {
+				echo '
+										<li class="posts current"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+			} else {
+				echo '
+										<li class="posts"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+			}
 		}
 		echo '
 									</ul>
@@ -207,6 +212,17 @@ foreach ($blogNav as $level1) {
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 	<script>
 	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	$('.archive_month ul').hide();
+	$('.months').click(function() {
+    	$(this).find('ul').slideToggle();
+    	if ($(this).find('i').hasClass('fa-plus-square-o')) {
+    		$(this).find('i').removeClass('fa-plus-square-o');
+    		$(this).find('i').addClass('fa-minus-square-o');
+    	} else {
+    		$(this).find('i').removeClass('fa-minus-square-o');
+    		$(this).find('i').addClass('fa-plus-square-o');
+    	}
+	});
 	</script>
 	</body>
 </html>

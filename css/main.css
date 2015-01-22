@@ -174,11 +174,16 @@ h6, .h6 {
 }
 
 .sidebar #blogNav ul {
-	padding-left: 20px;
+	padding: 0;
+	cursor: pointer;
 }
 
 .sidebar #blogNav ul ul {
-	padding-left: 20px;
+	padding-left: 18px;
+}
+
+.sidebar #blogNav .years {
+	margin-bottom: 1em;
 }
 
 .blog-link:link,
