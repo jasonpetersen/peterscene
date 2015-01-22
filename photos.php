@@ -11,7 +11,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 spacious2">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 					<h3>Life as a photoshoot</h3>
 					<p>I look at the world through a camera lens, whether I'm holding a camera or not. I frame the world I see, cutting away the periphery to focus on a well-composed window. The play of light, shadow, and color&mdash;the juxtaposition of foreground and background&mdash;the angle and the tilt&mdash;I see life constantly at play with my sensibilities as a photographer.</p>
 					<h3>Recent photos</h3>
@@ -83,7 +83,7 @@
 					</div>
 					<div class="hr-small visible-xs"></div>
 				</div>
-				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
+				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 					<p><img src="/images/hvar.jpg" alt="Hvar, Croatia" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>My Flickr page</h5>

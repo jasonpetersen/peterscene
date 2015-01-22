@@ -1,6 +1,6 @@
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 spacious2">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 					<span class="img-with-wrap-left">
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="150" height="150">
 					</span>
@@ -11,7 +11,7 @@
 					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent the prior summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
 					<div class="hr-small visible-xs"></div>
 				</div>
-				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
+				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 					<h5>Work</h5>
 					<ul class="sideV">
 						<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600, scrollbars=yes'); return false;">Full CV</a></li>

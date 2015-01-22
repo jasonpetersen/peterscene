@@ -144,45 +144,45 @@ h6, .h6 {
 	margin: 10px 0;
 }
 
-.sidebar h5 {
+#sidebar h5 {
 	font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.sidebar .sideH,
-.sidebar .sideV {
+#sidebar .sideH,
+#sidebar .sideV {
 	list-style-type: none;
 	list-style-position: inside;
 	margin: 0 0 1em 0;
 	padding: 0;
 }
 
-.sidebar .sideH li {
+#sidebar .sideH li {
 	display: inline-block;
 	margin-right: 1em;
 }
 
-.sidebar #blogNav,
-.sidebar #blogNav ul {
+#sidebar #blogNav,
+#sidebar #blogNav ul {
 	list-style-type: none;
 	list-style-position: inside;
 }
 
-.sidebar #blogNav {
+#sidebar #blogNav {
 	padding: 0;
 }
 
-.sidebar #blogNav ul {
+#sidebar #blogNav ul {
 	padding: 0;
 	cursor: pointer;
 }
 
-.sidebar #blogNav ul ul {
+#sidebar #blogNav ul ul {
 	padding-left: 18px;
 }
 
-.sidebar #blogNav .years {
+#sidebar #blogNav .years {
 	margin-bottom: 1em;
 }
 

@@ -117,7 +117,7 @@ $db->close();
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 spacious2">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 <?php
 
 if ($error == true) {
@@ -161,7 +161,7 @@ if ($error == true) {
 ?>
 					<div class="hr-small visible-xs"></div>
 				</div>
-				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
+				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>Share</h5>

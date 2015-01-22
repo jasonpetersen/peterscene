@@ -1,6 +1,6 @@
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 spacious2">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 					<h5>Edited January 9, 2015</h5>
 					<br />
 					<h3>In a nutshell</h3>
@@ -37,7 +37,7 @@
 					<p>This particular page wouldn't be here if not for Aaron, who introduced me to <a href="http://slashpurpose.org/" target="_blank">Slash Purpose</a>. My initial thought when deciding to make this website was <span class="ital">I need a website</span>. I hadn't expended nearly enough mental energy fully addressing the most important question of all&mdash;<span class="ital">why</span>? Again, my thanks go to Aaron.</p>
 					<div class="hr-small visible-xs"></div>
 				</div>
-				<div class="col-xs-12 col-sm-3 col-sm-offset-1 sidebar">
+				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>About</h5>

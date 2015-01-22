@@ -3,7 +3,10 @@
 error_reporting(0);
 
 define("CONTACTEMAIL", "contact@peterscene.com");
-define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT&nbsp;professional, and wordsmith living in Woodstock, NY.");
+define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Woodstock, NY.");
+
+define("GRIDBUCKET", "col-xs-12 col-sm-8");
+define("GRIDSIDEBAR", "col-xs-12 col-sm-3 col-sm-offset-1");
 
 define("HOSTNAME", "localhost");
 define("USERNAME", "jpete13_sql");
