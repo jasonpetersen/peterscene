@@ -77,10 +77,12 @@ if ($_GET['id'] == "") {
 			define("NONTEMPLATEDESC", $desc);
 			break;
 		case "video":
-			$template=true;
+			$template=false;
 			$id="video";
 			$title="Video | Jason Petersen";
 			$desc="A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.";
+			define("NONTEMPLATETITLE", $title);
+			define("NONTEMPLATEDESC", $desc);
 			break;
 		case "404":
 			$template=true;
