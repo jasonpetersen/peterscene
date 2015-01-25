@@ -6,130 +6,80 @@
 		<link rel="stylesheet" href="/royalslider/skins/default/rs-default.css">
 		<title><?php echo NONTEMPLATETITLE; ?></title>
 		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
-		<style>
-			#video-gallery {
-				width: 100%;
-			}
-			
-			.videoGallery .rsTmb {
-				padding: 20px;
-			}
-			
-			.videoGallery .rsThumbs .rsThumb {
-				width: 220px;
-				height: 80px;
-				border-bottom: 1px solid #2E2E2E;
-			}
-			
-			.videoGallery .rsThumbs {
-				width: 220px;
-				padding: 0;
-			}
-			
-			.videoGallery .rsThumb:hover {
-				background: #000;
-			}
-			
-			.videoGallery .rsThumb.rsNavSelected {
-				background-color: #b73336;
-				border-bottom:-color #b73336;
-			}
-			
-			.sampleBlock {
-				left: 3%; 
-				top: 1%; 
-				width: 100%;
-				max-width: 400px;
-			}
-			
-			.rsVideoContainer {
-				width:100%; 
-				height:100%; 
-				overflow:hidden; 
-				display:block; 
-				float:left; 
-			}
-			
-			@media screen and (min-width: 0px) and (max-width: 500px) {
-				.videoGallery .rsTmb {
-					padding: 6px 8px;
-				}
-				.videoGallery .rsTmb h5 {
-					font-size: 12px;
-					line-height: 17px;
-				}
-				.videoGallery .rsThumbs.rsThumbsVer {
-					width: 100px;
-					padding: 0;
-				}
-				.videoGallery .rsThumbs .rsThumb {
-					width: 100px;
-					height: 47px;
-				}
-				.videoGallery .rsTmb span {
-					display: none;
-				}
-				.videoGallery .rsOverflow,
-				.royalSlider.videoGallery {
-					height: 300px !important;
-				}
-				.sampleBlock {
-					font-size: 14px;
-				}
-			}
-		</style>
 	</head>
 	<body id="video" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
-				<div class="<?php echo GRIDBUCKET; ?> spacious2">
-					<!-- actual slider code -->
+				<div class="col-xs-12 col-sm-12 col-md-8">
+					<!-- royal slider code begin -->
 					<div id="video-gallery" class="royalSlider videoGallery rsDefault">
 						<a class="rsImg" data-rsVideo="http://vimeo.com/112184942" href="/images/torma.jpg">
 							<div class="rsTmb">
 								<h5>Torma</h5>
-								<span>Feature documentary</span>
+								<span>Feature-length documentary</span>
 							</div>
+                            <div class="rsCaption spacious2">
+								<h3>Torma (2014)</h3>
+								<p>I spent much of 2014 working on <span class="ital">Torma</span>, first as an editor, and later, when post-production moved to Thailand, as an Associate Producer and Technical Consultant. I was one of three people in the editing room shaping the film into its final form.</p>
+								<p>You can see my work most directly in the opening and closing animations, done in After Effects. I also spent considerable time agonizing over the many frame rate conversion processes needed to make this footage presentable (the production has a storied history going back to 2008, with multiple DPs and cameras involved). In terms of storytelling, if you're not familiar with Tibetan Buddhism and nonetheless find this film accessible, I fought for that.</p>
+								<p>I did the DVD authoring, as well as the encode for Vimeo. Everything you need to know about seeing this film can be found at the official website, <span class="bold">tormafilm.com</span>.</p>
+								<p>I remain involved in distribution on an ongoing basis.</p>
+                            </div>
 						</a>
-						<a class="rsImg" data-rsVideo="https://www.youtube.com/watch?v=VWeyNW-gIrA" href="/images/giving-tuesday.jpg">
+						<a class="rsImg" data-rsVideo="http://www.youtube.com/embed/VWeyNW-gIrA" href="/images/giving-tuesday.jpg">
 							<div class="rsTmb">
 								<h5>Giving Tuesday</h5>
-								<span>Fundraising video</span>
+								<span>Fundraising</span>
 							</div>
+                            <div class="rsCaption spacious2">
+								<h3>KTD Monastery Giving Tuesday Campaign (2014)</h3>
+								<p>The initial idea that was presented to me was to simply get sound bites from the residents at KTD Monastery to help fundraise. But as I started filming, it quickly occurred to me that the B-roll was more personable and endearing. I continued filming rehearsed speech, but secretly put more effort into making the residents laugh.</p>
+								<p>This video spoke to me early in the editing&mdash;it was clear what the structure had to be. I start by establishing the rehearsed nature of the video, punctuated by a moment a silence, as though to say, "where is this going?" Then there's a "good rehearsal" to bridge the gap between (basically) outtakes and the next few interviews, which have polished deliveries. Finally, reward the viewer for sitting through that serious talk by getting a little more goofy.</p>
+                            </div>
 						</a>
-						<a class="rsImg" data-rsVideo="https://www.youtube.com/watch?v=x_ONeOTJyZM" href="/images/family-day.jpg">
+						<a class="rsImg" data-rsVideo="http://www.youtube.com/embed/x_ONeOTJyZM" href="/images/family-day.jpg">
 							<div class="rsTmb">
 								<h5>Family Day at KTD</h5>
-								<span>Promotional/fundraising</span>
+								<span>Promotional</span>
 							</div>
+                            <div class="rsCaption spacious2">
+								<h3>Family Day at KTD Monastery (2014)</h3>
+								<p>The handheld camerawork on display here is meant to put the viewer in the shoes of the kids. The camera wanders up and down, side to side, and with more than a few rack-focuses. It's always wandering, like the attention span of a kid.</p>
+								<p>That was the only aspect of the this video I was confident about upfront. I really struggled in the editing with what this video wanted to be. It was supposed to be for fundraising, but I felt like I was shoehorning it to that purpose.</p>
+								<p>I eventually put together a fundraising version I was happy with, but I think this alternate version, which acts as a promotional piece, plays better.</p>
+                            </div>
 						</a>
-						<a class="rsImg" data-rsVideo="https://www.youtube.com/watch?v=kS4QhgUSk08" href="/images/sang-puja.jpg">
+						<a class="rsImg" data-rsVideo="http://www.youtube.com/embed/kS4QhgUSk08" href="/images/sang-puja.jpg">
 							<div class="rsTmb">
 								<h5>Sang Puja</h5>
 								<span>Archival</span>
 							</div>
+                            <div class="rsCaption spacious2">
+								<h3>Sang Puja: a cleansing smoke offering (2014)</h3>
+								<p>This is a fly-on-the-wall perspective of a Tibetan Buddhist practice performed at KTD Monastery each year on Losar&mdash;the Tibetan New Year. This is not an instructional video; there is no voice over or on-screen text to help you understand what you're watching. I had never experienced this practice before&mdash;I didn't know what was happening&mdash;and neither does the viewer. The point of view is from my own eyes.</p>
+								<p>The last shot, which I linger on for a good amount of time, was an after-thought later in the day when it was all over and everyone had gone home. There was so much activity centered around that hearth... then it had ended, and all that remained were the smoldering ashes. It was a perfect example of the Buddhist idea of the impermanence of all things.</p>
+                            </div>
 						</a>
-						<a class="rsImg" data-rsVideo="https://www.youtube.com/watch?v=Gls9fmhHCFE" href="/images/rent-check.jpg">
+						<a class="rsImg" data-rsVideo="http://www.youtube.com/embed/Gls9fmhHCFE" href="/images/rent-check.jpg">
 							<div class="rsTmb">
 								<h5>Rent Check</h5>
 								<span>Sketch comedy</span>
 							</div>
+                            <div class="rsCaption spacious2">
+								<h3>Rent Check (2010)</h3>
+								<p>Friends of mine in Los Angeles were involved in sketch comedy. I DPed this shoot, and served as editor.</p>
+								<p>It's pretty by-the-numbers cinematography: when events are still grounded, the camera is grounded. As soon as Aaron knocks out his roommate with the beer bottle, the camera goes handheld. Both characters have their respective sides of the frame and never cross.</p>
+								<p>There's some minor digital trickery to sell the stabbing and the slicing. If you can't tell, I consider it a job well done.</p>
+                            </div>
 						</a>
-						<!--<div class="rsContent">
-							<a class="rsImg" data-rsVideo="https://vimeo.com/31240369" href="http://b.vimeocdn.com/ts/210/393/210393954_640.jpg">
-								<div class="rsTmb">
-									<h5>I Believe I Can Fly</h5>
-									<span>by sebastien montaz-rosset</span>
-								</div>
-							</a>
-							<h3 class="rsABlock sampleBlock">Animated block.</h3>
-						</div>-->
 					</div>
-					<!-- end slider code -->
-					<div class="hr-small visible-xs"></div>
+                    <div class="spacer20"></div>
+                    <div class="descriptionBox"></div>
+					<!-- royal slider code end -->
+					<div class="hr-small visible-xs visible-sm"></div>
 				</div>
-				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
+				<div id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
 					<p><img src="/images/hal.jpg" alt="HAL 9000" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>More Resources</h5>
@@ -146,40 +96,43 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 		<!-- additional JS goes here -->
 		<script src="/royalslider/jquery.royalslider.min.js"></script>
+        <script src="/royalslider/dev/modules/jquery.rs.global-caption.js"></script>
 		<script>
 			jQuery(document).ready(function($) {
 				$('#video-gallery').royalSlider({
-					arrowsNav: false,
-					fadeinLoadedSlide: true,
-					controlNavigationSpacing: 0,
-					controlNavigation: 'thumbnails',
-					thumbs: {
-						autoCenter: false,
-						fitInViewport: true,
-						orientation: 'vertical',
-						spacing: 0,
-						paddingBottom: 0
+					fullscreen: {
+						enabled: true,
+						nativeFS: true
 					},
-					keyboardNavEnabled: true,
-					imageScaleMode: 'fill',
-					imageAlignCenter:true,
-					slidesSpacing: 0,
-					loop: false,
-					loopRewind: true,
-					numImagesToPreload: 3,
-					video: {
-						autoHideArrows:true,
-						autoHideControlNav:false,
-						autoHideBlocks: true
-					}, 
+					controlNavigation: 'thumbnails',
 					autoScaleSlider: true, 
-					autoScaleSliderWidth: 960,	 
-					autoScaleSliderHeight: 450,
-
-					/* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
-					imgWidth: 640,
-					imgHeight: 360
+					autoScaleSliderWidth: 960,     
+					autoScaleSliderHeight: 640,
+                    autoHeight: true,
+					loop: true,
+					imageScaleMode: 'fit',
+					navigateByClick: true,
+					numImagesToPreload: 2,
+					arrowsNav: true,
+					arrowsNavAutoHide: true,
+					arrowsNavHideOnTouch: true,
+					keyboardNavEnabled: true,
+					fadeinLoadedSlide: true,
+					globalCaption: true,
+					globalCaptionInside: false,
+					thumbs: {
+						appendSpan: true,
+						firstMargin: true,
+						paddingBottom: 4
+					},
+					deeplinking: {
+						// deep linking options go gere
+						enabled: true,
+                        change: true,
+						prefix: 'id-'
+					}
 				});
+                $('.rsGCaption').appendTo('.descriptionBox')
 			});
 		</script>
 	</body>
