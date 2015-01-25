@@ -1,9 +1,9 @@
 <?php
 
 $error=false;
-$pageTitleGood="Blog | Jason Petersen";
-$pageTitleError="Oops! | Jason Petersen";
-$pageTitleNoEntry="Blog entry not found | Jason Petersen";
+$pageTitleGood="Blog";
+$pageTitleError="Oops!";
+$pageTitleNoEntry="Blog entry not found";
 $pageDescriptionGood="Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.";
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
@@ -78,7 +78,7 @@ if ($db->connect_errno) {
 			case "entry":
 				if (in_array(BLOGENTRY, $l)) {
 					$key = array_search(BLOGENTRY, $l);
-					$pageTitle=$t[$key] . " | Jason Petersen";
+					$pageTitle=$t[$key];
 					$pageDescription=$e[$key];
 				} else {
 					$error=true;
@@ -102,18 +102,10 @@ $db->close();
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title><?php echo $pageTitle; ?></title>
+		<title><?php echo $pageTitle; ?> | Jason Petersen</title>
 		<meta name="description" content="<?php echo $pageDescription; ?>">
 	</head>
 	<body id="blog" class="body-bright">
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
@@ -129,6 +121,7 @@ if ($error == true) {
 } else {
 	switch (BLOGAVENUE) {
 		case "main":
+			$thisTitle = $t[1];
 			echo '
 					<h5>' . $dDisp[1] . '</h5>
 					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
@@ -145,6 +138,7 @@ if ($error == true) {
 				';
 			break;
 		case "entry":
+			$thisTitle = $t[$key];
 			echo '
 					<h5>' . $dDisp[$key] . '</h5>
 					<h2>' . $t[$key]  . '</h2>
@@ -168,8 +162,30 @@ if ($error == true) {
 					<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
 					<h5>Share</h5>
 					<ul class="sideH">
-						<li><a class="twitter-share-button" href="https://twitter.com/share" data-count="none" data-dnt="true" data-via="JasonPetersen">Tweet</a></li>
-						<li><div class="fb-share-button" data-href="<?php echo $escapedURL; ?>" data-layout="button"></div></li>
+						<li>
+							<a class="tweet" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" via="JasonPetersen" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="fbShare" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="googleShare" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
 					</ul>
 					<h5>Connect</h5>
 					<ul class="sideV">
@@ -208,39 +224,12 @@ foreach ($blogNav as $level1) {
 
 ?>
 					</ul>
-					<!--<h5>Alternate</h5>
-					<div data-collapse>
-						<p>Fruits</p>
-						<ul>
-							<li>Apple</li>
-							<li>Pear</li>
-							<li>Orange</li>
-						</ul>
-						<p>Info</p>
-						<div>
-							<p>You can use any container you like (in this case a div element)</p>
-						</div>
-					</div>-->
 				</div>
 			</div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 	<!-- additional JS goes here -->
-	<script src="/js/jquery.collapse.js"></script>
-	<script src="/js/jquery.collapse_storage.js"></script>
-	<script>
-	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-	$('.archive_month ul').hide();
-	$('.months').click(function() {
-    	$(this).find('ul').slideToggle();
-    	if ($(this).find('i').hasClass('fa-plus-square-o')) {
-    		$(this).find('i').removeClass('fa-plus-square-o');
-    		$(this).find('i').addClass('fa-minus-square-o');
-    	} else {
-    		$(this).find('i').removeClass('fa-minus-square-o');
-    		$(this).find('i').addClass('fa-plus-square-o');
-    	}
-	});
-	</script>
+	<script src="/js/blog.js"></script>
+	<script src="/js/share.js"></script>
 	</body>
 </html>

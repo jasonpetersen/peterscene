@@ -68,13 +68,11 @@ if ($_GET['id'] == "") {
 			define("NONTEMPLATETITLE", $title);
 			define("NONTEMPLATEDESC", $desc);
 			break;
-		case "photos":
-			$template=false;
-			$id="photos";
-			$title="Photos | Jason Petersen";
-			$desc="I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.";
-			define("NONTEMPLATETITLE", $title);
-			define("NONTEMPLATEDESC", $desc);
+		case "portfolio":
+			$template=true;
+			$id="portfolio";
+			$title="Portfolio | Jason Petersen";
+			$desc=$defaultDesc;
 			break;
 		case "video":
 			$template=false;
@@ -83,6 +81,20 @@ if ($_GET['id'] == "") {
 			$desc="A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.";
 			define("NONTEMPLATETITLE", $title);
 			define("NONTEMPLATEDESC", $desc);
+			break;
+		case "photos":
+			$template=false;
+			$id="photos";
+			$title="Photos | Jason Petersen";
+			$desc="I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.";
+			define("NONTEMPLATETITLE", $title);
+			define("NONTEMPLATEDESC", $desc);
+			break;
+		case "experiments":
+			$template=true;
+			$id="experiments";
+			$title="Experiments | Jason Petersen";
+			$desc=$defaultDesc;
 			break;
 		case "404":
 			$template=true;

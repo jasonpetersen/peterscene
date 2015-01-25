@@ -161,7 +161,7 @@ h6, .h6 {
 
 #sidebar .sideH li {
 	display: inline-block;
-	margin-right: 1em;
+	margin-right: 0.3em;
 }
 
 #sidebar #blogNav,

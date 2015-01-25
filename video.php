@@ -1,3 +1,10 @@
+<?php
+
+$thisURL =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -80,11 +87,38 @@
 					<div class="hr-small visible-xs visible-sm"></div>
 				</div>
 				<div id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
-					<p><img src="/images/hal.jpg" alt="HAL 9000" class="img-circle" width="100" height="100"></p>
+					<p><img src="/images/kubrick.jpg" alt="Kubrick" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>More Resources</h5>
 					<ul class="sideV">
 						<li><a href="https://www.youtube.com/user/jpetersen13/videos" target="_blank">YouTube Channel <i class="fa fa-external-link"></i></a></li>
+					</ul>
+					<h5>Share</h5>
+					<ul class="sideH">
+						<li>
+							<a class="tweet" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" via="JasonPetersen" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="fbShare" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="googleShare" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
 					</ul>
 					<h5>Connect</h5>
 					<ul class="sideV">
@@ -95,6 +129,7 @@
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 		<!-- additional JS goes here -->
+		<script src="/js/share.js"></script>
 		<script src="/royalslider/jquery.royalslider.min.js"></script>
         <script src="/royalslider/dev/modules/jquery.rs.global-caption.js"></script>
 		<script>

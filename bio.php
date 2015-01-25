@@ -28,7 +28,7 @@
 					</ul>
 					<h5>Contact</h5>
 					<ul class="sideV">
-						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><?php echo CONTACTEMAIL; ?></a></li>
+						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 					</ul>
 				</div>
 			</div>

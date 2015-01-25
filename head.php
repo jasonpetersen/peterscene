@@ -4,7 +4,9 @@
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="/css/main.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 		<meta name="author" content="Jason Petersen" />
 		<meta name="keywords" content="web developer, videographer, IT, design" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+		<meta property="og:site_name" content="Peterscene" />
+		<meta property="og:image" content="http://peterscene.com/images/banner-V1-large.png" />

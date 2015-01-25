@@ -84,7 +84,7 @@
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
-					<p><img src="/images/hvar.jpg" alt="Hvar, Croatia" class="img-circle" width="100" height="100"></p>
+					<p><img src="/images/prague.jpg" alt="Prague metro" class="img-circle" width="100" height="100"></p>
 					<div class="spacer10"></div>
 					<h5>My Flickr page</h5>
 					<ul class="sideV">
