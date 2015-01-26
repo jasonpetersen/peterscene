@@ -4,8 +4,8 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
 		<link rel="stylesheet" href="/css/blueimp-gallery.min.css">
 		<link rel="stylesheet" href="/css/bootstrap-image-gallery.min.css">
-		<title><?php echo NONTEMPLATETITLE; ?></title>
-		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
+		<title><?php echo PAGETITLE; ?></title>
+		<meta name="description" content="<?php echo PAGEDESC; ?>">
 	</head>
 	<body id="photos" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>

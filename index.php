@@ -5,6 +5,9 @@ error_reporting(0);
 define("CONTACTEMAIL", "contact@peterscene.com");
 define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Woodstock, NY.");
 
+define("THISURL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
+
 define("GRIDBUCKET", "col-xs-12 col-sm-8");
 define("GRIDSIDEBAR", "col-xs-12 col-sm-3 col-sm-offset-1");
 
@@ -22,34 +25,34 @@ $errorDesc="Something went wrong.";
 
 if ($_GET['id'] == "") {
 	$template=true;
-	$id="bio";
-	$title=$mainTitle;
-	$desc=$defaultDesc;
+	define("PAGEID", "bio");
+	define("PAGETITLE", $mainTitle);
+	define("PAGEDESC", $defaultDesc);
 } else {
 	switch(strtolower($_GET['id'])) {
 		case "bio":
 			$template=true;
-			$id="bio";
-			$title=$mainTitle;
-			$desc=$defaultDesc;
+			define("PAGEID", "bio");
+			define("PAGETITLE", $mainTitle);
+			define("PAGEDESC", $defaultDesc);
 			break;
 		case "cv":
 			$template=false;
-			$id="cv";
-			$title="CV | Jason Petersen";
-			$desc=$defaultDesc;
-			define("NONTEMPLATETITLE", $title);
-			define("NONTEMPLATEDESC", $desc);
+			define("PAGEID", "cv");
+			define("PAGETITLE", "CV | Jason Petersen");
+			define("PAGEDESC", $defaultDesc);
 			break;
 		case "purpose":
 			$template=true;
-			$id="purpose";
-			$title="Purpose | Jason Petersen";
-			$desc="The 'why' is more important than the 'what'. Read why this site exists at all.";
+			define("PAGEID", "purpose");
+			define("PAGETITLE", "Purpose | Jason Petersen");
+			define("PAGEDESC", "The 'why' is more important than the 'what'. Read why this site exists at all.");
 			break;
 		case "blog":
 			$template=false;
-			$id="blog";
+			define("PAGEID", "blog");
+			define("PAGETITLE", "Blog | Jason Petersen");
+			define("PAGEDESC", "Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.");
 			if ($_GET['entry'] != "") {
 				define("BLOGAVENUE", "entry");
 				define("BLOGENTRY", strtolower($_GET['entry']));
@@ -62,83 +65,74 @@ if ($_GET['id'] == "") {
 			break;
 		case "blog-add":
 			$template=false;
-			$id="blog-add";
-			$title="Add entry | Jason Petersen";
-			$desc="Adjectives on the typewriter, he moves his words like a prizefighter.";
-			define("NONTEMPLATETITLE", $title);
-			define("NONTEMPLATEDESC", $desc);
+			define("PAGEID", "blog-add");
+			define("PAGETITLE", "Add entry | Jason Petersen");
+			define("PAGEDESC", "Adjectives on the typewriter, he moves his words like a prizefighter.");
 			break;
 		case "portfolio":
 			$template=true;
-			$id="portfolio";
-			$title="Portfolio | Jason Petersen";
-			$desc=$defaultDesc;
+			define("PAGEID", "portfolio");
+			define("PAGETITLE", "Portfolio | Jason Petersen");
+			define("PAGEDESC", $defaultDesc);
 			break;
 		case "video":
 			$template=false;
-			$id="video";
-			$title="Video | Jason Petersen";
-			$desc="A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.";
-			define("NONTEMPLATETITLE", $title);
-			define("NONTEMPLATEDESC", $desc);
+			define("PAGEID", "video");
+			define("PAGETITLE", "Video | Jason Petersen");
+			define("PAGEDESC", "A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.");
 			break;
 		case "photos":
 			$template=false;
-			$id="photos";
-			$title="Photos | Jason Petersen";
-			$desc="I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.";
-			define("NONTEMPLATETITLE", $title);
-			define("NONTEMPLATEDESC", $desc);
+			define("PAGEID", "photos");
+			define("PAGETITLE", "Photos | Jason Petersen");
+			define("PAGEDESC", "I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.");
 			break;
 		case "experiments":
 			$template=true;
-			$id="experiments";
-			$title="Experiments | Jason Petersen";
-			$desc=$defaultDesc;
+			define("PAGEID", "experiments");
+			define("PAGETITLE", "Experiments | Jason Petersen");
+			define("PAGEDESC", $defaultDesc);
 			break;
 		case "404":
 			$template=true;
-			$id="404";
-			$title=$errorTitle;
-			$desc=$errorDesc;
+			define("PAGEID", "404");
+			define("PAGETITLE", $errorTitle);
+			define("PAGEDESC", $errorDesc);
 			break;
 		default:
 			if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . strtolower($_GET['id']) . '.php')) {
 				$template=true;
-				$id=strtolower($_GET['id']);
-				$title=ucfirst(strtolower($_GET['id'])) . " | Jason Petersen";
-				$desc=$defaultDesc;
+				define("PAGEID", strtolower($_GET['id']));
+				define("PAGETITLE", ucfirst(strtolower($_GET['id'])) . " | Jason Petersen");
+				define("PAGEDESC", $defaultDesc);
 			} else {
 				$template=true;
-				$id="404";
-				$title=$errorTitle;
-				$desc=$errorDesc;
+				define("PAGEID", "404");
+				define("PAGETITLE", $errorTitle);
+				define("PAGEDESC", $errorDesc);
 			}
 			break;
 	}
 }
 
 if ($template == false) {
-	include $_SERVER['DOCUMENT_ROOT'] . '/' . $id . '.php';
+	include $_SERVER['DOCUMENT_ROOT'] . '/' . PAGEID . '.php';
 	exit;
 } else {
-	echo '
-<!DOCTYPE html>
+	echo '<!DOCTYPE html>
 <html lang="en">
 	<head>
 ';
 	include $_SERVER['DOCUMENT_ROOT'] . '/head.php';
-	echo '
-		<title>' . $title . '</title>
-		<meta name="description" content="' . $desc . '">
+	echo '		<title>' . PAGETITLE . '</title>
+		<meta name="description" content="' . PAGEDESC . '">
 	</head>
-	<body id="' . $id . '" class="body-bright">
+	<body id="' . PAGEID . '" class="body-bright">
 ';
 	include $_SERVER['DOCUMENT_ROOT'] . '/top.php';
-	include $_SERVER['DOCUMENT_ROOT'] . '/' . $id . '.php';
+	include $_SERVER['DOCUMENT_ROOT'] . '/' . PAGEID . '.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php';
-	echo '
-	</body>
+	echo '	</body>
 </html>
 ';
 }

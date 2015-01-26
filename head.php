@@ -8,5 +8,16 @@
 		<meta name="author" content="Jason Petersen" />
 		<meta name="keywords" content="web developer, videographer, IT, design" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<?php
+
+if (PAGEID != "blog") {
+	echo '		<meta property="og:title" content="' . PAGETITLE . '" />
+		<meta property="og:description" content="' . PAGEDESC . '" />
+';
+}
+
+?>
+		<meta property="fb:admins" content="8209912" />
+		<meta property="og:url" content="<?php echo ESCAPEDURL; ?>" />
 		<meta property="og:site_name" content="Peterscene" />
 		<meta property="og:image" content="http://peterscene.com/images/banner-V1-large.png" />

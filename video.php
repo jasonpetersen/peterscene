@@ -1,18 +1,11 @@
-<?php
-
-$thisURL =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
 		<link rel="stylesheet" href="/royalslider/royalslider.css">
 		<link rel="stylesheet" href="/royalslider/skins/default/rs-default.css">
-		<title><?php echo NONTEMPLATETITLE; ?></title>
-		<meta name="description" content="<?php echo NONTEMPLATEDESC; ?>">
+		<title><?php echo PAGETITLE; ?></title>
+		<meta name="description" content="<?php echo PAGEDESC; ?>">
 	</head>
 	<body id="video" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
@@ -96,7 +89,7 @@ $escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
 					<h5>Share</h5>
 					<ul class="sideH">
 						<li>
-							<a class="tweet" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" via="JasonPetersen" target="_blank">
+							<a class="tweet" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -104,7 +97,7 @@ $escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
 							</a>
 						</li>
 						<li>
-							<a class="fbShare" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+							<a class="fbShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -112,7 +105,7 @@ $escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
 							</a>
 						</li>
 						<li>
-							<a class="googleShare" title="<?php echo NONTEMPLATETITLE; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+							<a class="googleShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>

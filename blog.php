@@ -4,13 +4,10 @@ $error=false;
 $pageTitleGood="Blog";
 $pageTitleError="Oops!";
 $pageTitleNoEntry="Blog entry not found";
-$pageDescriptionGood="Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.";
+$pageDescriptionGood=PAGEDESC;
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorMajor="<p>Something rather serious has resulted in this error.</p>";
-
-$thisURL =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$escapedURL = htmlspecialchars($thisURL, ENT_QUOTES, 'UTF-8');
 
 $db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 
@@ -163,7 +160,7 @@ if ($error == true) {
 					<h5>Share</h5>
 					<ul class="sideH">
 						<li>
-							<a class="tweet" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" via="JasonPetersen" target="_blank">
+							<a class="tweet" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -171,7 +168,7 @@ if ($error == true) {
 							</a>
 						</li>
 						<li>
-							<a class="fbShare" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+							<a class="fbShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -179,7 +176,7 @@ if ($error == true) {
 							</a>
 						</li>
 						<li>
-							<a class="googleShare" title="<?php echo $thisTitle; ?>" href="http:<?php echo $escapedURL; ?>" target="_blank">
+							<a class="googleShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
@@ -207,9 +204,9 @@ foreach ($blogNav as $level1) {
 		foreach ($level2 as $level3key => $level3) {
 			$postClass = "posts";
 			if (($n == 0) && (BLOGAVENUE == "main")) {
-				$postClass = "posts current";
+				$postClass .= " current";
 			} else if ($_SERVER["REQUEST_URI"] == ("/blog/" . $level3key)) {
-				$postClass = "posts current";
+				$postClass .= " current";
 			}
 			echo '
 										<li class="' . $postClass . '"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
