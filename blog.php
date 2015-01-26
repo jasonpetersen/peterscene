@@ -195,6 +195,7 @@ if ($error == true) {
 					<ul id="blogNav" class="archive_year">
 <?php
 
+$n = 0;
 foreach ($blogNav as $level1) {
 	echo '
 						<li class="years">' . $level1["year"] . '
@@ -204,13 +205,15 @@ foreach ($blogNav as $level1) {
 								<li class="months"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')
 									<ul class="archive_posts">';
 		foreach ($level2 as $level3key => $level3) {
-			if ($_SERVER["REQUEST_URI"] == ("/blog/" . $level3key)) {
-				echo '
-										<li class="posts current"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
-			} else {
-				echo '
-										<li class="posts"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+			$postClass = "posts";
+			if (($n == 0) && (BLOGAVENUE == "main")) {
+				$postClass = "posts current";
+			} else if ($_SERVER["REQUEST_URI"] == ("/blog/" . $level3key)) {
+				$postClass = "posts current";
 			}
+			echo '
+										<li class="' . $postClass . '"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+			$n++;
 		}
 		echo '
 									</ul>

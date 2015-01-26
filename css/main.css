@@ -164,27 +164,40 @@ h6, .h6 {
 	margin-right: 0.3em;
 }
 
-#sidebar #blogNav,
-#sidebar #blogNav ul {
+#blogNav,
+#blogNav ul {
 	list-style-type: none;
 	list-style-position: inside;
 }
 
-#sidebar #blogNav {
+#blogNav {
 	padding: 0;
 }
 
-#sidebar #blogNav ul {
+#blogNav ul {
 	padding: 0;
 	cursor: pointer;
 }
 
-#sidebar #blogNav ul ul {
+#blogNav ul ul {
 	padding-left: 18px;
 }
 
-#sidebar #blogNav .years {
+#blogNav .years {
 	margin-bottom: 1em;
+}
+
+#blogNav .months,
+#blogNav .posts {
+	margin-top: 0.3em;
+}
+
+#blogNav .archive_posts {
+	display: none;
+}
+
+#blogNav .current {
+	font-weight: bold;
 }
 
 .blog-link:link,
