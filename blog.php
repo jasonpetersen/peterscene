@@ -18,7 +18,7 @@ if ($db->connect_errno) {
 	$pageTitle=$pageTitleError;
 	$pageDescription=$pageDescriptionError;
 } else {
-	$sql="SELECT * FROM `" . USERTABLE . "` ORDER BY `" . USERTABLE . "`.`date` DESC";
+	$sql="SELECT * FROM `" . USERTABLE . "` WHERE live=1 ORDER BY `" . USERTABLE . "`.`date` DESC";
 	if (!$result = $db->query($sql)) {
 		$error=true;
 		$errorTechMsg=$db->error;
@@ -124,15 +124,23 @@ if ($error == true) {
 					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
 					' . $b[1] . '
 					<div class="hr-small"></div>
-					<h3>Previous entry:</h3>
-					<a class="blog-link" href="/blog/' . $l[2] . '">
+					<h3>Recent entries:</h3>';
+			$r = 2;
+			while ($r <= 6) {
+				echo '
+					<a class="blog-link" href="/blog/' . $l[$r] . '">
 						<div>
-							<h5>' . $dDisp[2] . '</h5>
-							<h4>' . $t[2] . '</h4>
-							' . $e[2] . '
+							<h5>' . $dDisp[$r] . '</h5>
+							<h4>' . $t[$r] . '</h4>
+							' . $e[$r] . '
 						</div>
-					</a>
-				';
+					</a>';
+				if ($r != 6) {
+					echo '
+					<div class="hr-full"></div>';
+				}
+				$r++;
+			}
 			break;
 		case "entry":
 			$thisTitle = $t[$key];

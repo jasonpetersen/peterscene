@@ -1,12 +1,4 @@
 <?php
-// Report simple running errors
-//error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
-$hostname="localhost";
-$username="jpete13_sql";
-$dbpassword="C@3rlion";
-$dbname="jpete13_blog";
-$usertable="entries";
 
 $serverDate = new DateTime();
 $readableDate = $serverDate->format('Y-m-d');
@@ -83,7 +75,7 @@ if ($_POST["submit"]) {
 
 	// If there are no errors, post the entry
 	if (!$errTitle && !$errTitlelink && !$errBody && !$errExtract && !$errDate && !$errPassword) {
-		$db = new mysqli($hostname, $username, $dbpassword, $dbname);
+		$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 		
 		if ($db->connect_errno) {
 			$result='<div class="alert alert-danger">Error connecting to database: "' . $db->connect_error . '"</div>';
@@ -158,7 +150,7 @@ if ($_POST["submit"]) {
 							<label for="date" class="col-sm-2 control-label">Tags</label>
 							<div class="col-sm-10">
 								<?php
-								$db = new mysqli($hostname, $username, $dbpassword, $dbname);
+								$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 								if ($db->connect_errno) {
 									echo '<p>Could not retrieve tags from database, which does not bode well for this page functioning at all.</p>';
 									exit();

@@ -15,7 +15,7 @@ var main = function() {
     	}
 	});
 	//re-position the leaf to be within the last element of the blog entry
-	$('.leaf').appendTo($( ".leaf" ).prev());
+	$('.leaf').appendTo($('.leaf').prev());
 };
 
 $(document).ready(main);
