@@ -38,7 +38,7 @@ if ($db->connect_errno) {
 				$dDisp = array(1 => date("F j, Y", strtotime($d[1])));
 				$t = array(1 => $row["title"]);
 				$l = array(1 => $row["titlelink"]);
-				$b = array(1 => $row["body"]);
+				$b = array(1 => $row["body"] . '<i class="leaf"></i>');
 				$e = array(1 => $row["extract"]);
 				$blogNav = array();
 				$blogNav[$currYear] = array("year" => $dY[1]);
@@ -51,7 +51,7 @@ if ($db->connect_errno) {
 				$dDisp[] = date("F j, Y", strtotime($d[$i]));
 				$t[] = $row["title"];
 				$l[] = $row["titlelink"];
-				$b[] = $row["body"];
+				$b[] = $row["body"] . '<i class="leaf"></i>';
 				$e[] = $row["extract"];
 				if ($dY[$i] != $blogNav[$currYear]["year"]) {
 					$currYear++;

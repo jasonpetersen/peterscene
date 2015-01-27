@@ -14,6 +14,8 @@ var main = function() {
     		$(this).find('i').addClass('fa-plus-square-o');
     	}
 	});
+	//re-position the leaf to be within the last element of the blog entry
+	$('.leaf').appendTo($( ".leaf" ).prev());
 };
 
 $(document).ready(main);

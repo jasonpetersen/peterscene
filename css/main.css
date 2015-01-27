@@ -311,12 +311,6 @@ h6, .h6 {
 	background-repeat: no-repeat;
 }
 
-.fb-share-button,
-.twitter-share-button {
-	display: inline-block;
-	float: left;
-}
-
 .red {
 	background-color: #d9534f;
 }
@@ -353,6 +347,15 @@ h6, .h6 {
 .spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+.leaf {
+	display: inline-block;
+	margin-left: 0.5em;
+	width: 30px;
+	height: 17px;
+	background: url(/images/leaf.svg);
+	background-size: 30px 17px;
+}
 
 #video-gallery {
 	width: 100%;
