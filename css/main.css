@@ -145,23 +145,46 @@ h6, .h6 {
 	margin: 10px 0;
 }
 
+#sidebar {
+	font-size: 14px;
+}
+
+#sidebar div {
+	margin-bottom: 0.8em;
+	padding: 5px;
+}
+
 #sidebar h5 {
-	font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+#sidebar p {
+	padding: 0;
+	margin: 0;
+	line-height: 200%;
 }
 
 #sidebar .sideH,
 #sidebar .sideV {
 	list-style-type: none;
 	list-style-position: inside;
-	margin: 0 0 1em 0;
 	padding: 0;
+	margin: 0;
+}
+
+#sidebar .sideV li {
+	margin-top: 0.3em;
 }
 
 #sidebar .sideH li {
 	display: inline-block;
 	margin-right: 0.3em;
+}
+
+#sidebar #blogBox {
+	background-color: #faf3f3;
+	display: inline-block;
 }
 
 #blogNav,
@@ -180,7 +203,7 @@ h6, .h6 {
 }
 
 #blogNav ul ul {
-	padding-left: 18px;
+	padding-left: 22px;
 }
 
 #blogNav .years {
@@ -189,7 +212,7 @@ h6, .h6 {
 
 #blogNav .months,
 #blogNav .posts {
-	margin-top: 0.3em;
+	margin-top: 0.5em;
 }
 
 #blogNav .archive_posts {
@@ -210,6 +233,10 @@ h6, .h6 {
 .blog-link:active {
 	color: #7c2324;
 	text-decoration: none;
+}
+
+.blog-link p {
+	font-size: 14px;
 }
 
 .spacious0 p {

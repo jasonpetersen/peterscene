@@ -84,23 +84,28 @@
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
-					<p><img src="/images/prague.jpg" alt="Prague metro" class="img-circle" width="100" height="100"></p>
-					<div class="spacer10"></div>
-					<h5>My Flickr page</h5>
-					<ul class="sideV">
-						<li>
-							<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
-							<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
-						</li>
-						<li>
-							<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen/sets/" target="_blank">Albums <i class="fa fa-external-link"></i></a>
-							<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen/sets/" target="_blank">Albums <i class="fa fa-external-link"></i></a>
-						</li>
-					</ul>
-					<h5>Connect</h5>
-					<ul class="sideV">
-						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
-					</ul>
+					<div>
+						<img src="/images/prague.jpg" alt="Prague metro" class="img-circle" width="100" height="100">
+					</div>
+					<div>
+						<h5>My Flickr page</h5>
+						<ul class="sideV">
+							<li>
+								<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
+								<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
+							</li>
+							<li>
+								<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen/sets/" target="_blank">Albums <i class="fa fa-external-link"></i></a>
+								<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen/sets/" target="_blank">Albums <i class="fa fa-external-link"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5>Connect</h5>
+						<ul class="sideV">
+							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

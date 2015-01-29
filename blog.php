@@ -132,7 +132,7 @@ if ($error == true) {
 						<div>
 							<h5>' . $dDisp[$r] . '</h5>
 							<h4>' . $t[$r] . '</h4>
-							' . $e[$r] . '
+							<p>' . $e[$r] . '</p>
 						</div>
 					</a>';
 				if ($r != 6) {
@@ -161,54 +161,62 @@ if ($error == true) {
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
-					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
-					<div class="spacer10"></div>
-					<h5>About</h5>
-					<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
+					<div>
+						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100">
+					</div>
+					<div>
+						<h5>About</h5>
+						<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
+					</div>
+					<div>
 					<h5>Share</h5>
-					<ul class="sideH">
-						<li>
-							<a class="tweet" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a class="fbShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a class="googleShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-					</ul>
-					<h5>Connect</h5>
-					<ul class="sideV">
-						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
-					</ul>
+						<ul class="sideH">
+							<li>
+								<a class="tweet" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="fbShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="googleShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5>Connect</h5>
+						<ul class="sideV">
+							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+						</ul>
+					</div>
+					<div>
 					<h5>All Entries</h5>
-					<ul id="blogNav" class="archive_year">
+						<ul id="blogNav" class="archive_year">
 <?php
 
 $n = 0;
 foreach ($blogNav as $level1) {
 	echo '
-						<li class="years">' . $level1["year"] . '
-							<ul class="archive_month">';
+							<li class="years">' . $level1["year"] . '
+								<ul class="archive_month">';
 	foreach ($level1["months"] as $level2key => $level2) {
 		echo '
-								<li class="months"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')
-									<ul class="archive_posts">';
+									<li class="months"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')
+										<ul class="archive_posts">';
 		foreach ($level2 as $level3key => $level3) {
 			$postClass = "posts";
 			if (($n == 0) && (BLOGAVENUE == "main")) {
@@ -217,21 +225,22 @@ foreach ($blogNav as $level1) {
 				$postClass .= " current";
 			}
 			echo '
-										<li class="' . $postClass . '"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
+											<li class="' . $postClass . '"><a href="/blog/' . $level3key . '">' . $level3 . '</a></li>';
 			$n++;
 		}
 		echo '
-									</ul>
-								</li>';
+										</ul>
+									</li>';
 	}
 	echo '
-							</ul>
-						</li>
+								</ul>
+							</li>
 ';
 }
 
 ?>
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

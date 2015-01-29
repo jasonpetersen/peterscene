@@ -22,7 +22,7 @@
                             <div class="rsCaption spacious2">
 								<h3>Torma (2014)</h3>
 								<p>I spent much of 2014 working on <span class="ital">Torma</span>, first as an editor, and later, when post-production moved to Thailand, as an Associate Producer and Technical Consultant. I was one of three people in the editing room shaping the film into its final form.</p>
-								<p>You can see my work most directly in the opening and closing animations, done in After Effects. I also spent considerable time agonizing over the many frame rate conversion processes needed to make this footage presentable (the production has a storied history going back to 2008, with multiple DPs and cameras involved). In terms of storytelling, if you're not familiar with Tibetan Buddhism and nonetheless find this film accessible, I fought for that.</p>
+								<p>You can see my work most directly in the opening and closing animations, done in After Effects. I also spent considerable time agonizing over the many frame rate conversion processes needed to make this footage presentable (the production has a long history, with multiple DPs and cameras involved). In terms of storytelling, I lobbied for more accessibility for casual viewers. It was a tough balancing act!</p>
 								<p>I did the DVD authoring, as well as the encode for Vimeo. Everything you need to know about seeing this film can be found at the official website, <span class="bold">tormafilm.com</span>.</p>
 								<p>I remain involved in distribution on an ongoing basis.</p>
                             </div>
@@ -80,43 +80,50 @@
 					<div class="hr-small visible-xs visible-sm"></div>
 				</div>
 				<div id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
-					<p><img src="/images/kubrick.jpg" alt="Kubrick" class="img-circle" width="100" height="100"></p>
-					<div class="spacer10"></div>
-					<h5>More Resources</h5>
-					<ul class="sideV">
-						<li><a href="https://www.youtube.com/user/jpetersen13/videos" target="_blank">YouTube Channel <i class="fa fa-external-link"></i></a></li>
-					</ul>
-					<h5>Share</h5>
-					<ul class="sideH">
-						<li>
-							<a class="tweet" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a class="fbShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a class="googleShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-								</span>
-							</a>
-						</li>
-					</ul>
-					<h5>Connect</h5>
-					<ul class="sideV">
-						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
-					</ul>
+					<div>
+						<img src="/images/kubrick.jpg" alt="Kubrick" class="img-circle" width="100" height="100">
+					</div>
+					<div>
+						<h5>More Resources</h5>
+						<ul class="sideV">
+							<li><a href="https://www.youtube.com/user/jpetersen13/videos" target="_blank">YouTube Channel <i class="fa fa-external-link"></i></a></li>
+						</ul>
+					</div>
+					<div>
+						<h5>Share</h5>
+						<ul class="sideH">
+							<li>
+								<a class="tweet" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="fbShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="googleShare" title="<?php echo NONTEMPLATETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5>Connect</h5>
+						<ul class="sideV">
+							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

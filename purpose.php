@@ -1,7 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
-					<h5>Edited January 9, 2015</h5>
+					<h5>Edited January 29, 2015</h5>
 					<br />
 					<h3>In a nutshell</h3>
 					<p>This website is a personal solution to an identity crisis endemic to the evolving internet. It also advertises me, the things I do, and the services I offer.</p>
@@ -30,7 +30,7 @@
 					<h3>And we arrive at...</h3>
 					<p>Peterscene. I call it a "residence" on the homepage because that's what it is to me: it's my online residence, workplace, and showcase for all the varied things I do.</p>
 					<p>The internet is not a desert anymore&mdash;it's a jungle. But here at my own website, I can rest. I can be comfortable. I can be myself&mdash;my whole self. As much as this medium is capable of conveying.</p>
-					<p>Responsive design was the earliest consideration. I opted against using a CMS; if I was going to do this at all, I wanted a site that I had as much control of as possible. There is only <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a> under the hood. I also rely on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a> for its many useful features.</p>
+					<p>Responsive design was the earliest consideration. I opted against using a CMS; if I was going to do this at all, I wanted a site that I had as much control of as possible. I built this house on commonplace frameworks <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>, as well as several plugins for my Photo and Video pages&mdash;<a href="https://github.com/blueimp/Bootstrap-Image-Gallery" target="_blank">Bootstrap Image Gallery</a> and <a href="http://dimsemenov.com/plugins/royal-slider/" target="_blank">Royal Slider</a>, respectively. Both are elegant solutions that would have taken me considerable time to program myself. I also rely on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a> for its many useful features.</p>
 					<p>I aimed for an uncluttered, simplistic aesthetic, which I spent no small amount of time agonizing over. I hope you find it to be a welcome change of pace from the wider internet.</p>
 					<h3>Gratitude</h3>
 					<p>My friend and once-coworker Aaron Grando has a <a href="http://gran.do" target="_blank">beautiful personal website</a>, which was a great inspiration to me from a design perspective, but it was his ideas that influenced me the most. You'll find a lot of it echoed here, dangerously close to plagiarism in the broad strokes. He found his voice before I did, as did his inspiration, <a href="http://frankchimero.com/" target="_blank">Frank Chimero</a>, before him. I am indebted to both.</p>
@@ -38,16 +38,19 @@
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
-					<p><img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100"></p>
-					<div class="spacer10"></div>
-					<h5>About</h5>
-					<ul class="sideV">
-						<li><?php echo STOCKPLUG; ?></li>
-					</ul>
-					<h5>Connect</h5>
-					<ul class="sideV">
-						<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
-					</ul>
+					<div>
+						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100">
+					</div>
+					<div>
+						<h5>About</h5>
+						<p><?php echo STOCKPLUG; ?></p>
+					</div>
+					<div>
+						<h5>Connect</h5>
+						<ul class="sideV">
+							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
