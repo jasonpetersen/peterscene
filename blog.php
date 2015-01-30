@@ -110,8 +110,7 @@ $db->close();
 <?php
 
 if ($error == true) {
-	echo '
-					' . $errorDisplayMsg . '
+	echo '					' . $errorDisplayMsg . '
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
 					<a class="btn btn-default" href="/" role="button">Homepage</a>
 	';
@@ -119,8 +118,7 @@ if ($error == true) {
 	switch (BLOGAVENUE) {
 		case "main":
 			$thisTitle = $t[1];
-			echo '
-					<h5>' . $dDisp[1] . '</h5>
+			echo '					<h5>' . $dDisp[1] . '</h5>
 					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
 					' . $b[1] . '
 					<div class="hr-small"></div>
@@ -144,8 +142,7 @@ if ($error == true) {
 			break;
 		case "entry":
 			$thisTitle = $t[$key];
-			echo '
-					<h5>' . $dDisp[$key] . '</h5>
+			echo '					<h5>' . $dDisp[$key] . '</h5>
 					<h2>' . $t[$key]  . '</h2>
 					' . $b[$key] . '
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
