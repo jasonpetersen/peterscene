@@ -1,7 +1,8 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="hr-banner-footer"></div>
-				<p>&copy; 2015 Jason Petersen</p>
+				<span>&copy; 2015 Jason Petersen</span>
+				<span class="backToTop"><a href="#"><i class="fa fa-arrow-up"></i>&nbsp;Top</a></span>
 			</div>
 		</footer>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

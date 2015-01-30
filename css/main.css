@@ -141,8 +141,17 @@ h6, .h6 {
 	height: 95px;/* Set the fixed height of the footer here - must correspond to body margin */
 }
 
-.footer p {
-	margin: 10px 0;
+.footer span {
+	display: inline-block;
+}
+
+.footer .backToTop {
+	float: right;
+	display: none;
+}
+
+.footer .backToTop a {
+	text-decoration: none;
 }
 
 #sidebar {
@@ -151,7 +160,6 @@ h6, .h6 {
 
 #sidebar div {
 	margin-bottom: 0.8em;
-	padding: 5px;
 }
 
 #sidebar h5 {
@@ -185,6 +193,7 @@ h6, .h6 {
 #sidebar #blogBox {
 	background-color: #faf3f3;
 	display: inline-block;
+	padding: 5px;
 }
 
 #blogNav,
