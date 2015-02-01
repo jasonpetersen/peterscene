@@ -196,6 +196,21 @@ h6, .h6 {
 	padding: 5px;
 }
 
+#sidebar .collapse-all,
+#sidebar .expand-all {
+	cursor: pointer;
+}
+
+#sidebar .collapse-all {
+	padding-left: 6px;
+	padding-right: 3px;
+}
+
+#sidebar .expand-all {
+	padding-left: 3px;
+	padding-right: 6px;
+}
+
 #blogNav,
 #blogNav ul {
 	list-style-type: none;
@@ -208,7 +223,6 @@ h6, .h6 {
 
 #blogNav ul {
 	padding: 0;
-	cursor: pointer;
 }
 
 #blogNav ul ul {
@@ -222,6 +236,10 @@ h6, .h6 {
 #blogNav .months,
 #blogNav .posts {
 	margin-top: 0.5em;
+}
+
+#blogNav .mClick {
+	cursor: pointer;
 }
 
 #blogNav .archive_posts {

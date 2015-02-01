@@ -201,7 +201,7 @@ if ($error == true) {
 						</ul>
 					</div>
 					<div>
-					<h5>All Entries</h5>
+					<h5>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h5>
 						<ul id="blogNav" class="archive_year">
 <?php
 
@@ -212,7 +212,7 @@ foreach ($blogNav as $level1) {
 								<ul class="archive_month">';
 	foreach ($level1["months"] as $level2key => $level2) {
 		echo '
-									<li class="months"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')
+									<li class="months"><span class="mClick"><i class="fa fa-plus-square-o"></i> ' . $level2key . ' (' . count($level2) . ')</span>
 										<ul class="archive_posts">';
 		foreach ($level2 as $level3key => $level3) {
 			$postClass = "posts";
