@@ -15,7 +15,8 @@ define("HOSTNAME", "localhost");
 define("USERNAME", "jpete13_sql");
 define("DBPASSWORD", "C@3rlion");
 define("DBNAME", "jpete13_blog");
-define("USERTABLE", "entries");
+define("USERTABLE1", "entries");
+define("USERTABLE2", "tags");
 
 $mainTitle="The online residence of Jason Petersen";
 $defaultDesc="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.";

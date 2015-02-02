@@ -62,6 +62,10 @@ h6, .h6 {
     font-style: italic;
 }
 
+.smaller {
+	font-size: 90%;
+}
+
 .hr-full,
 .hr-banner-footer {
 	background: #eeeeee;
@@ -191,7 +195,7 @@ h6, .h6 {
 }
 
 #sidebar #blogBox {
-	background-color: #faf3f3;
+	background-color: #fbf5f5;
 	display: inline-block;
 	padding: 5px;
 }

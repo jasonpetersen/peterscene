@@ -17,7 +17,7 @@
 $db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 
 if (!$db->connect_errno) {
-	$sql="SELECT * FROM `" . USERTABLE . "` WHERE live=1 ORDER BY `" . USERTABLE . "`.`date` DESC LIMIT 1";
+	$sql="SELECT * FROM `" . USERTABLE1 . "` WHERE live=1 ORDER BY `" . USERTABLE1 . "`.`date` DESC LIMIT 1";
 	if ($result = $db->query($sql)) {
 		while ($row = $result->fetch_assoc()) {
 			echo '

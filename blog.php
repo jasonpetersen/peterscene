@@ -4,10 +4,33 @@ $error=false;
 $pageTitleGood="Blog";
 $pageTitleError="Oops!";
 $pageTitleNoEntry="Blog entry not found";
+$pageTitleNoTag="Tag not found";
 $pageDescriptionGood=PAGEDESC;
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
+$bodyErrorNoTag="<p>Tag not found.</p>";
 $bodyErrorMajor="<p>Something rather serious has resulted in this error.</p>";
+
+function createTagText($tagString) {
+	if ($tagString != "") {
+		global $tags;
+		$tagArray = explode(",", $tagString);
+		$entryTags = '<p class="smaller bold">Tags: ';
+		$c = 1;
+		foreach ($tagArray as $tagKey => $tagValue) {
+			$entryTags .= '<a href="/blog/tag/' . strtolower($tags[$tagValue]) . '">' . $tags[$tagValue] . '</a>';
+			if ($c != count($tagArray)) {
+				$entryTags .= ', ';
+			} else {
+				$entryTags .= '</p>';
+			}
+			$c++;
+		}
+	} else {
+		$entryTags = false;
+	}
+	return $entryTags;
+}
 
 $db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
 
@@ -18,8 +41,16 @@ if ($db->connect_errno) {
 	$pageTitle=$pageTitleError;
 	$pageDescription=$pageDescriptionError;
 } else {
-	$sql="SELECT * FROM `" . USERTABLE . "` WHERE live=1 ORDER BY `" . USERTABLE . "`.`date` DESC";
-	if (!$result = $db->query($sql)) {
+	$sqlEntries="SELECT * FROM `" . USERTABLE1 . "` WHERE live=1 ORDER BY `" . USERTABLE1 . "`.`date` DESC";
+	$sqlTags="SELECT * FROM `" . USERTABLE2 . "` ORDER BY `" . USERTABLE2 . "`.`id` ASC";
+	if ($result = $db->query($sqlTags)) {
+		$tags = array();
+		$tags[] = NULL;
+		while ($row = $result->fetch_assoc()) {
+			$tags[] = $row["name"];
+		}
+	}
+	if (!$result = $db->query($sqlEntries)) {
 		$error=true;
 		$errorTechMsg=$db->error;
 		$errorDisplayMsg=$bodyErrorMajor;
@@ -27,56 +58,39 @@ if ($db->connect_errno) {
 		$pageDescription=$pageDescriptionError;
 		break;
 	} else {
-		$i = 0;
-		$currYear = 1;
+		$currYear = 0;
+		$c = 1;
 		while ($row = $result->fetch_assoc()) {
-			$i++;
-			if ($i == 1) {
-				$d = array(1 => $row["date"]);
-				$dY = array(1 => date("Y", strtotime($d[1])));
-				$dM = array(1 => date("F", strtotime($d[1])));
-				$dDisp = array(1 => date("F j, Y", strtotime($d[1])));
-				$t = array(1 => $row["title"]);
-				$l = array(1 => $row["titlelink"]);
-				$b = array(1 => $row["body"] . '<i class="leaf"></i>');
-				$e = array(1 => $row["extract"]);
-				$blogNav = array();
-				$blogNav[$currYear] = array("year" => $dY[1]);
-				$blogNav[$currYear]["months"] = array();
-				$blogNav[$currYear]["months"][$dM[1]] = array($l[1] => $t[1]);
-			} else {
-				$d[] = $row["date"];
-				$dY[] = date("Y", strtotime($d[$i]));
-				$dM[] = date("F", strtotime($d[$i]));
-				$dDisp[] = date("F j, Y", strtotime($d[$i]));
-				$t[] = $row["title"];
-				$l[] = $row["titlelink"];
-				$b[] = $row["body"] . '<i class="leaf"></i>';
-				$e[] = $row["extract"];
-				if ($dY[$i] != $blogNav[$currYear]["year"]) {
-					$currYear++;
-					$blogNav[$currYear] = array("year" => $dY[$i]);
-					$blogNav[$currYear]["months"] = array();
-					$blogNav[$currYear]["months"][$dM[$i]] = array($l[$i] => $t[$i]);
-				} else {
-					if (!array_key_exists($dM[$i], $blogNav[$currYear]["months"])) {
-						$blogNav[$currYear]["months"][$dM[$i]] = array($l[$i] => $t[$i]);
-					} else {
-						$blogNav[$currYear]["months"][$dM[$i]][$l[$i]] = $t[$i];
-					}
-				}
+			$x = $row["id"];
+			$i[$x] = $o[$c] = $x;
+			$d[$x] = $row["date"];
+			$dY[$x] = date("Y", strtotime($d[$x]));
+			$dM[$x] = date("F", strtotime($d[$x]));
+			$dDisp[$x] = date("F j, Y", strtotime($d[$x]));
+			$t[$x] = $row["title"];
+			$l[$x] = $row["titlelink"];
+			$b[$x] = $row["body"] . '<i class="leaf"></i>';
+			$e[$x] = $row["extract"];
+			$g[$x] = $row["tags"];
+			if ($dY[$x] != $blogNav[$currYear]["year"]) {
+				$currYear++;
+				$blogNav[$currYear]["year"]  = $dY[$x];
 			}
+			$blogNav[$currYear]["months"][$dM[$x]][$l[$x]] = $t[$x];
+			$c++;
 		}
 		switch (BLOGAVENUE) {
 			case "main":
 				$pageTitle=$pageTitleGood;
 				$pageDescription=$pageDescriptionGood;
+				$thisTitle=$t[$o[1]];
 				break;
 			case "entry":
 				if (in_array(BLOGENTRY, $l)) {
-					$key = array_search(BLOGENTRY, $l);
+					$key=array_search(BLOGENTRY, $l);
 					$pageTitle=$t[$key];
 					$pageDescription=$e[$key];
+					$thisTitle=$t[$key];
 				} else {
 					$error=true;
 					$errorDisplayMsg=$bodyErrorNoEntry;
@@ -85,7 +99,23 @@ if ($db->connect_errno) {
 				}
 				break;
 			case "tag":
-				//
+				if (in_array(ucfirst(BLOGTAG), $tags)) {
+					$key=array_search(ucfirst(BLOGTAG), $tags);
+					$pageTitle=ucfirst(BLOGTAG);
+					$pageDescription=$pageDescriptionGood;
+					foreach ($g as $k => $v) {
+						foreach (explode(",", $v) as $tagKey => $tagValue) {
+							if ($key == $tagValue) {
+								$tagMatch[] = $k;
+							}
+						}
+					}
+				} else {
+					$error=true;
+					$errorDisplayMsg=$bodyErrorNoTag;
+					$pageTitle=$pageTitleNoTag;
+					$pageDescription=$pageDescriptionError;
+				}
 				break;
 		}
 	}
@@ -111,26 +141,27 @@ $db->close();
 
 if ($error == true) {
 	echo '					' . $errorDisplayMsg . '
+					<div class="spacer10"></div>
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
 					<a class="btn btn-default" href="/" role="button">Homepage</a>
 	';
 } else {
 	switch (BLOGAVENUE) {
 		case "main":
-			$thisTitle = $t[1];
-			echo '					<h5>' . $dDisp[1] . '</h5>
-					<a class="blog-link" href="/blog/' . $l[1] . '"><h2>' . $t[1] . '</h2></a>
-					' . $b[1] . '
+			echo '					<h5>' . $dDisp[$o[1]] . '</h5>
+					<a class="blog-link" href="/blog/' . $l[$o[1]] . '"><h2>' . $t[$o[1]] . '</h2></a>
+					' . $b[$o[1]] . '
+					' . createTagText($g[$o[1]]) . '
 					<div class="hr-small"></div>
 					<h3>Recent entries:</h3>';
 			$r = 2;
 			while ($r <= 6) {
 				echo '
-					<a class="blog-link" href="/blog/' . $l[$r] . '">
+					<a class="blog-link" href="/blog/' . $l[$o[$r]] . '">
 						<div>
-							<h5>' . $dDisp[$r] . '</h5>
-							<h4>' . $t[$r] . '</h4>
-							<p>' . $e[$r] . '</p>
+							<h5>' . $dDisp[$o[$r]] . '</h5>
+							<h4>' . $t[$o[$r]] . '</h4>
+							<p>' . $e[$o[$r]] . '</p>
 						</div>
 					</a>';
 				if ($r != 6) {
@@ -141,15 +172,38 @@ if ($error == true) {
 			}
 			break;
 		case "entry":
-			$thisTitle = $t[$key];
 			echo '					<h5>' . $dDisp[$key] . '</h5>
 					<h2>' . $t[$key]  . '</h2>
 					' . $b[$key] . '
+					' . createTagText($g[$key]) . '
+					<div class="spacer10"></div>
 					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
 			';
 			break;
 		case "tag":
-			//
+			echo '
+					<p>Blog entries matching the tag &ldquo;<span class="bold">' . ucfirst(BLOGTAG) . '</span>&rdquo;:</p>
+					<div class="hr-small"></div>';
+			$r = 1;
+			foreach ($tagMatch as $k => $v) {
+				echo '
+					<a class="blog-link" href="/blog/' . $l[$v] . '">
+						<div>
+							<h5>' . $dDisp[$v] . '</h5>
+							<h4>' . $t[$v] . '</h4>
+							<p>' . $e[$v] . '</p>
+						</div>
+					</a>';
+				if ($r < count($tagMatch)) {
+					echo '
+					<div class="hr-full"></div>';
+				}
+				$r++;
+			}
+			echo '
+					<div class="spacer10"></div>
+					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
+			';
 			break;
 	}
 }

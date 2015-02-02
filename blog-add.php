@@ -80,7 +80,7 @@ if ($_POST["submit"]) {
 		if ($db->connect_errno) {
 			$result='<div class="alert alert-danger">Error connecting to database: "' . $db->connect_error . '"</div>';
 		} else {
-			$sql = "INSERT INTO `" . DBNAME . "`.`" . USERTABLE . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $title . "', '" . $titlelink . "', '" . $body . "', '" . $extract . "', " . $live . ")";
+			$sql = "INSERT INTO `" . DBNAME . "`.`" . USERTABLE1 . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $title . "', '" . $titlelink . "', '" . $body . "', '" . $extract . "', " . $live . ")";
 			if (!$result = $db->query($sql)) {
 				$result='<div class="alert alert-danger">Error with SQL syntax: "' . $db->error . '"</div>';
 			} else {
