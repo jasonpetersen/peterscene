@@ -1,3 +1,15 @@
+### Do only if the environmental variables module is installed
+<IfModule mod_setenvif.c>
+
+### Set spammers referral as spambot
+SetEnvIfNoCase Referer darodar.com spambot=yes
+
+Order allow,deny
+Allow from all
+Deny from env=spambot
+
+</IfModule>
+
 ### Do only if rewrite is installed
 <IfModule mod_rewrite.c>
 
