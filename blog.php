@@ -83,14 +83,12 @@ if ($db->connect_errno) {
 			case "main":
 				$pageTitle=$pageTitleGood;
 				$pageDescription=$pageDescriptionGood;
-				$thisTitle=$t[$o[1]];
 				break;
 			case "entry":
 				if (in_array(BLOGENTRY, $l)) {
 					$key=array_search(BLOGENTRY, $l);
 					$pageTitle=$t[$key];
 					$pageDescription=$e[$key];
-					$thisTitle=$t[$key];
 				} else {
 					$error=true;
 					$errorDisplayMsg=$bodyErrorNoEntry;
@@ -219,11 +217,11 @@ if ($error == true) {
 						<h5>About</h5>
 						<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
 					</div>
-					<div>
-					<h5>Share</h5>
+					<div class="share">
+						<h5>Share</h5>
 						<ul class="sideH">
 							<li>
-								<a class="tweet" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
+								<a class="tweet" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -231,7 +229,7 @@ if ($error == true) {
 								</a>
 							</li>
 							<li>
-								<a class="fbShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="fbShare" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -239,7 +237,7 @@ if ($error == true) {
 								</a>
 							</li>
 							<li>
-								<a class="googleShare" title="<?php echo $thisTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="googleShare" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
@@ -299,5 +297,10 @@ foreach ($blogNav as $level1) {
 	<!-- additional JS goes here -->
 	<script src="/js/blog.js"></script>
 	<script src="/js/share.js"></script>
+	<script>
+		if (<?php echo $error; ?> == true) {
+			$('.share').hide();
+		}
+	</script>
 	</body>
 </html>

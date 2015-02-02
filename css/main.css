@@ -66,6 +66,10 @@ h6, .h6 {
 	font-size: 90%;
 }
 
+.hide {
+	display: none;
+}
+
 .hr-full,
 .hr-banner-footer {
 	background: #eeeeee;

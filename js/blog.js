@@ -5,7 +5,7 @@ var main = function() {
     $('.current').parent().show();
     $('.current').parent().parent().find('i').removeClass('fa-plus-square-o');
     $('.current').parent().parent().find('i').addClass('fa-minus-square-o');
-    //make the clicking work
+    //make the all entries clicking work
 	$('.mClick').click(function() {
     	$(this).parent().find('ul').toggle();
     	if ($(this).find('i').hasClass('fa-plus-square-o')) {
@@ -16,7 +16,7 @@ var main = function() {
     		$(this).find('i').addClass('fa-plus-square-o');
     	}
 	});
-    //make the clicking the expand all/collapse all buttons work
+    //make the expand all/collapse all buttons work
     $('.collapse-all').click(function() {
         $('.archive_posts').hide();
         $('.mClick').find('i').removeClass('fa-minus-square-o');
