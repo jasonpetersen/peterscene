@@ -138,7 +138,8 @@ h6, .h6 {
 #portfolio .logline,
 #video .logline,
 #photos .logline,
-#experiments .logline {
+#experiments .logline,
+#error .logline {
     display: none;
 }
 

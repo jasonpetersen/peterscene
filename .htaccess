@@ -44,6 +44,9 @@ RewriteRule ^blog/tag/([a-zA-Z0-9_-]+)$ /index.php?id=blog&tag=$1 [L,QSA]
 ### Rewrite blog entry
 RewriteRule ^blog/([a-zA-Z0-9_-]+)$ /index.php?id=blog&entry=$1 [L,QSA]
 
+### Rewrite experiments
+RewriteRule ^experiments/([a-zA-Z0-9_-]+)$ /index.php?id=experiments&route=$1 [L,QSA]
+
 ### Rewrite anything else
 RewriteRule ^([a-zA-Z0-9_-]+)$ /index.php?id=$1 [L,QSA]
 

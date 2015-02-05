@@ -253,7 +253,7 @@ if ($error == true) {
 						</ul>
 					</div>
 					<div>
-					<h5>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h5>
+						<h5>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h5>
 						<ul id="blogNav" class="archive_year">
 <?php
 
