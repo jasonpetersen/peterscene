@@ -214,11 +214,11 @@ if ($error == true) {
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100">
 					</div>
 					<div>
-						<h5>About</h5>
+						<h4>About</h4>
 						<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
 					</div>
 					<div class="share">
-						<h5>Share</h5>
+						<h4>Share</h4>
 						<ul class="sideH">
 							<li>
 								<a class="tweet" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
@@ -247,13 +247,13 @@ if ($error == true) {
 						</ul>
 					</div>
 					<div>
-						<h5>Connect</h5>
+						<h4>Connect</h4>
 						<ul class="sideV">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
 					</div>
 					<div>
-						<h5>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h5>
+						<h4>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h4>
 						<ul id="blogNav" class="archive_year">
 <?php
 

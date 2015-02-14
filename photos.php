@@ -88,7 +88,7 @@
 						<img src="/images/prague.jpg" alt="Prague metro" class="img-circle" width="100" height="100">
 					</div>
 					<div>
-						<h5>My Flickr page</h5>
+						<h4>My Flickr page</h4>
 						<ul class="sideV">
 							<li>
 								<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Photostream <i class="fa fa-external-link"></i></a>
@@ -101,7 +101,7 @@
 						</ul>
 					</div>
 					<div>
-						<h5>Connect</h5>
+						<h4>Connect</h4>
 						<ul class="sideV">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>

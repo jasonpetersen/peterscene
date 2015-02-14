@@ -22,7 +22,7 @@ if (!$db->connect_errno) {
 		while ($row = $result->fetch_assoc()) {
 			echo '
 					<div id="blogBox" class="hidden-xs">
-						<h5>Latest Blog Entry</h5>
+						<h4>Latest Blog Entry</h4>
 						<ul class="sideV">
 							<li><span class="ital">' . date("F j, Y", strtotime($row["date"])) . '</span></li>
 							<li><a href="/blog">' . $row["title"] . '</a></li>
@@ -36,14 +36,14 @@ $db->close();
 
 ?>
 					<div>
-						<h5>Work</h5>
+						<h4>Work</h4>
 						<ul class="sideV">
 							<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600, scrollbars=yes'); return false;">Full CV</a></li>
 							<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub <i class="fa fa-external-link"></i></a></li>
 						</ul>
 					</div>
 					<div>
-						<h5>Social</h5>
+						<h4>Social</h4>
 						<ul class="sideV">
 							<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn <i class="fa fa-external-link"></i></a></li>
 							<li>
@@ -54,7 +54,7 @@ $db->close();
 						</ul>
 					</div>
 					<div>
-						<h5>Contact</h5>
+						<h4>Contact</h4>
 						<ul class="sideV">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>

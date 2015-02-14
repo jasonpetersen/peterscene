@@ -84,13 +84,13 @@
 						<img src="/images/kubrick.jpg" alt="Kubrick" class="img-circle" width="100" height="100">
 					</div>
 					<div>
-						<h5>More Resources</h5>
+						<h4>More Resources</h4>
 						<ul class="sideV">
 							<li><a href="https://www.youtube.com/user/jpetersen13/videos" target="_blank">YouTube Channel <i class="fa fa-external-link"></i></a></li>
 						</ul>
 					</div>
 					<div>
-						<h5>Share</h5>
+						<h4>Share</h4>
 						<ul class="sideH">
 							<li>
 								<a class="tweet" title="<?php echo PAGETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
@@ -119,7 +119,7 @@
 						</ul>
 					</div>
 					<div>
-						<h5>Connect</h5>
+						<h4>Connect</h4>
 						<ul class="sideV">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>

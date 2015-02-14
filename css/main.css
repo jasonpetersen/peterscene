@@ -51,7 +51,17 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
 	margin-top: 0;
-	margin-bottom: 1em;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+	font-weight: bold;
+}
+
+h5, .h5 {
+	font-style: italic;
 }
 
 .bold {
@@ -66,6 +76,11 @@ h6, .h6 {
 	font-size: 90%;
 }
 
+.tight {
+	margin: 0 0 0.2em 0;
+	padding: 0;
+}
+
 .hide {
 	display: none;
 }
@@ -74,6 +89,12 @@ h6, .h6 {
 .hr-banner-footer {
 	background: #eeeeee;
 	height: 1px;
+	margin: 20px 0;
+}
+
+.hr-full-dashed {
+	border: 0;
+	border-bottom: 1px dashed #eee;
 	margin: 20px 0;
 }
 
@@ -171,8 +192,8 @@ h6, .h6 {
 	margin-bottom: 0.8em;
 }
 
-#sidebar h5 {
-    font-weight: bold;
+#sidebar h4 {
+	font-size: 100%;
     text-transform: uppercase;
 }
 
@@ -275,13 +296,28 @@ h6, .h6 {
 	font-size: 14px;
 }
 
-.spacious0 p {
+.spacious0 p,
+.spacious0 h1, .spacious0 .h1,
+.spacious0 h2, .spacious0 .h2,
+.spacious0 h3, .spacious0 .h3,
+.spacious0 h4, .spacious0 .h4,
+.spacious0 h5, .spacious0 .h5,
+.spacious0 h6, .spacious0 .h6 {
 	margin: 0;
 }
 
 .spacious1 p {
 	line-height: 150%;
-	margin-bottom: 1em;
+	margin-bottom: 0.7em;
+}
+
+.spacious1 h1, .spacious1 .h1,
+.spacious1 h2, .spacious1 .h2,
+.spacious1 h3, .spacious1 .h3,
+.spacious1 h4, .spacious1 .h4,
+.spacious1 h5, .spacious1 .h5,
+.spacious1 h6, .spacious1 .h6 {
+	margin-bottom: 0.5em;
 }
 
 .spacious2 p {
@@ -289,35 +325,27 @@ h6, .h6 {
 	margin-bottom: 1.2em;
 }
 
+.spacious2 h1, .spacious2 .h1,
+.spacious2 h2, .spacious2 .h2,
+.spacious2 h3, .spacious2 .h3,
+.spacious2 h4, .spacious2 .h4,
+.spacious2 h5, .spacious2 .h5,
+.spacious2 h6, .spacious2 .h6 {
+	margin-bottom: 1em;
+}
+
 .spacious3 p {
 	line-height: 250%;
 	margin-bottom: 1.5em;
 }
 
-.spacious0 h1,
-.spacious0 h2,
-.spacious0 h3,
-.spacious0 h4,
-.spacious1 h1,
-.spacious1 h2,
-.spacious1 h3,
-.spacious1 h4,
-.spacious2 h1,
-.spacious2 h2,
-.spacious2 h3,
-.spacious2 h4,
-.spacious3 h1,
-.spacious3 h2,
-.spacious3 h3,
-.spacious3 h4 {
-    font-weight: bold;
-}
-
-.spacious0 h5,
-.spacious1 h5,
-.spacious2 h5,
-.spacious3 h5 {
-    font-style: italic;
+.spacious3 h1, .spacious3 .h1,
+.spacious3 h2, .spacious3 .h2,
+.spacious3 h3, .spacious3 .h3,
+.spacious3 h4, .spacious3 .h4,
+.spacious3 h5, .spacious3 .h5,
+.spacious3 h6, .spacious3 .h6 {
+	margin-bottom: 1.2em;
 }
 
 .img-with-wrap-left img {

@@ -25,8 +25,8 @@ $defaultDesc="Web developer, videographer, photographer, wordsmith, world travel
 $errorTitle="Oops! | Jason Petersen";
 $errorDesc="Something went wrong.";
 
-$myExperiments[] = "notes";
-$myExperiments[] = "notes-build";
+$myExperiments[] = "anonynote";
+$myExperiments[] = "anonynote-build";
 
 if ($_GET['id'] == "") {
 	$template=true;

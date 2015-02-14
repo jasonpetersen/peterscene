@@ -9,11 +9,11 @@
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="100" height="100">
 					</div>
 					<div>
-						<h5>About</h5>
+						<h4>About</h4>
 						<p><?php echo STOCKPLUG; ?></p>
 					</div>
 					<div>
-						<h5>Connect</h5>
+						<h4>Connect</h4>
 						<ul class="sideV">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
