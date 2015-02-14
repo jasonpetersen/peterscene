@@ -1,0 +1,33 @@
+.bucket {
+	color: #373737;
+}
+
+.bucket h1, .bucket .h1,
+.bucket h2, .bucket .h2,
+.bucket h3, .bucket .h3,
+.bucket h4, .bucket .h4,
+.bucket h5, .bucket .h5,
+.bucket h6, .bucket .h6 {
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.bucket a:link,
+.bucket a:visited {
+	color: #373737;
+	text-decoration: none;
+}
+
+.bucket a:hover,
+.bucket a:active {
+	color: #666666;
+	text-decoration: none;
+}
+
+td {
+	min-width: 125px;
+}
+
+.col-one {
+	width: 125px;
+}

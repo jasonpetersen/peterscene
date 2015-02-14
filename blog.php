@@ -32,7 +32,7 @@ function createTagText($tagString) {
 	return $entryTags;
 }
 
-$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
+$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAMEBLOG);
 
 if ($db->connect_errno) {
 	$error=true;

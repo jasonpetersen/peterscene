@@ -14,7 +14,7 @@
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
 <?php
 
-$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
+$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAMEBLOG);
 
 if (!$db->connect_errno) {
 	$sql="SELECT * FROM `" . USERTABLE1 . "` WHERE live=1 ORDER BY `" . USERTABLE1 . "`.`date` DESC LIMIT 1";

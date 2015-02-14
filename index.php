@@ -14,7 +14,8 @@ define("GRIDSIDEBAR", "col-xs-12 col-sm-3 col-sm-offset-1");
 define("HOSTNAME", "localhost");
 define("USERNAME", "jpete13_sql");
 define("DBPASSWORD", "C@3rlion");
-define("DBNAME", "jpete13_blog");
+define("DBNAMEBLOG", "jpete13_blog");
+define("DBNAMEEXP", "jpete13_experiments");
 define("USERTABLE1", "entries");
 define("USERTABLE2", "tags");
 
@@ -25,6 +26,7 @@ $errorTitle="Oops! | Jason Petersen";
 $errorDesc="Something went wrong.";
 
 $myExperiments[] = "notes";
+$myExperiments[] = "notes-build";
 
 if ($_GET['id'] == "") {
 	$template=true;
@@ -99,6 +101,7 @@ if ($_GET['id'] == "") {
 						if (($x == EXPROUTE) && (file_exists($_SERVER['DOCUMENT_ROOT'] . '/experiments-' . EXPROUTE . '.php'))) {
 							$template=false;
 							define("PAGEID", "experiments-" . EXPROUTE);
+							define("BODYID", "experiments");
 							define("PAGETITLE", ucfirst(EXPROUTE) . " | Jason Petersen");
 							define("PAGEDESC", $defaultDesc);
 							$n++;

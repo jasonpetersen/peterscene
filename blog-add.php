@@ -75,12 +75,12 @@ if ($_POST["submit"]) {
 
 	// If there are no errors, post the entry
 	if (!$errTitle && !$errTitlelink && !$errBody && !$errExtract && !$errDate && !$errPassword) {
-		$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
+		$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAMEBLOG);
 		
 		if ($db->connect_errno) {
 			$result='<div class="alert alert-danger">Error connecting to database: "' . $db->connect_error . '"</div>';
 		} else {
-			$sql = "INSERT INTO `" . DBNAME . "`.`" . USERTABLE1 . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $title . "', '" . $titlelink . "', '" . $body . "', '" . $extract . "', " . $live . ")";
+			$sql = "INSERT INTO `" . DBNAMEBLOG . "`.`" . USERTABLE1 . "` (`date`, `tags`, `title`, `titlelink`, `body`, `extract`, `live`) VALUES (" . $sqlDate . ", '" . $tags . "', '" . $title . "', '" . $titlelink . "', '" . $body . "', '" . $extract . "', " . $live . ")";
 			if (!$result = $db->query($sql)) {
 				$result='<div class="alert alert-danger">Error with SQL syntax: "' . $db->error . '"</div>';
 			} else {
@@ -122,7 +122,7 @@ if ($_POST["submit"]) {
 						<div class="form-group">
 							<label for="body" class="col-sm-2 control-label">Body</label>
 							<div class="col-sm-10">
-								<textarea class="form-control" rows="10"id="entryBody" name="body"><?php echo htmlspecialchars($_POST['body']);?></textarea>
+								<textarea class="form-control" rows="10" id="entryBody" name="body"><?php echo htmlspecialchars($_POST['body']);?></textarea>
 								<?php echo "<p class='text-danger'>$errBody</p>";?>
 							</div>
 						</div>
@@ -150,7 +150,7 @@ if ($_POST["submit"]) {
 							<label for="date" class="col-sm-2 control-label">Tags</label>
 							<div class="col-sm-10">
 								<?php
-								$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAME);
+								$db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAMEBLOG);
 								if ($db->connect_errno) {
 									echo '<p>Could not retrieve tags from database, which does not bode well for this page functioning at all.</p>';
 									exit();
