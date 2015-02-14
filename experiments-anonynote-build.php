@@ -15,11 +15,11 @@ $method = $_GET['method'];
 $db = new mysqli(HOSTNAME, USERNAME, DBPASSWORD, DBNAMEEXP);
 
 if ($db->connect_errno) {
-	echo '<p>Database error. <a href="/experiments/notes">Maybe reload</a>?</p>';
+	echo '<p>Database error. <a href="/experiments/anonynote">Maybe reload</a>?</p>';
 } else {
 	switch ($method) {
 		case "buildNotepad":
-			$pad = addslashes($_GET['notepad']);
+			$pad = $_GET['notepad'];
 			echo '<a href="#" onclick="buildOpenDialog();"><i class="fa fa-long-arrow-left"></i> Create or edit another notepad</a>
 				<h2>Notepad: &ldquo;' . stripslashes($pad) . '&rdquo;</h2>
 				<span id="this-notepad" class="hidden">' . stripslashes($pad) . '</span>
@@ -42,9 +42,9 @@ if ($db->connect_errno) {
 				';
 				while ($row = $result->fetch_assoc()) {
 					$note = $noteFull = htmlspecialchars($row["text"]);
-					if (strlen($note) > 200) {
+					if (strlen($note) > 100) {
 						// truncate string
-						$noteCut = substr($note, 0, 200);
+						$noteCut = substr($note, 0, 100);
 						// make sure it ends in a word
 						$note = substr($noteCut, 0, strrpos($noteCut, ' ')).'... <a href="#" title="Read more" onclick="readMore(' . $row["id"] . ');">(<span class="ital">read more</span>)</a>';
 					}
@@ -81,7 +81,7 @@ if ($db->connect_errno) {
 			}
 			break;
 		case "buildEdit":
-			$pad = addslashes($_GET['notepad']);
+			$pad = $_GET['notepad'];
 			$id = $_GET['noteid'];
 			if ($id != "") {
 				$sql="SELECT * FROM `notes` WHERE id='" . $id . "' LIMIT 1";
@@ -135,8 +135,8 @@ if ($db->connect_errno) {
 			';
 			break;
 		case "saveNote":
-			$pad = addslashes($_GET['notepad']);
-			$text = addslashes($_GET['notetext']);
+			$pad = $_GET['notepad'];
+			$text = $_GET['notetext'];
 			$color = $_GET['notecolor'];
 			if ($_GET['noteid'] == "") {
 				$sql1="SELECT MAX(`org`) FROM `notes` WHERE notepad='" . $pad . "'";
@@ -173,7 +173,7 @@ if ($db->connect_errno) {
 			}
 			break;
 		case "reorderEntry":
-			$pad = addslashes($_GET['notepad']);
+			$pad = $_GET['notepad'];
 			$orderStr = $_GET['noteorder'];
 			$err = 0;
 			foreach ($orderStr as $idKey => $idValue) {

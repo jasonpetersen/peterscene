@@ -17,8 +17,11 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 	<!-- additional JS goes here -->
 	<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+	<script src="/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="/js/bootstrap-colorselector.js"></script>
 	<script>
+		// define build URL
+		var buildURL = "/experiments/anonynote-build";
 		// define fade speed
 		var speed = 600;
 		// prevent default link actions from executing
@@ -31,8 +34,20 @@
 				class: 'open-dialog'
 			}).appendTo('.bucket');
 			$('.open-dialog').hide();
+			$('<img>', {
+				src: '/images/anonynote-title.gif',
+				alt: 'Anonynote',
+				class: 'img-rounded',
+				width: '300',
+				css: {
+					'margin-bottom': '20px'
+				}
+			}).appendTo('.open-dialog');
 			$('<div>', {
-				class: 'form-group'
+				class: 'form-group',
+				css: {
+					'width': '300px'
+				}
 			}).appendTo('.open-dialog');
 			$('<label>', {
 				for: 'notepad',
@@ -87,7 +102,7 @@
 				$('.active-div').css('pointer-events', 'none');
 				$.ajax({
 					// The URL for the request
-					url: "/experiments/notes-build",
+					url: buildURL,
 					// The data to send (will be converted to a query string)
 					data: {
 						method: "buildNotepad",
@@ -155,7 +170,7 @@
 		function buildEdit(npad, nid) {
 			$('.active-div').css('pointer-events', 'none');
 			$.ajax({
-				url: "/experiments/notes-build",
+				url: buildURL,
 				data: {
 					method: "buildEdit",
 					notepad: npad,
@@ -191,7 +206,7 @@
 			} else {
 				$('.active-div').css('pointer-events', 'none');
 				$.ajax({
-					url: "/experiments/notes-build",
+					url: buildURL,
 					data: {
 						method: "saveNote",
 						notepad: ntpad,
@@ -212,7 +227,7 @@
 			$('.active-div').css('pointer-events', 'none');
 			$('.status-msg').html("Deleting...");
 			$.ajax({
-				url: "/experiments/notes-build",
+				url: buildURL,
 				data: {
 					method: "deleteNote",
 					noteid: targetid
@@ -234,7 +249,7 @@
 		function reorderEntry(orderStr) {
 			$('.active-div').css('pointer-events', 'none');
 			$.ajax({
-				url: "/experiments/notes-build",
+				url: buildURL,
 				data: {
 					method: "reorderEntry",
 					notepad: $('#this-notepad').html(),
