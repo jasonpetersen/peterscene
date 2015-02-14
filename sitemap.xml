@@ -1,92 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://peterscene.com</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/purpose</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<!--<url>
 		<loc>http://peterscene.com/portfolio</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>-->
 	<url>
 		<loc>http://peterscene.com/video</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/photos</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
-	<!--<url>
+	<url>
 		<loc>http://peterscene.com/experiments</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
-	</url>-->
+	</url>
+	<url>
+		<loc>http://peterscene.com/experiments/notes</loc>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://peterscene.com/blog/muse</loc>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
 	<url>
 		<loc>http://peterscene.com/blog/emptiness-of-ideas</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/the-information</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/wrangling-the-unruly-mind</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/desire</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/post-multiculturalism</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/delhi-day-two</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/the-master</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/is-might-right</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/the-proposal-part-one</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/the-fear</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://peterscene.com/blog/song-of-ice-and-fire</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 </urlset>
