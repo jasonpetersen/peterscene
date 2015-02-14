@@ -14,7 +14,7 @@
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 					<h3>Life as a photoshoot</h3>
 					<p>I look at the world through a camera lens, whether I'm holding a camera or not. I frame the world I see, cutting away the periphery to focus on a well-composed window. The play of light, shadow, and color&mdash;the juxtaposition of foreground and background&mdash;the angle and the tilt&mdash;I see life constantly at play with my sensibilities as a photographer.</p>
-					<h3>Recent photos</h3>
+					<h3>Select photos</h3>
 					<form class="form-inline">
 						<!--<div class="form-group">
 							<button id="video-gallery-button" type="button" class="btn btn-success btn-lg">
