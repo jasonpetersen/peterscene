@@ -8,7 +8,6 @@
 .bucket h4, .bucket .h4,
 .bucket h5, .bucket .h5,
 .bucket h6, .bucket .h6 {
-	font-weight: bold;
 	margin: 20px 0;
 }
 

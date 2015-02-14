@@ -37,7 +37,7 @@
 			$('<img>', {
 				src: '/images/anonynote-title.gif',
 				alt: 'Anonynote',
-				class: 'img-rounded',
+				class: 'img-rounded img-responsive',
 				width: '300',
 				css: {
 					'margin-bottom': '20px'
@@ -46,7 +46,8 @@
 			$('<div>', {
 				class: 'form-group',
 				css: {
-					'width': '300px'
+					'width': '300px',
+					'max-width': '100%'
 				}
 			}).appendTo('.open-dialog');
 			$('<label>', {
