@@ -17,19 +17,19 @@
 					<h3>Select photos</h3>
 					<form class="form-inline">
 						<!--<div class="form-group">
-							<button id="video-gallery-button" type="button" class="btn btn-success btn-lg">
+							<button id="video-gallery-button" type="button" class="btn btn-success">
 								<i class="glyphicon glyphicon-film"></i>
 								Launch Video Gallery
 							</button>
 						</div>-->
 						<div class="form-group">
-							<button id="image-gallery-button" type="button" class="btn btn-primary btn-lg">
+							<button id="image-gallery-button" type="button" class="btn btn-primary">
 								<i class="glyphicon glyphicon-picture"></i>
 								Launch Image Gallery
 							</button>
 						</div>
 						<div class="btn-group hidden-xs" data-toggle="buttons">
-							<label id="fullscreen-btn" class="btn btn-danger btn-lg">
+							<label id="fullscreen-btn" class="btn btn-danger">
 								<i class="glyphicon glyphicon-fullscreen"></i>
 								<input id="fullscreen-checkbox" type="checkbox"> <span id="fsBtnTxt">Fullscreen Off</span>
 							</label>
