@@ -57,13 +57,13 @@ $(function () {
 		['http://farm6.staticflickr.com/5587/15069211645_7783b3a66b', 'View from the top floor. Chiang Mai, Thailand.'],
 		['http://farm6.staticflickr.com/5160/14212387413_e01206dab5', 'Spiraling branches. Honolulu, HI.'],
 		['http://farm8.staticflickr.com/7435/14005690057_8b09d09482', 'Monks at play. Oahu, HI.'],
-		['http://farm6.staticflickr.com/5567/14188942431_1fe04d8663', 'Striking a pose. Oahu, HI'],
+		['http://farm6.staticflickr.com/5567/14188942431_1fe04d8663', 'Posing for a photo. Oahu, HI'],
 		['http://farm9.staticflickr.com/8504/8415773560_9ac02590b8', 'JBG. Annecy, France.'],
 		['http://farm9.staticflickr.com/8472/8415781582_bca67ab09f', 'The Eiffel Tower. Paris, France.'],
 		['http://farm9.staticflickr.com/8229/8415771198_0f8856bcb2', 'Statue at the Louvre. Paris, France.'],
 		['http://farm9.staticflickr.com/8360/8288616074_33ed7d7f81', 'Rupas at Gyuto Monastery. Sidhbari, India.'],
 		['http://farm9.staticflickr.com/8495/8287677181_20a25e765c', 'A dog named Lion. Bir, India.'],
-		['http://farm9.staticflickr.com/8067/8287723983_301eaa1f77', 'Childhood'],
+		['http://farm9.staticflickr.com/8067/8287723983_301eaa1f77', 'Childhood. Bir, India.'],
 		['http://farm9.staticflickr.com/8214/8287729982_e6660461b9', 'Sunset above McLeod Ganj. Dharamcot, India.'],
 		['http://farm9.staticflickr.com/8218/8287772570_a9c0c0a109', 'Reading in the dying light. McLeod Ganj, India.'],
 		['http://farm9.staticflickr.com/8214/8286693903_4d9778382f', 'Lighting lamps at the Tsuglagkhang Temple. McLeod Ganj, India.'],
@@ -80,7 +80,14 @@ $(function () {
 		['http://farm7.staticflickr.com/6022/5951061554_3aeb4da632', 'Harry H. Larnaca, Cyprus.'],
 		['http://farm7.staticflickr.com/6014/5951029140_38666b5439', 'What! Cyprus.'],
 		['http://farm7.staticflickr.com/6040/5912398832_642c7a6fe1', 'Marionette and kids. Athens, Greece.'],
-		['http://farm7.staticflickr.com/6041/5910942467_e8218d7c83', 'Grand decay. Athens, Greece.']
+		['http://farm7.staticflickr.com/6041/5910942467_e8218d7c83', 'Grand decay. Athens, Greece.'],
+		['http://farm7.staticflickr.com/6009/5883425693_6966a596d1', 'Man and nature. Naxos, Greece.'],
+		['http://farm6.staticflickr.com/5302/5883434359_73cf94bb28', 'The cat\'s abode. Naxos, Greece.'],
+		['http://farm4.staticflickr.com/3338/5824302612_01696686ab', 'Julia and Tosca. Goreme, Turkey.'],
+		['http://farm6.staticflickr.com/5040/5820736870_fc711231ab', 'Reaching for the heavens. Goreme, Turkey.'],
+		['http://farm3.staticflickr.com/2802/5800714174_00d38b6ce2', 'Pathway to paradise. Istanbul, Turkey.'],
+		['http://farm3.staticflickr.com/2759/5799541847_87b4fc10b5', 'Birth. Nis, Serbia.'],
+		['http://farm6.staticflickr.com/5146/5800083318_f411c37e76', 'Spring in dusk. Nis, Serbia.']
 	];
 	var linksContainer = $('#links'), u;
 	$.each(photoDisp, function (index, value) {
