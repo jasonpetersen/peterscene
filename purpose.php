@@ -1,8 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
-					<h5>Edited January 29, 2015</h5>
-					<br />
+					<h5>Edited February 17, 2015</h5>
 					<h3>In a nutshell</h3>
 					<p>This website is a personal solution to an identity crisis endemic to the evolving internet. It also advertises me, the things I do, and the services I offer.</p>
 					<h3>Stop. Rewind!</h3>
@@ -12,7 +11,7 @@
 					<div class="hr-small"></div>
 					<p>I can't tell you when the internet changed for me. It's as organic and ever-evolving as the countless people who make it. It developed.</p>
 					<p>It developed quickly.</p>
-					<p>I remember in high school when I stopped reading the newspaper because there was more (and better) news on the internet than I was getting in the local <a href="http://www.thefreedictionary.com/rag" target="_blank">rag</a>.</p>
+					<p>I remember in high school when I stopped reading the newspaper because there was more (and better) news on the internet than I was getting in the local rag.</p>
 					<p>I remember&mdash;although I can't pin it to a year&mdash;when advertising seemed to hit the internet like a tidal wave. It was frustrating to see this cool thing that I'd been using for, like, <span class="ital">ever</span>, suddenly co-opted by uncool corporate interests.</p>
 					<p>But the internet really changed for me because of a little company called Google. I had used many search engines before theirs&mdash;Lycos, AltaVista, Dogpile, Yahoo&mdash;but when I started using Google, I didn't go back. Then I traded in my crummy Hotmail account for a sleek new Gmail model. Suddenly I wasn't using MapQuest anymore&mdash;it was Google Maps. Sure, we all kept saying "MapQuest" out of habit, but Google had clearly turned in a superior product. Out of all its services, though, the now-defunct <a href="http://en.wikipedia.org/wiki/Google_Reader" target="_blank">Google Reader</a> was a game-changer. I no longer had to hoof it to the next watering hole: Google had built a road there. And look! Here's a car too. No, no, says Google&mdash;that's for us. We'll go and get your content, hang tight, brb!</p>
 					<p>The desert was tamed, waypoints built, transportation lines laid. Sure, there will always be those who romanticize the frontier&mdash;that's often an inclination of mine&mdash;but this development was good. It was necessary. The potential of the internet, heretofore largely untapped, was blossoming.</p>
@@ -30,7 +29,7 @@
 					<h3>And we arrive at...</h3>
 					<p>Peterscene. I call it a "residence" on the homepage because that's what it is to me: it's my online residence, workplace, and showcase for all the varied things I do.</p>
 					<p>The internet is not a desert anymore&mdash;it's a jungle. But here at my own website, I can rest. I can be comfortable. I can be myself&mdash;my whole self. As much as this medium is capable of conveying.</p>
-					<p>Responsive design was the earliest consideration. I opted against using a CMS; if I was going to do this at all, I wanted a site that I had as much control of as possible. I built this house on commonplace frameworks <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>, as well as several plugins for my Photo and Video pages&mdash;<a href="https://github.com/blueimp/Bootstrap-Image-Gallery" target="_blank">Bootstrap Image Gallery</a> and <a href="http://dimsemenov.com/plugins/royal-slider/" target="_blank">Royal Slider</a>, respectively. Both are elegant solutions that would have taken me considerable time to program myself. I also rely on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a> for its many useful features.</p>
+					<p>Responsive design was the earliest consideration. I opted against using a CMS; if I was going to do this at all, I wanted a site that I had as much control of as possible. I built this house on commonplace frameworks <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>, as well as the <a href="https://github.com/blueimp/Bootstrap-Image-Gallery" target="_blank">Bootstrap Image Gallery</a> for my Photo and Video pages. I also rely on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a> for its many useful features.</p>
 					<p>I aimed for an uncluttered, simplistic aesthetic, which I spent no small amount of time agonizing over. I hope you find it to be a welcome change of pace from the wider internet.</p>
 					<h3>Gratitude</h3>
 					<p>My friend and once-coworker Aaron Grando has a <a href="http://gran.do" target="_blank">beautiful personal website</a>, which was a great inspiration to me from a design perspective, but it was his ideas that influenced me the most. You'll find a lot of it echoed here, dangerously close to plagiarism in the broad strokes. He found his voice before I did, as did his inspiration, <a href="http://frankchimero.com/" target="_blank">Frank Chimero</a>, before him. I am indebted to both.</p>
@@ -47,7 +46,7 @@
 					</div>
 					<div>
 						<h4>Connect</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
 					</div>

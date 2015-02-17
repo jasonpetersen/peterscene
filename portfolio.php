@@ -14,7 +14,7 @@
 					</div>
 					<div>
 						<h4>Connect</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
 					</div>

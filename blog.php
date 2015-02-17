@@ -219,7 +219,7 @@ if ($error == true) {
 					</div>
 					<div class="share">
 						<h4>Share</h4>
-						<ul class="sideH">
+						<ul class="side-h">
 							<li>
 								<a class="tweet" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 									<span class="fa-stack">
@@ -248,7 +248,7 @@ if ($error == true) {
 					</div>
 					<div>
 						<h4>Connect</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
 					</div>

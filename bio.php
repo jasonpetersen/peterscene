@@ -1,7 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
-					<span class="img-with-wrap-left">
+					<span class="pull-left">
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="150" height="150">
 					</span>
 					<p>Way back when, I took my Film &amp; Media Arts degree from Philadelphia to Hollywood and worked as a software engineer for Warner Bros. and Sony Pictures.</p>
@@ -23,9 +23,9 @@ if (!$db->connect_errno) {
 			echo '
 					<div id="blogBox" class="hidden-xs">
 						<h4>Latest Blog Entry</h4>
-						<ul class="sideV">
-							<li><span class="ital">' . date("F j, Y", strtotime($row["date"])) . '</span></li>
-							<li><a href="/blog">' . $row["title"] . '</a></li>
+						<ul class="side-v">
+							<li><span class="ital">' . date("F j, Y", strtotime($row["date"])) . '</span><br />
+							<a href="/blog">' . $row["title"] . '</a></li>
 						</ul>
 					</div>';
 		}
@@ -37,25 +37,23 @@ $db->close();
 ?>
 					<div>
 						<h4>Work</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="/cv" onclick="window.open('/cv', 'newwindow', 'width=400, height=600, scrollbars=yes'); return false;">Full CV</a></li>
 							<li><a href="https://github.com/jasonpetersen" target="_blank">GitHub <i class="fa fa-external-link"></i></a></li>
 						</ul>
 					</div>
 					<div>
 						<h4>Social</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="https://www.linkedin.com/in/hellojasonpetersen" target="_blank">LinkedIn <i class="fa fa-external-link"></i></a></li>
-							<li>
-								<a class="hidden-xs" href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a>
-								<a class="visible-xs" href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a>
-							</li>
+							<li class="hidden-xs"><a href="https://www.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a></li>
+							<li class="visible-xs"><a href="https://m.flickr.com/photos/jasonpetersen" target="_blank">Flickr <i class="fa fa-external-link"></i></a></li>
 							<li><a href="https://twitter.com/JasonPetersen" target="_blank">Twitter <i class="fa fa-external-link"></i></a></li>
 						</ul>
 					</div>
 					<div>
 						<h4>Contact</h4>
-						<ul class="sideV">
+						<ul class="side-v">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
 						</ul>
 					</div>
