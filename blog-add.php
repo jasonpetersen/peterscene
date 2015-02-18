@@ -14,10 +14,10 @@ function validateDate($inputDate, $inputFormat = 'Y-m-d')
 }
 
 if ($_POST["submit"]) {
-	$title = $_POST['title'];
-	$titlelink = $_POST['titlelink'];
-	$body = $_POST['body'];
-	$extract = $_POST['extract'];
+	$title = addslashes($_POST['title']);
+	$titlelink = addslashes($_POST['titlelink']);
+	$body = addslashes($_POST['body']);
+	$extract = addslashes($_POST['extract']);
 	if ($_POST['today'] == "true") {
 		$today = "true";
 		$date = null;

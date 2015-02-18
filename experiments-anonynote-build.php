@@ -19,7 +19,7 @@ if ($db->connect_errno) {
 } else {
 	switch ($method) {
 		case "buildNotepad":
-			$pad = $_GET['notepad'];
+			$pad = addslashes($_GET['notepad']);
 			echo '<a href="#" onclick="buildOpenDialog();"><i class="fa fa-long-arrow-left"></i> Create or edit another notepad</a>
 				<h2>Notepad: &ldquo;' . stripslashes($pad) . '&rdquo;</h2>
 				<span id="this-notepad" class="hidden">' . stripslashes($pad) . '</span>
@@ -81,7 +81,7 @@ if ($db->connect_errno) {
 			}
 			break;
 		case "buildEdit":
-			$pad = $_GET['notepad'];
+			$pad = addslashes($_GET['notepad']);
 			$id = $_GET['noteid'];
 			if ($id != "") {
 				$sql="SELECT * FROM `notes` WHERE id='" . $id . "' LIMIT 1";
@@ -135,8 +135,8 @@ if ($db->connect_errno) {
 			';
 			break;
 		case "saveNote":
-			$pad = $_GET['notepad'];
-			$text = $_GET['notetext'];
+			$pad = addslashes($_GET['notepad']);
+			$text = addslashes($_GET['notetext']);
 			$color = $_GET['notecolor'];
 			if ($_GET['noteid'] == "") {
 				$sql1="SELECT MAX(`org`) FROM `notes` WHERE notepad='" . $pad . "'";
@@ -173,7 +173,7 @@ if ($db->connect_errno) {
 			}
 			break;
 		case "reorderEntry":
-			$pad = $_GET['notepad'];
+			$pad = addslashes($_GET['notepad']);
 			$orderStr = $_GET['noteorder'];
 			$err = 0;
 			foreach ($orderStr as $idKey => $idValue) {

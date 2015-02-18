@@ -1,3 +1,6 @@
+### Turn off magic quotes - doesn't work on this server
+#php_flag magic_quotes_gpc Off
+
 ### Do only if the environmental variables module is installed
 <IfModule mod_setenvif.c>
 
