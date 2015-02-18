@@ -177,7 +177,7 @@
 									<div class="row spacious2">
 										<div class="col-xs-12">
 											<div class="hr-small"></div>
-											<p>The handheld camerawork on display here is meant to put the viewer in the shoes of the kids. The camera wanders up and down, side to side, and with more than a few rack-focuses. It's always wandering, like the attention span of a kid.</p>
+											<p>The handheld camerawork on display here is meant to put the viewer in the shoes of the kids. The camera wanders up and down, side to side, and with more than a few rack-focuses. It's always wandering, like the attention span of a child.</p>
 											<p>That was the only aspect of this video I was confident about upfront. I really struggled in the editing with what this video wanted to be. It was supposed to be for fundraising, but I felt like I was shoehorning it to that purpose.</p>
 											<p>I eventually put together a fundraising version I was happy with, but I think this alternate version, which acts as a promotional piece, plays better.</p>
 										</div>
@@ -254,7 +254,7 @@
 									<div class="row spacious2">
 										<div class="col-xs-12">
 											<div class="hr-small"></div>
-											<p>Friends of mine in Los Angeles were involved in sketch comedy. I DPed this shoot, and served as editor.</p>
+											<p>Friends of mine in Los Angeles were involved in sketch comedy. I was the director of photography on this shoot, and served as editor.</p>
 											<p>It's textbook cinematography: when events are still grounded, the camera is grounded. As soon as Aaron knocks out his roommate with the beer bottle, the camera goes handheld. Both characters have their respective sides of the frame and never cross.</p>
 											<p>There's some minor digital trickery to sell the stabbing and the slicing.</p>
 										</div>
