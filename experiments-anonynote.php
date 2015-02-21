@@ -19,6 +19,7 @@
 		<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 		<script src="/js/jquery.ui.touch-punch.min.js"></script>
 		<script src="/js/bootstrap-colorselector.js"></script>
+		<script src="/js/jquery.linkify.min.js"></script>
 		<script>
 			// define build URL
 			var buildURL = "/experiments/anonynote-build";
@@ -121,6 +122,14 @@
 							}).appendTo('.bucket');
 							$('.notepad-main').hide();
 							$('.notepad-main').html(result);
+							// linkify URLs
+							$('.notepad-main').linkify({
+								tagName: 'a',
+								target: '_blank',
+								newLine: '\n',
+								linkClass: null,
+								linkAttributes: null
+							});
 							// make the notes sortable
 							$(function() {
 								$('#sortable').sortable({
