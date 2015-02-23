@@ -6,6 +6,7 @@ html {
 body {
 	font-family: 'Bitter', serif;
 	font-size: 15px;
+	margin-bottom: 95px;/* Corresponds to footer height */
 }
 
 #cv {
@@ -17,7 +18,11 @@ body {
 .body-bright {
 	background: #ffffff;
 	color: #6a5858;
-	margin-bottom: 95px;/* Margin bottom by footer height */
+}
+
+.body-dark {
+	background: #000000;
+	color: #ffffff;
 }
 
 a:link,
@@ -136,9 +141,14 @@ h5, .h5 {
 	color: #b09e9e;
 }
 
-.banner a:hover,
-.banner a:active {
+.body-bright .banner a:hover,
+.body-bright .banner a:active {
 	color: #302828;
+}
+
+.body-dark .banner a:hover,
+.body-dark .banner a:active {
+	color: #ffffff;
 }
 
 .banner .logline p {
@@ -146,14 +156,25 @@ h5, .h5 {
 	line-height: 30px;
 }
 
-#bio .bio,
-#purpose .purpose,
-#blog .blog,
-#portfolio .portfolio,
-#video .video,
-#photos .photos,
-#experiments .experiments {
+#bio.body-bright .bio,
+#purpose.body-bright .purpose,
+#blog.body-bright .blog,
+#portfolio.body-bright .portfolio,
+#video.body-bright .video,
+#photos.body-bright .photos,
+#experiments.body-bright .experiments {
 	color: #302828;
+	font-weight: bold;
+}
+
+#bio.body-dark .bio,
+#purpose.body-dark .purpose,
+#blog.body-dark .blog,
+#portfolio.body-dark .portfolio,
+#video.body-dark .video,
+#photos.body-dark .photos,
+#experiments.body-dark .experiments {
+	color: #ffffff;
 	font-weight: bold;
 }
 
@@ -171,7 +192,7 @@ h5, .h5 {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 95px;/* Set the fixed height of the footer here - must correspond to body margin */
+	height: 95px;/* Set the fixed height of the footer here - corresponds to body margin-bottom */
 }
 
 .footer span {
@@ -512,50 +533,4 @@ h5, .h5 {
 	height: 17px;
 	background: url(/images/leaf.svg);
 	background-size: 30px 17px;
-}
-
-#video-gallery {
-	width: 100%;
-	-webkit-user-select: none;
-	-moz-user-select: none;  
-	user-select: none;
-}
-
-#video-gallery .rsTmb {
-	padding: 5px 10px;
-    text-align: center;
-}
-
-.rsVideoContainer {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	display: block;
-	float: left;
-}
-
-.rsCaption {
-    text-align: left;
-}
-
-@media screen and (min-width: 0px) and (max-width: 480px) {
-	#video-gallery .rsTmb {
-		padding: 6px 8px;
-	}
-	#video-gallery .rsTmb h5 {
-		font-size: 12px;
-		line-height: 17px;
-	}
-	#video-gallery .rsThumbs.rsThumbsVer {
-		width: 100px;
-		padding: 0;
-	}
-	#video-gallery .rsThumbs .rsThumb {
-        top: 10px;
-		width: 100px;
-		height: 50px;
-	}
-	#video-gallery .rsTmb span {
-		display: none;
-	}
 }
