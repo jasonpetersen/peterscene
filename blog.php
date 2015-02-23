@@ -38,7 +38,7 @@ if ($db->connect_errno) {
 	$error=true;
 	$errorTechMsg=$db->connect_error;
 	$errorDisplayMsg=$bodyErrorMajor;
-	$pageTitle=$pageTitleError;
+	$pageTitle=$shareTitle=$pageTitleError;
 	$pageDescription=$pageDescriptionError;
 } else {
 	$sqlEntries="SELECT * FROM `" . USERTABLE1 . "` WHERE live=1 ORDER BY `" . USERTABLE1 . "`.`date` DESC";
@@ -54,7 +54,7 @@ if ($db->connect_errno) {
 		$error=true;
 		$errorTechMsg=$db->error;
 		$errorDisplayMsg=$bodyErrorMajor;
-		$pageTitle=$pageTitleError;
+		$pageTitle=$shareTitle=$pageTitleError;
 		$pageDescription=$pageDescriptionError;
 		break;
 	} else {
@@ -83,23 +83,24 @@ if ($db->connect_errno) {
 			case "main":
 				$pageTitle=$pageTitleGood;
 				$pageDescription=$pageDescriptionGood;
+				$shareTitle=$t[$o[1]];
 				break;
 			case "entry":
 				if (in_array(BLOGENTRY, $l)) {
 					$key=array_search(BLOGENTRY, $l);
-					$pageTitle=$t[$key];
+					$pageTitle=$shareTitle=$t[$key];
 					$pageDescription=$e[$key];
 				} else {
 					$error=true;
 					$errorDisplayMsg=$bodyErrorNoEntry;
-					$pageTitle=$pageTitleNoEntry;
+					$pageTitle=$shareTitle=$pageTitleNoEntry;
 					$pageDescription=$pageDescriptionError;
 				}
 				break;
 			case "tag":
 				if (in_array(ucfirst(BLOGTAG), $tags)) {
 					$key=array_search(ucfirst(BLOGTAG), $tags);
-					$pageTitle=ucfirst(BLOGTAG);
+					$pageTitle=$shareTitle=ucfirst(BLOGTAG);
 					$pageDescription=$pageDescriptionGood;
 					foreach ($g as $k => $v) {
 						foreach (explode(",", $v) as $tagKey => $tagValue) {
@@ -111,7 +112,7 @@ if ($db->connect_errno) {
 				} else {
 					$error=true;
 					$errorDisplayMsg=$bodyErrorNoTag;
-					$pageTitle=$pageTitleNoTag;
+					$pageTitle=$shareTitle=$pageTitleNoTag;
 					$pageDescription=$pageDescriptionError;
 				}
 				break;
@@ -221,7 +222,7 @@ if ($error == true) {
 						<h4>Share</h4>
 						<ul class="side-h">
 							<li>
-								<a class="tweet" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
+								<a class="tweet" title="Twitter" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -229,7 +230,7 @@ if ($error == true) {
 								</a>
 							</li>
 							<li>
-								<a class="fbShare" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="fbShare" title="Facebook" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -237,7 +238,7 @@ if ($error == true) {
 								</a>
 							</li>
 							<li>
-								<a class="googleShare" title="<?php echo $pageTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="googleShare" title="Google+" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>

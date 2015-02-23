@@ -279,7 +279,7 @@
 						<h4>Share</h4>
 						<ul class="side-h">
 							<li>
-								<a class="tweet" title="<?php echo PAGETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
+								<a class="tweet" title="Twitter" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -287,7 +287,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="fbShare" title="<?php echo PAGETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="fbShare" title="Facebook" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -295,7 +295,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="googleShare" title="<?php echo PAGETITLE; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+								<a class="googleShare" title="Google+" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" target="_blank">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
 										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>

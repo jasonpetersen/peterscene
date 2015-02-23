@@ -20,7 +20,7 @@ if ($db->connect_errno) {
 	switch ($method) {
 		case "buildNotepad":
 			$pad = addslashes($_GET['notepad']);
-			echo '<a href="#" onclick="buildOpenDialog();"><i class="fa fa-long-arrow-left"></i> Create or edit another notepad</a>
+			echo '<a href="#" class="home-link" onclick="buildOpenDialog();"><i class="fa fa-long-arrow-left"></i> Create or edit another notepad</a>
 				<h2>Notepad: &ldquo;' . stripslashes($pad) . '&rdquo;</h2>
 				<span id="this-notepad" class="hidden">' . stripslashes($pad) . '</span>
 				<button type="button" class="btn btn-primary" onclick="buildEdit(\'' . $pad . '\');">
@@ -42,14 +42,14 @@ if ($db->connect_errno) {
 				';
 				while ($row = $result->fetch_assoc()) {
 					$note = $noteFull = htmlspecialchars($row["text"]);
-					if (strlen($note) > 100) {
+					if (strlen($note) > 150) {
 						// truncate string
-						$noteCut = substr($note, 0, 100);
+						$noteCut = substr($note, 0, 150);
 						// make sure it ends in a word
-						$note = substr($noteCut, 0, strrpos($noteCut, ' ')).'... <a href="#" title="Read more" onclick="readMore(' . $row["id"] . ');">(<span class="ital">read more</span>)</a>';
+						$note = substr($noteCut, 0, strrpos($noteCut, ' ')).'... <a href="#" title="Read more" onclick="readMore(' . $row["id"] . ');"><span class="ital">read more</span></a>';
 					}
-					echo '<tr id="id-' . $row["id"] . '" style="background-color: #' . $row["color"] . '">
-							<td>
+					echo '<tr id="id-' . $row["id"] . '" class="color-' . $row["color"] . '" style="background-color: #' . $row["color"] . '">
+							<td class="action-btns">
 								<a href="#" class="sort-handle" title="Drag to re-order">
 									<span class="fa-stack">
 										<i class="fa fa-circle fa-stack-2x"></i>
@@ -69,9 +69,9 @@ if ($db->connect_errno) {
 									</span>
 								</a>
 							</td>
-							<td>
-								<span class="noteShort">' . $note . '</span>
-								<span class="noteFull hidden">' . $noteFull . '</span>
+							<td class="note-display">
+								<span class="note-short">' . $note . '</span>
+								<span class="note-full hidden">' . $noteFull . '</span>
 							</td>
 						</tr>
 					';
@@ -94,7 +94,7 @@ if ($db->connect_errno) {
 					$t = $row["text"];
 				}
 			}
-			echo '<span class="bold">Color:&nbsp;</span>
+			echo '<span class="bold">Pick a color:&nbsp;</span>
 				<div style="display: inline-block;">
 					<select id="colorselector">';
 			foreach ($colors as $arr) {

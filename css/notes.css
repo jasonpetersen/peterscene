@@ -12,21 +12,116 @@
 }
 
 .bucket a:link,
-.bucket a:visited {
+.bucket a:visited,
+.bucket a:active {
 	color: #373737;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
-.bucket a:hover,
-.bucket a:active {
-	color: #666666;
-	text-decoration: none;
+.bucket a:hover {
+	color: #888888;
+	text-decoration: underline;
 }
 
 td {
-	min-width: 125px;
+	min-width: 110px;
+	vertical-align: middle;
 }
 
 .col-one {
-	width: 125px;
+	width: 110px;
+	max-width: 110px;
 }
+
+a.home-link:link,
+a.home-link:visited,
+a.home-link:active {
+	text-decoration: none;
+}
+
+a.home-link:hover {
+	text-decoration: underline;
+}
+
+.action-btns a:link,
+.action-btns a:visited,
+.action-btns a:hover,
+.action-btns a:active {
+	text-decoration: none;
+}
+
+.color-ffffff .action-btns a:hover,
+.color-ffffff .note-display a:link,
+.color-ffffff .note-display a:visited,
+.color-ffffff .note-display a:active {
+	color: #909090;
+}
+
+.color-f3f3f3 .action-btns a:hover,
+.color-f3f3f3 .note-display a:link,
+.color-f3f3f3 .note-display a:visited,
+.color-f3f3f3 .note-display a:active {
+	color: #858585;
+}
+
+.color-ffdddd .action-btns a:hover,
+.color-ffdddd .note-display a:link,
+.color-ffdddd .note-display a:visited,
+.color-ffdddd .note-display a:active {
+	color: #ae5252;
+}
+
+.color-fff6dd .action-btns a:hover,
+.color-fff6dd .note-display a:link,
+.color-fff6dd .note-display a:visited,
+.color-fff6dd .note-display a:active {
+	color: #aa9856;
+}
+
+.color-feffdd .action-btns a:hover,
+.color-feffdd .note-display a:link,
+.color-feffdd .note-display a:visited,
+.color-feffdd .note-display a:active {
+	color: #aaaa56;
+}
+
+.color-dfffdd .action-btns a:hover,
+.color-dfffdd .note-display a:link,
+.color-dfffdd .note-display a:visited,
+.color-dfffdd .note-display a:active {
+	color: #56aa56;
+}
+
+.color-ddffff .action-btns a:hover,
+.color-ddffff .note-display a:link,
+.color-ddffff .note-display a:visited,
+.color-ddffff .note-display a:active {
+	color: #52aeae;
+}
+
+.color-dde2ff .action-btns a:hover,
+.color-dde2ff .note-display a:link,
+.color-dde2ff .note-display a:visited,
+.color-dde2ff .note-display a:active {
+	color: #5461ab;
+}
+
+.color-f4ddff .action-btns a:hover,
+.color-f4ddff .note-display a:link,
+.color-f4ddff .note-display a:visited,
+.color-f4ddff .note-display a:active {
+	color: #9354ab;
+}
+
+.color-ffffff .note-display a:hover,
+.color-f3f3f3 .note-display a:hover,
+.color-ffdddd .note-display a:hover,
+.color-fff6dd .note-display a:hover,
+.color-feffdd .note-display a:hover,
+.color-dfffdd .note-display a:hover,
+.color-ddffff .note-display a:hover,
+.color-dde2ff .note-display a:hover,
+.color-f4ddff .note-display a:hover {
+	color: #000000;
+}
+

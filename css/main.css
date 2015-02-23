@@ -346,6 +346,18 @@ h5, .h5 {
 	padding-right: 6px;
 }
 
+#sidebar a.tweet:hover {
+	color: #00aced;
+}
+
+#sidebar a.fbShare:hover {
+	color: #3b5998;
+}
+
+#sidebar a.googleShare:hover {
+	color: #dd4b39;
+}
+
 #blogNav,
 #blogNav ul {
 	list-style-type: none;

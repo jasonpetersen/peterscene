@@ -71,7 +71,7 @@
 				$('<button>', {
 					id: 'build-notepad',
 					type: 'button',
-					class: 'btn btn-default',
+					class: 'btn btn-primary',
 					onclick: 'buildNotepad($(\'.notepad-name\').val().toLowerCase(), "fade");',
 					text: 'Submit'
 				}).appendTo('.open-dialog');
@@ -274,8 +274,8 @@
 			}
 			// function to fully display a truncated note
 			function readMore(whichid) {
-				$('#id-'+whichid).find('.noteShort').addClass('hidden');
-				$('#id-'+whichid).find('.noteFull').removeClass('hidden');
+				$('#id-'+whichid).find('.note-short').addClass('hidden');
+				$('#id-'+whichid).find('.note-full').removeClass('hidden');
 			}
 			// function to interpret runtime codes as text
 			function codeToText(codeid) {
