@@ -1,7 +1,7 @@
 		<div class="banner container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 logo">
-					<a href="/"><img src="/images/banner-V1-small-indexed.gif" alt="Peterscene" width="200" height="57"></a>
+					<a href="/"><img src="/images/banner-v2-black-lg-indexed.gif" alt="Peterscene" width="200" height="56"></a>
 				</div>
 				<div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 menu-options">
 					<ul role="menu">
