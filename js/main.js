@@ -17,6 +17,19 @@ var main = function() {
 		}, 800);
 		return false;
 	});
+	// Toggle bright and dark themes with the 'L' key
+	$('body').keyup(function(event) {
+		if (event.which == 76) {
+			event.preventDefault();
+			if ($('body').hasClass('body-bright')) {
+				$('body').removeClass('body-bright');
+				$('body').addClass('body-dark');
+			} else if ($('body').hasClass('body-dark')) {
+				$('body').removeClass('body-dark');
+				$('body').addClass('body-bright');
+			}
+		}
+	});
 };
 
 $(document).ready(main);

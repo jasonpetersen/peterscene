@@ -25,6 +25,11 @@ body {
 	color: #ffffff;
 }
 
+.body-bright .logo-dark,
+.body-dark .logo-bright {
+	display: none;
+}
+
 a:link,
 a:visited {
 	color: #b73336;
@@ -86,29 +91,29 @@ h5, .h5 {
 	padding: 0;
 }
 
-.hide {
-	display: none;
-}
-
 .hr-full,
 .hr-banner-footer {
-	background: #eeeeee;
 	height: 1px;
 	margin: 20px 0;
 }
 
-.hr-full-dashed {
-	border: 0;
-	border-bottom: 1px dashed #eee;
-	margin: 20px 0;
-}
-
 .hr-small {
-	background: #eeeeee;
 	height: 3px;
 	width: 100px;
 	margin: 2em 0;
     clear: both;
+}
+
+.body-bright .hr-full,
+.body-bright .hr-banner-footer,
+.body-bright .hr-small {
+	background: #eeeeee;
+}
+
+.body-dark .hr-full,
+.body-dark .hr-banner-footer,
+.body-dark .hr-small {
+	background: #b73336;
 }
 
 .banner .row {
@@ -347,9 +352,16 @@ h5, .h5 {
 }
 
 #sidebar #blogBox {
-	background-color: #fbf5f5;
 	display: inline-block;
 	padding: 5px;
+}
+
+.body-bright #sidebar #blogBox {
+	background-color: #fbf5f5;
+}
+
+.body-dark #sidebar #blogBox {
+	background-color: #301111;
 }
 
 #sidebar .collapse-all,
