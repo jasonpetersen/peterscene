@@ -2,6 +2,7 @@
 
 error_reporting(0);
 
+define("SITENAME", "Jason Petersen");
 define("CONTACTEMAIL", "contact@peterscene.com");
 define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Woodstock, NY.");
 
@@ -22,7 +23,7 @@ define("USERTABLE2", "tags");
 $mainTitle="The online residence of Jason Petersen";
 $defaultDesc="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.";
 
-$errorTitle="Oops! | Jason Petersen";
+$errorTitle="Oops! | " . SITENAME;
 $errorDesc="Something went wrong.";
 
 $myExperiments[] = "anonynote";
@@ -45,19 +46,19 @@ if ($_GET['id'] == "") {
 			case "cv":
 				$template=false;
 				define("PAGEID", "cv");
-				define("PAGETITLE", "CV | Jason Petersen");
+				define("PAGETITLE", "CV | " . SITENAME);
 				define("PAGEDESC", $defaultDesc);
 				break;
 			case "purpose":
 				$template=true;
 				define("PAGEID", "purpose");
-				define("PAGETITLE", "Purpose | Jason Petersen");
+				define("PAGETITLE", "Purpose | " . SITENAME);
 				define("PAGEDESC", "The 'why' is more important than the 'what'. Read why this site exists at all.");
 				break;
 			case "blog":
 				$template=false;
 				define("PAGEID", "blog");
-				define("PAGETITLE", "Blog | Jason Petersen");
+				define("PAGETITLE", "Blog | " . SITENAME);
 				define("PAGEDESC", "Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.");
 				if ($_GET['entry'] != "") {
 					define("BLOGAVENUE", "entry");
@@ -72,25 +73,25 @@ if ($_GET['id'] == "") {
 			case "blog-add":
 				$template=false;
 				define("PAGEID", "blog-add");
-				define("PAGETITLE", "Add entry | Jason Petersen");
+				define("PAGETITLE", "Add entry | " . SITENAME);
 				define("PAGEDESC", "Adjectives on the typewriter, he moves his words like a prizefighter.");
 				break;
 			case "portfolio":
 				$template=true;
 				define("PAGEID", "portfolio");
-				define("PAGETITLE", "Portfolio | Jason Petersen");
+				define("PAGETITLE", "Portfolio | " . SITENAME);
 				define("PAGEDESC", $defaultDesc);
 				break;
 			case "video":
 				$template=false;
 				define("PAGEID", "video");
-				define("PAGETITLE", "Video | Jason Petersen");
+				define("PAGETITLE", "Video | " . SITENAME);
 				define("PAGEDESC", "A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.");
 				break;
 			case "photos":
 				$template=false;
 				define("PAGEID", "photos");
-				define("PAGETITLE", "Photos | Jason Petersen");
+				define("PAGETITLE", "Photos | " . SITENAME);
 				define("PAGEDESC", "I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.");
 				break;
 			case "experiments":
@@ -102,7 +103,7 @@ if ($_GET['id'] == "") {
 							$template=false;
 							define("PAGEID", "experiments-" . EXPROUTE);
 							define("BODYID", "experiments");
-							define("PAGETITLE", ucfirst(EXPROUTE) . " | Jason Petersen");
+							define("PAGETITLE", ucfirst(EXPROUTE) . " | " . SITENAME);
 							define("PAGEDESC", $defaultDesc);
 							$n++;
 						}
@@ -117,9 +118,13 @@ if ($_GET['id'] == "") {
 				} else {
 					$template=true;
 					define("PAGEID", "experiments");
-					define("PAGETITLE", "Experiments | Jason Petersen");
+					define("PAGETITLE", "Experiments | " . SITENAME);
 					define("PAGEDESC", $defaultDesc);
 				}
+				break;
+			case "sitemap":
+				$template=false;
+				define("PAGEID", "sitemap");
 				break;
 			case "404":
 			default:

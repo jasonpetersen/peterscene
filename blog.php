@@ -128,7 +128,7 @@ $db->close();
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title><?php echo $pageTitle; ?> | Jason Petersen</title>
+		<title><?php echo $pageTitle; ?> | <?php echo SITENAME; ?></title>
 		<meta name="description" content="<?php echo $pageDescription; ?>">
 	</head>
 	<body id="blog" class="body-bright">
