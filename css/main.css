@@ -42,6 +42,10 @@ a:active {
 	text-decoration: none;
 }
 
+.btn-default {
+	border-style: none;
+}
+
 .btn-default:link,
 .btn-default:visited {
 	color: #ffffff;
@@ -473,14 +477,14 @@ h5, .h5 {
 	color: #333;
 }
 
-.panel-heading-wrap a:link,
-.panel-heading-wrap a:visited,
-.panel-heading-wrap a:active {
+a.panel-heading-wrap:link,
+a.panel-heading-wrap:visited,
+a.panel-heading-wrap:active {
 	color: #918383;
 	text-decoration: none;
 }
 
-.panel-heading-wrap a:hover {
+a.panel-heading-wrap:hover {
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -489,8 +493,24 @@ h5, .h5 {
 	background-color: #f5f5f5;
 }
 
-.panel-heading-wrap a:hover .panel-heading {
+a.panel-heading-wrap:hover .panel-heading {
 	background-color: #b73336;
+}
+
+.body-dark .panel-group {
+	color: #6a5858;
+}
+
+.body-dark .panel {
+	border-style: none;
+}
+
+.body-dark a.panel-heading-wrap {
+	color: #ffffff;
+}
+
+.body-dark .panel-heading-wrap .panel-heading {
+	background-color: #6a5858;
 }
 
 .fa-flickr {

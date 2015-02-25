@@ -19,8 +19,8 @@ var main = function() {
 	});
 	// Toggle bright and dark themes with the 'L' key
 	$('body').keyup(function(event) {
-		if (event.which == 76) {
-			event.preventDefault();
+		var tag = event.target.tagName.toLowerCase();
+		if ((event.which === 76) && (tag != 'input') && (tag != 'textarea')) {
 			if ($('body').hasClass('body-bright')) {
 				$('body').removeClass('body-bright');
 				$('body').addClass('body-dark');

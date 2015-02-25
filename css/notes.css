@@ -1,7 +1,3 @@
-.bucket {
-	color: #373737;
-}
-
 .bucket h1, .bucket .h1,
 .bucket h2, .bucket .h2,
 .bucket h3, .bucket .h3,
@@ -13,24 +9,9 @@
 
 .bucket a:link,
 .bucket a:visited,
-.bucket a:active {
-	color: #373737;
-	text-decoration: underline;
-}
-
+.bucket a:active,
 .bucket a:hover {
-	color: #888888;
 	text-decoration: underline;
-}
-
-td {
-	min-width: 110px;
-	vertical-align: middle;
-}
-
-.col-one {
-	width: 110px;
-	max-width: 110px;
 }
 
 a.home-link:link,
@@ -41,6 +22,40 @@ a.home-link:active {
 
 a.home-link:hover {
 	text-decoration: underline;
+}
+
+#notes-table,
+.body-bright .bucket,
+.action-btns a:link,
+.action-btns a:visited,
+.action-btns a:active,
+.body-bright a.home-link:link,
+.body-bright a.home-link:visited,
+.body-bright a.home-link:active {
+	color: #373737;
+}
+
+.body-bright a.home-link:hover {
+	color: #888888;
+}
+
+.body-dark .bucket {
+	color: #ffffff;
+}
+
+#notes-table {
+	background-color: #ffffff;
+}
+
+td {
+	min-width: 110px;
+	vertical-align: middle;
+	/*word-break: break-all;*/
+}
+
+.col-one {
+	width: 110px;
+	max-width: 110px;
 }
 
 .action-btns a:link,
@@ -124,4 +139,3 @@ a.home-link:hover {
 .color-f4ddff .note-display a:hover {
 	color: #000000;
 }
-

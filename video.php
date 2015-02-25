@@ -68,13 +68,11 @@
 					</div>
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-default">
-							<div class="panel-heading-wrap">
-								<a data-toggle="collapse" data-parent="#accordion" href="#video-1" aria-expanded="true" aria-controls="video-1">
-									<div class="panel-heading" role="tab" id="heading-1">
-										<h4 class="panel-title">Torma</h4>
-									</div>
-								</a>
-							</div>
+							<a class="panel-heading-wrap" href="#video-1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="video-1">
+								<div class="panel-heading" role="tab" id="heading-1">
+									<h4 class="panel-title">Torma</h4>
+								</div>
+							</a>
 							<div id="video-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
 								<div class="panel-body">
 									<div class="row">
@@ -108,13 +106,11 @@
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<div class="panel-heading-wrap">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#video-2" aria-expanded="false" aria-controls="video-2">
-									<div class="panel-heading" role="tab" id="heading-2">
-										<h4 class="panel-title">KTD Monastery Giving Tuesday Campaign</h4>
-									</div>
-								</a>
-							</div>
+							<a class="panel-heading-wrap collapsed" href="#video-2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-2">
+								<div class="panel-heading" role="tab" id="heading-2">
+									<h4 class="panel-title">KTD Monastery Giving Tuesday Campaign</h4>
+								</div>
+							</a>
 							<div id="video-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
 								<div class="panel-body">
 									<div class="row">
@@ -147,13 +143,11 @@
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<div class="panel-heading-wrap">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#video-3" aria-expanded="false" aria-controls="video-3">
-									<div class="panel-heading" role="tab" id="heading-3">
-										<h4 class="panel-title">Family Day at KTD Monastery</h4>
-									</div>
-								</a>
-							</div>
+							<a class="panel-heading-wrap collapsed" href="#video-3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-3">
+								<div class="panel-heading" role="tab" id="heading-3">
+									<h4 class="panel-title">Family Day at KTD Monastery</h4>
+								</div>
+							</a>
 							<div id="video-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
 								<div class="panel-body">
 									<div class="row">
@@ -186,13 +180,11 @@
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<div class="panel-heading-wrap">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#video-4" aria-expanded="false" aria-controls="video-4">
-									<div class="panel-heading" role="tab" id="heading-4">
-										<h4 class="panel-title">Sang Puja: a cleansing smoke offering</h4>
-									</div>
-								</a>
-							</div>
+							<a class="panel-heading-wrap collapsed" href="#video-4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-4">
+								<div class="panel-heading" role="tab" id="heading-4">
+									<h4 class="panel-title">Sang Puja: a cleansing smoke offering</h4>
+								</div>
+							</a>
 							<div id="video-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
 								<div class="panel-body">
 									<div class="row">
@@ -224,13 +216,11 @@
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<div class="panel-heading-wrap">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#video-5" aria-expanded="false" aria-controls="video-5">
-									<div class="panel-heading" role="tab" id="heading-5">
-										<h4 class="panel-title">Rent Check</h4>
-									</div>
-								</a>
-							</div>
+							<a class="panel-heading-wrap collapsed" href="#video-5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-5">
+								<div class="panel-heading" role="tab" id="heading-5">
+									<h4 class="panel-title">Rent Check</h4>
+								</div>
+							</a>
 							<div id="video-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
 								<div class="panel-body">
 									<div class="row">

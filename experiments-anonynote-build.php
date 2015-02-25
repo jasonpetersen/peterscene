@@ -31,6 +31,7 @@ if ($db->connect_errno) {
 			$result = $db->query($sql);
 			if (mysqli_num_rows($result) > 0) {
 				echo '<div class="spacer20"></div>
+				<div class="table-responsive">
 				<table id="notes-table" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
@@ -77,7 +78,8 @@ if ($db->connect_errno) {
 					';
 				}
 				echo '</tbody>
-				</table>';
+				</table>
+				</div>';
 			}
 			break;
 		case "buildEdit":
