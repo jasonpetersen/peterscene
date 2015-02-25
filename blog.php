@@ -148,7 +148,7 @@ if ($error == true) {
 	switch (BLOGAVENUE) {
 		case "main":
 			echo '					<h5>' . $dDisp[$o[1]] . '</h5>
-					<a class="blog-link" href="/blog/' . $l[$o[1]] . '"><h2>' . $t[$o[1]] . '</h2></a>
+					<a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '"><h2>' . $t[$o[1]] . '</h2></a>
 					' . $b[$o[1]] . '
 					' . createTagText($g[$o[1]]) . '
 					<div class="hr-small"></div>
@@ -156,7 +156,7 @@ if ($error == true) {
 			$r = 2;
 			while ($r <= 6) {
 				echo '
-					<a class="blog-link" href="/blog/' . $l[$o[$r]] . '">
+					<a class="inconspicuous-link" href="/blog/' . $l[$o[$r]] . '">
 						<div>
 							<h5>' . $dDisp[$o[$r]] . '</h5>
 							<h4>' . $t[$o[$r]] . '</h4>
@@ -186,7 +186,7 @@ if ($error == true) {
 			$r = 1;
 			foreach ($tagMatch as $k => $v) {
 				echo '
-					<a class="blog-link" href="/blog/' . $l[$v] . '">
+					<a class="inconspicuous-link" href="/blog/' . $l[$v] . '">
 						<div>
 							<h5>' . $dDisp[$v] . '</h5>
 							<h4>' . $t[$v] . '</h4>

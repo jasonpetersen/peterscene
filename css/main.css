@@ -1,3 +1,5 @@
+/* SITEWIDE STYLES */
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -6,56 +8,47 @@ html {
 body {
 	font-family: 'Bitter', serif;
 	font-size: 15px;
-	margin-bottom: 95px;/* Corresponds to footer height */
 }
 
-#cv {
-	background: #f3f3f3 url('/images/paper.gif');
-	color: #000000;
-	padding: 10px;
+.body-bright,
+.body-dark {
+	margin-bottom: 95px;/* Must correspond to footer height */
 }
 
 .body-bright {
 	background: #ffffff;
-	color: #6a5858;
 }
 
 .body-dark {
 	background: #000000;
+}
+
+.body-bright,
+.body-bright a.inconspicuous-link:link,
+.body-bright a.inconspicuous-link:visited {
+	color: #6a5858;
+}
+
+.body-dark,
+.body-dark a.inconspicuous-link:link,
+.body-dark a.inconspicuous-link:visited {
 	color: #ffffff;
 }
 
-.body-bright .logo-dark,
-.body-dark .logo-bright {
-	display: none;
-}
-
 a:link,
-a:visited {
+a:visited,
+.body-dark a.inconspicuous-link:hover,
+.body-dark a.inconspicuous-link:active {
 	color: #b73336;
 	text-decoration: none;
 }
 
 a:hover,
-a:active {
+a:active,
+.body-bright a.inconspicuous-link:hover,
+.body-bright a.inconspicuous-link:active {
 	color: #7c2324;
 	text-decoration: none;
-}
-
-.btn-default {
-	border-style: none;
-}
-
-.btn-default:link,
-.btn-default:visited {
-	color: #ffffff;
-	background-color: #b73336;
-}
-
-.btn-default:hover,
-.btn-default:active {
-	color: #ffffff;
-	background-color: #6a5858;
 }
 
 h1, .h1,
@@ -95,6 +88,24 @@ h5, .h5 {
 	padding: 0;
 }
 
+.btn-default {
+	border-style: none;
+}
+
+.btn-default:link,
+.btn-default:visited {
+	color: #ffffff;
+	background-color: #b73336;
+}
+
+.btn-default:hover,
+.btn-default:active {
+	color: #ffffff;
+	background-color: #6a5858;
+}
+
+/* HR */
+
 .hr-full,
 .hr-banner-footer {
 	height: 1px;
@@ -118,6 +129,13 @@ h5, .h5 {
 .body-dark .hr-banner-footer,
 .body-dark .hr-small {
 	background: #b73336;
+}
+
+/* BANNER */
+
+.body-bright .logo-dark,
+.body-dark .logo-bright {
+	display: none;
 }
 
 .banner .row {
@@ -197,11 +215,13 @@ h5, .h5 {
     display: none;
 }
 
+/* FOOTER */
+
 .footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 95px;/* Set the fixed height of the footer here - corresponds to body margin-bottom */
+	height: 95px;/* Set the fixed height of the footer here - must correspond to body margin-bottom */
 }
 
 .footer span {
@@ -212,6 +232,135 @@ h5, .h5 {
 	float: right;
 	display: none;
 }
+
+/* SIDEBAR */
+
+#sidebar {
+	font-size: 95%;
+}
+
+#sidebar div {
+	margin-bottom: 15px;
+}
+
+#sidebar h4 {
+	font-size: 100%;
+    text-transform: uppercase;
+}
+
+#sidebar p {
+	padding: 0;
+	margin: 0;
+	line-height: 200%;
+}
+
+#sidebar .side-h,
+#sidebar .side-v {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+	margin: 15px 0 0 0;
+}
+
+#sidebar .side-v li {
+	margin-top: 0.8em;
+}
+
+#sidebar .side-h li {
+	display: inline-block;
+	margin-right: 0.3em;
+}
+
+#sidebar #blogBox {
+	display: inline-block;
+	padding: 5px;
+}
+
+.body-bright #sidebar #blogBox {
+	background-color: #fbf5f5;
+}
+
+.body-dark #sidebar #blogBox {
+	background-color: #301111;
+}
+
+#sidebar .collapse-all,
+#sidebar .expand-all {
+	cursor: pointer;
+}
+
+#sidebar .collapse-all {
+	padding-left: 6px;
+	padding-right: 3px;
+}
+
+#sidebar .expand-all {
+	padding-left: 3px;
+	padding-right: 6px;
+}
+
+#sidebar a.tweet:hover {
+	color: #00aced;
+}
+
+#sidebar a.fbShare:hover {
+	color: #3b5998;
+}
+
+#sidebar a.googleShare:hover {
+	color: #dd4b39;
+}
+
+/* BLOG NAVIGATION - element of sidebar */
+
+#blogNav,
+#blogNav ul {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+}
+
+#blogNav ul ul {
+	padding-left: 22px;
+}
+
+#blogNav .years {
+	margin-bottom: 1em;
+}
+
+#blogNav .months,
+#blogNav .posts {
+	margin-top: 0.5em;
+}
+
+#blogNav .mClick {
+	cursor: pointer;
+}
+
+#blogNav .archive_posts {
+	display: none;
+}
+
+#blogNav .current {
+	font-weight: bold;
+}
+
+/* BLOG */
+
+.leaf {
+	display: inline-block;
+	margin-left: 0.5em;
+	width: 30px;
+	height: 17px;
+	background: url(/images/leaf.svg);
+	background-size: 30px 17px;
+}
+
+#blog a.inconspicuous-link p {
+	font-size: 95%;
+}
+
+/* SPACIOUS STYLES - for how much breathing room text should have */
 
 .spacious0 li,
 .spacious0 p,
@@ -290,157 +439,18 @@ h5, .h5 {
 .spacious0 li:before,
 .spacious1 li:before,
 .spacious2 li:before,
-.spacious3 li:before {    
+.spacious3 li:before {
 	font-family: 'FontAwesome';
 	content: '\f101';
 	margin: 0 5px 0 -15px;
 }
 
-.no-bullet {
-	list-style-type: none;
-	list-style-position: inside;
-	padding: 0;
-	margin: 0;
-}
+/* CV PAGE */
 
-.no-bullet li {
-	margin-bottom: 0.5em;
-}
-
-.pull-left img {
-	float: left;
-	margin-right: 20px;
-	margin-bottom: 10px;
-}
-
-.pull-right img {
-	float: right;
-	margin-left: 20px;
-	margin-bottom: 10px;
-}
-
-#sidebar {
-	font-size: 95%;
-}
-
-#sidebar div {
-	margin-bottom: 15px;
-}
-
-#sidebar h4 {
-	font-size: 100%;
-    text-transform: uppercase;
-}
-
-#sidebar p {
-	padding: 0;
-	margin: 0;
-	line-height: 200%;
-}
-
-#sidebar .side-h,
-#sidebar .side-v {
-	list-style-type: none;
-	list-style-position: inside;
-	padding: 0;
-	margin: 15px 0 0 0;
-}
-
-#sidebar .side-v li {
-	margin-top: 0.8em;
-}
-
-#sidebar .side-h li {
-	display: inline-block;
-	margin-right: 0.3em;
-}
-
-#sidebar #blogBox {
-	display: inline-block;
-	padding: 5px;
-}
-
-.body-bright #sidebar #blogBox {
-	background-color: #fbf5f5;
-}
-
-.body-dark #sidebar #blogBox {
-	background-color: #301111;
-}
-
-#sidebar .collapse-all,
-#sidebar .expand-all {
-	cursor: pointer;
-}
-
-#sidebar .collapse-all {
-	padding-left: 6px;
-	padding-right: 3px;
-}
-
-#sidebar .expand-all {
-	padding-left: 3px;
-	padding-right: 6px;
-}
-
-#sidebar a.tweet:hover {
-	color: #00aced;
-}
-
-#sidebar a.fbShare:hover {
-	color: #3b5998;
-}
-
-#sidebar a.googleShare:hover {
-	color: #dd4b39;
-}
-
-#blogNav,
-#blogNav ul {
-	list-style-type: none;
-	list-style-position: inside;
-	padding: 0;
-}
-
-#blogNav ul ul {
-	padding-left: 22px;
-}
-
-#blogNav .years {
-	margin-bottom: 1em;
-}
-
-#blogNav .months,
-#blogNav .posts {
-	margin-top: 0.5em;
-}
-
-#blogNav .mClick {
-	cursor: pointer;
-}
-
-#blogNav .archive_posts {
-	display: none;
-}
-
-#blogNav .current {
-	font-weight: bold;
-}
-
-.blog-link:link,
-.blog-link:visited {
-	color: #6a5858;
-	text-decoration: none;
-}
-
-.blog-link:hover,
-.blog-link:active {
-	color: #7c2324;
-	text-decoration: none;
-}
-
-.blog-link p {
-	font-size: 95%;
+#cv {
+	background: #f3f3f3 url('/images/paper.gif');
+	color: #000000;
+	padding: 10px;
 }
 
 .cv-item {
@@ -472,10 +482,7 @@ h5, .h5 {
 	list-style-type: square;
 }
 
-.modal {
-	overflow: auto;
-	color: #333;
-}
+/* JQUERY ACCORDION */
 
 a.panel-heading-wrap:link,
 a.panel-heading-wrap:visited,
@@ -511,6 +518,36 @@ a.panel-heading-wrap:hover .panel-heading {
 
 .body-dark .panel-heading-wrap .panel-heading {
 	background-color: #6a5858;
+}
+
+/* MISCELLANEOUS */
+
+.no-bullet {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+}
+
+.no-bullet li {
+	margin-bottom: 0.5em;
+}
+
+.pull-left img {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.pull-right img {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.modal {
+	overflow: auto;
+	color: #333;
 }
 
 .fa-flickr {
@@ -557,12 +594,3 @@ a.panel-heading-wrap:hover .panel-heading {
 .spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
-
-.leaf {
-	display: inline-block;
-	margin-left: 0.5em;
-	width: 30px;
-	height: 17px;
-	background: url(/images/leaf.svg);
-	background-size: 30px 17px;
-}
