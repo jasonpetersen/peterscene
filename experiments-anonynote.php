@@ -29,6 +29,8 @@
 			$('.bucket').on('click', 'a', function (e) {
 				e.preventDefault();
 			});
+			// do not allow AJAX requests to be cached (because IE is silly)
+			$.ajaxSetup({ cache: false });
 			// function to create the first dialog window prompting the user to create or edit a notepad
 			function buildOpenDialog() {
 				$('<div>', {

@@ -104,6 +104,11 @@ h5, .h5 {
 	background-color: #6a5858;
 }
 
+img {
+	-ms-interpolation-mode: bicubic;
+	image-rendering: auto;
+}
+
 /* HR */
 
 .hr-full,
