@@ -81,7 +81,7 @@
 											<ul class="no-bullet">
 												<li><span class="ital">Feature-length documentary</span></li>
 												<li>Year: 2014</li>
-												<li>Client: Yeshe Wangmo (Mary Young)</li>
+												<li>Producer: Yeshe Wangmo (Mary Young)</li>
 												<li>Editor: <a href="http://www.livingfilms.com/partners/georg-peter-muller/" target="_blank">Georg Peter M&uuml;ller&nbsp;<i class="fa fa-external-link"></i></a></li>
 												<li>Produced at <span class="bold">Living Films</span> in Thailand: <a href="http://www.livingfilms.com/" target="_blank">livingfilms.com&nbsp;<i class="fa fa-external-link"></i></a></li>
 												<li>Official website: <a href="http://tormafilm.com/" target="_blank">tormafilm.com&nbsp;<i class="fa fa-external-link"></i></a></li>
@@ -98,7 +98,7 @@
 										<div class="col-xs-12">
 											<div class="hr-small"></div>
 											<p>I spent much of 2014 working on <span class="ital">Torma</span>, first as an editor, and later, when post-production moved to Thailand, as an Associate Producer and Technical Consultant. I was one of three people in the editing room shaping the film into its final form.</p>
-											<p>I offered my technical expertise in the opening and closing animations, done in After Effects. The source material (much of it seven years old) required considerable prep work, including frame rate conversion, which I executed. I also performed Quality Control on the finished product.</p>
+											<p>I offered my technical expertise in the opening and closing animations, done in After Effects. The source material required considerable prep work, including frame rate conversion, which I executed. I also performed Quality Control on the finished product.</p>
 											<p>I am involved in distribution on an ongoing basis. I produced both the DVD and the Vimeo encode, and have set up public screenings. Everything you need to know about seeing this film can be found at the official website, <a href="http://tormafilm.com/" target="_blank">tormafilm.com</a>.</p>
 										</div>
 									</div>
