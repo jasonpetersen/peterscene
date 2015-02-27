@@ -245,6 +245,14 @@ if ($error == true) {
 									</span>
 								</a>
 							</li>
+							<li>
+								<a class="redditShare" title="Reddit" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div>
