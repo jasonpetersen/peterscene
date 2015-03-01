@@ -273,7 +273,7 @@ img {
 
 #sidebar .side-h li {
 	display: inline-block;
-	margin-right: 0.3em;
+	margin-right: 0em;
 }
 
 #sidebar #blogBox {
@@ -302,6 +302,10 @@ img {
 #sidebar .expand-all {
 	padding-left: 3px;
 	padding-right: 6px;
+}
+
+#sidebar .share a {
+	font-size: 1.2em;
 }
 
 #sidebar a.tweet:hover {
