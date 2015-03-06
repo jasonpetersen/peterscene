@@ -71,8 +71,8 @@ if ($db->connect_errno) {
 								</a>
 							</td>
 							<td class="note-display">
-								<span class="note-short">' . $note . '</span>
-								<span class="note-full hidden">' . $noteFull . '</span>
+								<span class="note-short">' . nl2br($note) . '</span>
+								<span class="note-full hidden">' . nl2br($noteFull) . '</span>
 							</td>
 						</tr>
 					';
