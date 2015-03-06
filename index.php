@@ -77,10 +77,10 @@ if ($_GET['id'] == "") {
 				define("PAGEDESC", "Adjectives on the typewriter, he moves his words like a prizefighter.");
 				break;
 			case "portfolio":
-				$template=true;
+				$template=false;
 				define("PAGEID", "portfolio");
 				define("PAGETITLE", "Portfolio | " . SITENAME);
-				define("PAGEDESC", $defaultDesc);
+				define("PAGEDESC", "I am a web developer, dedicated to clean, mobile-first designs. Explore my body of work here.");
 				break;
 			case "video":
 				$template=false;

@@ -266,43 +266,6 @@
 						</ul>
 					</div>
 					<div>
-						<h4>Share</h4>
-						<ul class="side-h">
-							<li>
-								<a class="tweet" title="Twitter" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="fbShare" title="Facebook" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="googleShare" title="Google+" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="redditShare" title="Reddit" page-title="Video portfolio by Jason Petersen" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div>
 						<h4>Connect</h4>
 						<ul class="side-v">
 							<li><a href="mailto:<?php echo CONTACTEMAIL; ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email me</a></li>
@@ -316,7 +279,6 @@
 		<script src="/js/jquery.blueimp-gallery.min.js"></script>
 		<script src="/js/bootstrap-image-gallery.min.js"></script>
 		<script src="/js/gallery-video.js"></script>
-		<script src="/js/share.js"></script>
 		<script>
 			$(function() {
 				$('#accordion').accordion();
