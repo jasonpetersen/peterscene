@@ -41,6 +41,11 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
+		<loc>http://peterscene.com/blog/fourth-wall</loc>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
 		<loc>http://peterscene.com/blog/citizenfour</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
