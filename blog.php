@@ -148,7 +148,7 @@ if ($error == true) {
 	switch (BLOGAVENUE) {
 		case "main":
 			echo '					<h5>' . $dDisp[$o[1]] . '</h5>
-					<a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '"><h2>' . $t[$o[1]] . '</h2></a>
+					<h2><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '">' . $t[$o[1]] . '</a></h2>
 					' . $b[$o[1]] . '
 					' . createTagText($g[$o[1]]) . '
 					<div class="hr-small"></div>
