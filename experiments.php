@@ -1,3 +1,17 @@
+<?php
+
+define("PAGETITLE", "Experiments | " . SITENAME);
+define("PAGEDESC", "A playground of code.");
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
+	</head>
+	<body id="experiments" class="body-bright">
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?>">
@@ -39,3 +53,7 @@
 				</div>
 			</div>
 		</div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
+		<!-- additional JS goes here -->
+	</body>
+</html>

@@ -1,3 +1,10 @@
+<?php
+
+define("PAGETITLE", "Video | " . SITENAME);
+define("PAGEDESC", "A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

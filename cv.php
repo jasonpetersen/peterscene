@@ -1,3 +1,10 @@
+<?php
+
+define("PAGETITLE", "CV | " . SITENAME);
+define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

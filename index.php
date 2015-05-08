@@ -20,46 +20,27 @@ define("DBNAMEEXP", "jpete13_experiments");
 define("USERTABLE1", "entries");
 define("USERTABLE2", "tags");
 
-$homeTitle="The online residence of Jason Petersen";
-$defaultDesc="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.";
-
-$errorTitle="Oops! | " . SITENAME;
-$errorDesc="Something went wrong.";
-
 $myExperiments[] = "anonynote";
 $myExperiments[] = "anonynote-build";
 
 if ($_GET['id'] == "") {
-	$template=true;
-	define("PAGEID", "bio");
-	define("PAGETITLE", $homeTitle);
-	define("PAGEDESC", $defaultDesc);
+	$pageID = "bio";
 } else {
-	if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . strtolower($_GET['id']) . '.php')) {
-		switch(strtolower($_GET['id'])) {
+	$request = strtolower($_GET['id']);
+	if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $request . '.php')) {
+		switch($request) {
 			case "bio":
-				$template=true;
-				define("PAGEID", "bio");
-				define("PAGETITLE", $homeTitle);
-				define("PAGEDESC", $defaultDesc);
-				break;
 			case "cv":
-				$template=false;
-				define("PAGEID", "cv");
-				define("PAGETITLE", "CV | " . SITENAME);
-				define("PAGEDESC", $defaultDesc);
-				break;
 			case "purpose":
-				$template=true;
-				define("PAGEID", "purpose");
-				define("PAGETITLE", "Purpose | " . SITENAME);
-				define("PAGEDESC", "The 'why' is more important than the 'what'. Read why this site exists at all.");
+			case "blog-add":
+			case "portfolio":
+			case "video":
+			case "photos":
+			case "404":
+				$pageID = $request;
 				break;
 			case "blog":
-				$template=false;
-				define("PAGEID", "blog");
-				define("PAGETITLEMAIN", "Blog");
-				define("PAGEDESCMAIN", "Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.");
+				$pageID = "blog";
 				if ($_GET['entry'] != "") {
 					define("BLOGAVENUE", "entry");
 					define("BLOGENTRY", strtolower($_GET['entry']));
@@ -70,100 +51,32 @@ if ($_GET['id'] == "") {
 					define("BLOGAVENUE", "main");
 				}
 				break;
-			case "blog-add":
-				$template=false;
-				define("PAGEID", "blog-add");
-				define("PAGETITLE", "Add entry | " . SITENAME);
-				define("PAGEDESC", "Adjectives on the typewriter, he moves his words like a prizefighter.");
-				break;
-			case "portfolio":
-				$template=false;
-				define("PAGEID", "portfolio");
-				define("PAGETITLE", "Portfolio | " . SITENAME);
-				define("PAGEDESC", "I am a web developer, dedicated to clean, mobile-first designs. Explore my body of work here.");
-				break;
-			case "video":
-				$template=false;
-				define("PAGEID", "video");
-				define("PAGETITLE", "Video | " . SITENAME);
-				define("PAGEDESC", "A film major by education, but a student of cinema 'in perpetuam'. I am deeply versed in the craft, with an emphasis on editing and camera work.");
-				break;
-			case "photos":
-				$template=false;
-				define("PAGEID", "photos");
-				define("PAGETITLE", "Photos | " . SITENAME);
-				define("PAGEDESC", "I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.");
-				break;
 			case "experiments":
 				if ($_GET['route'] != "") {
-					define("EXPROUTE", strtolower($_GET['route']));
+					$expRoute = strtolower($_GET['route']);
 					$n = 0;
 					foreach ($myExperiments as $x) {
-						if (($x == EXPROUTE) && (file_exists($_SERVER['DOCUMENT_ROOT'] . '/experiments-' . EXPROUTE . '.php'))) {
-							$template=false;
-							define("PAGEID", "experiments-" . EXPROUTE);
-							define("BODYID", "experiments");
+						if (($x == $expRoute) && (file_exists($_SERVER['DOCUMENT_ROOT'] . '/experiments-' . $expRoute . '.php'))) {
+							$pageID = "experiments-" . $expRoute;
 							$n++;
 						}
 					}
 					if ($n == 0) {
-						$template=true;
-						define("PAGEID", "404");
-						define("BODYID", "error");
-						define("PAGETITLE", $errorTitle);
-						define("PAGEDESC", $errorDesc);
+						$pageID = "404";
 					}
 				} else {
-					$template=true;
-					define("PAGEID", "experiments");
-					define("PAGETITLE", "Experiments | " . SITENAME);
-					define("PAGEDESC", $defaultDesc);
+					$pageID = "experiments";
 				}
 				break;
-			case "sitemap":
-				$template=false;
-				define("PAGEID", "sitemap");
-				break;
-			case "404":
 			default:
-				$template=true;
-				define("PAGEID", "404");
-				define("BODYID", "error");
-				define("PAGETITLE", $errorTitle);
-				define("PAGEDESC", $errorDesc);
+				$pageID = "404";
 				break;
 		}
 	} else {
-		$template=true;
-		define("PAGEID", "404");
-		define("BODYID", "error");
-		define("PAGETITLE", $errorTitle);
-		define("PAGEDESC", $errorDesc);
+		$pageID = "404";
 	}
 }
 
-if (!defined("BODYID")) {
-	define("BODYID", PAGEID);
-}
-
-if ($template == false) {
-	include $_SERVER['DOCUMENT_ROOT'] . '/' . PAGEID . '.php';
-	exit;
-} else {
-	echo '<!DOCTYPE html>
-<html lang="en">
-	<head>
-';
-	include $_SERVER['DOCUMENT_ROOT'] . '/head.php';
-	echo '		</head>
-	<body id="' . BODYID . '" class="body-bright">
-';
-	include $_SERVER['DOCUMENT_ROOT'] . '/top.php';
-	include $_SERVER['DOCUMENT_ROOT'] . '/' . PAGEID . '.php';
-	include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php';
-	echo '	</body>
-</html>
-';
-}
+include $_SERVER['DOCUMENT_ROOT'] . '/' . $pageID . '.php';
 
 ?>

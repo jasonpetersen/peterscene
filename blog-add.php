@@ -1,5 +1,8 @@
 <?php
 
+define("PAGETITLE", "Add entry | " . SITENAME);
+define("PAGEDESC", "Adjectives on the typewriter, he moves his words like a prizefighter.");
+
 $serverDate = new DateTime();
 $readableDate = $serverDate->format('Y-m-d');
 $dateField = $readableDate;
@@ -91,7 +94,9 @@ if ($_POST["submit"]) {
 		$db->close();
 	}
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -199,53 +204,54 @@ if ($_POST["submit"]) {
 			</div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
-	<script>
-		var main = function() {
-			$("#extractChar").text($("#extract").val().length);
-			$("#extract").keyup(function() {
+		<!-- additional JS goes here -->
+		<script>
+			var main = function() {
 				$("#extractChar").text($("#extract").val().length);
-			});
-			$("#title").keyup(function() {
-				var inputText = $("#title").val();
-				var outputText = inputText.toLowerCase().replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'');
-				$("#titlelink").val(outputText);
-			});
-			$("#today").change(function() {
-				$("#date").prop('disabled', $("#today").is(':checked'));
-				if ($("#today").is(':checked')) {
-					$("#date").val('<?php echo $readableDate; ?>');
-				};
-			});
-			<?php
-			if ($today == "false") {
-				echo '
-				$("#today").prop("checked", false);
-				$("#date").prop("disabled", false);
-				';
-			}
-			if ($live == "true") {
-				echo '
-				$("#live").prop("checked", true);
-				';
-			}
-			?>
-			$('#previewBtn').click(function() {
-				$('#previewBtn').text('Refresh preview');
-				$('#bucket').remove();
-				$('.preview-hr').show();
-				$('<div/>', {
-					id: 'bucket'
-				}).appendTo('.preview');
-				$('<h2/>', {
-					text: $('#title').val()
-				}).appendTo('#bucket');
-				$('#bucket').append($.parseHTML($('#entryBody').val()));
-			});
-			//$("form").submit(function( event ) {
-			//	event.preventDefault();
-			//});
-		};
-		$(document).ready(main);
-	</script>
+				$("#extract").keyup(function() {
+					$("#extractChar").text($("#extract").val().length);
+				});
+				$("#title").keyup(function() {
+					var inputText = $("#title").val();
+					var outputText = inputText.toLowerCase().replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+					$("#titlelink").val(outputText);
+				});
+				$("#today").change(function() {
+					$("#date").prop('disabled', $("#today").is(':checked'));
+					if ($("#today").is(':checked')) {
+						$("#date").val('<?php echo $readableDate; ?>');
+					};
+				});
+				<?php
+				if ($today == "false") {
+					echo '
+					$("#today").prop("checked", false);
+					$("#date").prop("disabled", false);
+					';
+				}
+				if ($live == "true") {
+					echo '
+					$("#live").prop("checked", true);
+					';
+				}
+				?>
+				$('#previewBtn').click(function() {
+					$('#previewBtn').text('Refresh preview');
+					$('#bucket').remove();
+					$('.preview-hr').show();
+					$('<div/>', {
+						id: 'bucket'
+					}).appendTo('.preview');
+					$('<h2/>', {
+						text: $('#title').val()
+					}).appendTo('#bucket');
+					$('#bucket').append($.parseHTML($('#entryBody').val()));
+				});
+				//$("form").submit(function( event ) {
+				//	event.preventDefault();
+				//});
+			};
+			$(document).ready(main);
+		</script>
 	</body>
 </html>

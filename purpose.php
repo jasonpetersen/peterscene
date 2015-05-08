@@ -1,3 +1,17 @@
+<?php
+
+define("PAGETITLE", "Purpose | " . SITENAME);
+define("PAGEDESC", "The 'why' is more important than the 'what'. Read why this site exists at all.");
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
+	</head>
+	<body id="purpose" class="body-bright">
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
@@ -53,3 +67,7 @@
 				</div>
 			</div>
 		</div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
+		<!-- additional JS goes here -->
+	</body>
+</html>

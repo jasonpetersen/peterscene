@@ -1,11 +1,11 @@
 <?php
 
 $error=false;
-$pageTitleGood=PAGETITLEMAIN;
+$pageTitleGood="Blog";
 $pageTitleError="Oops!";
 $pageTitleNoEntry="Blog entry not found";
 $pageTitleNoTag="Tag not found";
-$pageDescriptionGood=PAGEDESCMAIN;
+$pageDescriptionGood="Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.";
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorNoTag="<p>Tag not found.</p>";
@@ -303,13 +303,13 @@ foreach ($blogNav as $level1) {
 			</div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
-	<!-- additional JS goes here -->
-	<script src="/js/blog.js"></script>
-	<script src="/js/share.js"></script>
-	<script>
-		if (<?php echo $error; ?> == true) {
-			$('.share').hide();
-		}
-	</script>
+		<!-- additional JS goes here -->
+		<script src="/js/blog.js"></script>
+		<script src="/js/share.js"></script>
+		<script>
+			if (<?php echo $error; ?> == true) {
+				$('.share').hide();
+			}
+		</script>
 	</body>
 </html>

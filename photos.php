@@ -1,3 +1,10 @@
+<?php
+
+define("PAGETITLE", "Photos | " . SITENAME);
+define("PAGEDESC", "I look at the world through a camera lens, whether I'm holding a camera or not. Peruse my latest photographic exploits.");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

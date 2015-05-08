@@ -1,3 +1,10 @@
+<?php
+
+define("PAGETITLE", "Web portfolio | " . SITENAME);
+define("PAGEDESC", "I am a web developer, dedicated to clean, mobile-first designs. Explore my body of work here.");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

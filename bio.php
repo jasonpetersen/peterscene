@@ -1,3 +1,17 @@
+<?php
+
+define("PAGETITLE", "The online residence of Jason Petersen");
+define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.");
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
+	</head>
+	<body id="bio" class="body-bright">
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
 				<div class="<?php echo GRIDBUCKET; ?> spacious2">
@@ -60,3 +74,7 @@ $db->close();
 				</div>
 			</div>
 		</div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
+		<!-- additional JS goes here -->
+	</body>
+</html>
