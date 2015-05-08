@@ -10,15 +10,8 @@
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="/css/main.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
-<?php
-
-if (PAGEID != "blog") {
-	echo '		<meta property="og:title" content="' . PAGETITLE . '" />
-		<meta property="og:description" content="' . PAGEDESC . '" />
-';
-}
-
-?>
+		<meta property="og:title" content="<?php echo PAGETITLE; ?>" />
+		<meta property="og:description" content="<?php echo PAGEDESC; ?>" />
 		<meta property="fb:admins" content="8209912" />
 		<meta property="og:url" content="<?php echo ESCAPEDURL; ?>" />
 		<meta property="og:site_name" content="Peterscene" />
