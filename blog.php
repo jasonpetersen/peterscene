@@ -1,11 +1,11 @@
 <?php
 
 $error=false;
-$pageTitleGood="Blog";
+$pageTitleGood=PAGETITLEMAIN;
 $pageTitleError="Oops!";
 $pageTitleNoEntry="Blog entry not found";
 $pageTitleNoTag="Tag not found";
-$pageDescriptionGood=PAGEDESC;
+$pageDescriptionGood=PAGEDESCMAIN;
 $pageDescriptionError="Something went wrong.";
 $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorNoTag="<p>Tag not found.</p>";
@@ -117,6 +117,8 @@ if ($db->connect_errno) {
 				}
 				break;
 		}
+		define("PAGETITLE", $pageTitle . " | " . SITENAME);
+		define("PAGEDESC", $pageDescription);
 	}
 }		
 
@@ -128,8 +130,6 @@ $db->close();
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title><?php echo $pageTitle; ?> | <?php echo SITENAME; ?></title>
-		<meta name="description" content="<?php echo $pageDescription; ?>">
 	</head>
 	<body id="blog" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>

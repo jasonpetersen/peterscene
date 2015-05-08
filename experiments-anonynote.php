@@ -1,11 +1,16 @@
+<?php
+
+define("PAGETITLE", "Anonynote | " . SITENAME);
+define("PAGEDESC", "A lightweight web app for anonymously saving and organizing notes.");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
 		<link rel="stylesheet" type="text/css" href="/css/notes.css" />
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-colorselector.css" />
-		<title>Anonynote | <?php echo SITENAME; ?></title>
-		<meta name="description" content="A lightweight web app for anonymously saving and organizing notes.">
 	</head>
 	<body id="experiments" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>

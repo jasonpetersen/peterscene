@@ -4,7 +4,7 @@ error_reporting(0);
 
 define("SITENAME", "Jason Petersen");
 define("CONTACTEMAIL", "contact@peterscene.com");
-define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Woodstock, NY.");
+define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Rhinebeck, NY.");
 
 define("THISURL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
@@ -20,7 +20,7 @@ define("DBNAMEEXP", "jpete13_experiments");
 define("USERTABLE1", "entries");
 define("USERTABLE2", "tags");
 
-$mainTitle="The online residence of Jason Petersen";
+$homeTitle="The online residence of Jason Petersen";
 $defaultDesc="Web developer, videographer, photographer, wordsmith, world traveler, and all-around upstanding gentleman.";
 
 $errorTitle="Oops! | " . SITENAME;
@@ -32,7 +32,7 @@ $myExperiments[] = "anonynote-build";
 if ($_GET['id'] == "") {
 	$template=true;
 	define("PAGEID", "bio");
-	define("PAGETITLE", $mainTitle);
+	define("PAGETITLE", $homeTitle);
 	define("PAGEDESC", $defaultDesc);
 } else {
 	if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . strtolower($_GET['id']) . '.php')) {
@@ -40,7 +40,7 @@ if ($_GET['id'] == "") {
 			case "bio":
 				$template=true;
 				define("PAGEID", "bio");
-				define("PAGETITLE", $mainTitle);
+				define("PAGETITLE", $homeTitle);
 				define("PAGEDESC", $defaultDesc);
 				break;
 			case "cv":
@@ -58,8 +58,8 @@ if ($_GET['id'] == "") {
 			case "blog":
 				$template=false;
 				define("PAGEID", "blog");
-				define("PAGETITLE", "Blog | " . SITENAME);
-				define("PAGEDESC", "Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.");
+				define("PAGETITLEMAIN", "Blog");
+				define("PAGEDESCMAIN", "Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.");
 				if ($_GET['entry'] != "") {
 					define("BLOGAVENUE", "entry");
 					define("BLOGENTRY", strtolower($_GET['entry']));
@@ -103,8 +103,6 @@ if ($_GET['id'] == "") {
 							$template=false;
 							define("PAGEID", "experiments-" . EXPROUTE);
 							define("BODYID", "experiments");
-							define("PAGETITLE", ucfirst(EXPROUTE) . " | " . SITENAME);
-							define("PAGEDESC", $defaultDesc);
 							$n++;
 						}
 					}
@@ -157,9 +155,7 @@ if ($template == false) {
 	<head>
 ';
 	include $_SERVER['DOCUMENT_ROOT'] . '/head.php';
-	echo '		<title>' . PAGETITLE . '</title>
-		<meta name="description" content="' . PAGEDESC . '">
-	</head>
+	echo '		</head>
 	<body id="' . BODYID . '" class="body-bright">
 ';
 	include $_SERVER['DOCUMENT_ROOT'] . '/top.php';

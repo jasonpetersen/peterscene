@@ -2,8 +2,6 @@
 <html lang="en">
 	<head>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/head.php'; ?>
-		<title><?php echo PAGETITLE; ?></title>
-		<meta name="description" content="<?php echo PAGEDESC; ?>">
 	</head>
 	<body id="cv">
 		<div class="cv">
