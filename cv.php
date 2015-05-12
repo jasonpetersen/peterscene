@@ -14,9 +14,19 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 		<div class="cv">
 			<h2>Work Experience</h2>
 			<div class="cv-item">
+				<h3>Online Learning Assistant</h3>
+				<h4>Omega Institute: Rhinebeck,&nbsp;NY</h4>
+				<h5>April 2015 &mdash; Present</h5>
+				<ul>
+					<li>Edit content for online sale and promotion</li>
+					<li>Serve as a grip and cameraman</li>
+					<li>Produce livestream video</li>
+				</ul>
+			</div>
+			<div class="cv-item">
 				<h3>IT Specialist / Videographer</h3>
 				<h4>Karma Triyana Dharmachakra: Woodstock,&nbsp;NY</h4>
-				<h5>March 2013 &mdash; Present</h5>
+				<h5>March 2013 &mdash; April 2015</h5>
 				<ul>
 					<li>Maintain, repair, and upgrade network infrastructure, computer hardware, and telephone system in a world-renowned retreat center</li>
 					<li>Film and edit teaching events and promotional material; make content available on disc and online</li>
