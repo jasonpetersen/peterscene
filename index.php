@@ -36,6 +36,7 @@ if ($_GET['id'] == "") {
 			case "portfolio":
 			case "video":
 			case "photos":
+			case "sitemap":
 			case "404":
 				$pageID = $request;
 				break;
