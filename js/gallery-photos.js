@@ -87,7 +87,31 @@ $(function () {
 		['http://farm6.staticflickr.com/5040/5820736870_fc711231ab', 'Reaching for the heavens. Goreme, Turkey.'],
 		['http://farm3.staticflickr.com/2802/5800714174_00d38b6ce2', 'Pathway to paradise. Istanbul, Turkey.'],
 		['http://farm3.staticflickr.com/2759/5799541847_87b4fc10b5', 'Birth. Nis, Serbia.'],
-		['http://farm6.staticflickr.com/5146/5800083318_f411c37e76', 'Spring in dusk. Nis, Serbia.']
+		['http://farm6.staticflickr.com/5146/5800083318_f411c37e76', 'Spring in dusk. Nis, Serbia.'],
+		['http://farm6.staticflickr.com/5030/5758803735_3e7b82004f', 'Urban decay. Sarajevo, Bosnia.'],
+		['http://farm6.staticflickr.com/5108/5758743425_4c4cd4184e', 'New friends. Sarajevo, Bosnia.'],
+		['http://farm3.staticflickr.com/2464/5758620381_86444f8bb3', 'Minh takes a jump. Mostar, Bosnia.'],
+		['http://farm3.staticflickr.com/2216/5733470815_a956f05835', 'Taking it all in. Hvar, Croatia.'],
+		['http://farm4.staticflickr.com/3466/5734034458_a11be184eb', 'The watch. Hvar, Croatia.'],
+		['http://farm4.staticflickr.com/3533/5716326204_c711c725fe', 'Reaching for heaven. Zadar, Croatia.'],
+		['http://farm3.staticflickr.com/2423/5699088447_d53b223a3b', 'The astronomical clock tower. Prague, Czech Republic.'],
+		['http://farm6.staticflickr.com/5104/5672950226_d3d2c0cc6d', 'The Salt King. Krakow, Poland.'],
+		['http://farm6.staticflickr.com/5230/5672441481_e2c5f3b4b8', 'Breaking through. Krakow, Poland.'],
+		['http://farm6.staticflickr.com/5267/5654654302_e7b0e71987', 'Parliament. Budapest, Hungary.'],
+		['http://farm6.staticflickr.com/5262/5644150712_8033c82a4c', 'Alien. Koh Chang, Thailand.'],
+		['http://farm6.staticflickr.com/5189/5643618169_d6e790b382', 'Sunset from the bluffs. Koh Chang, Thailand.'],
+		['http://farm6.staticflickr.com/5304/5550006108_3ea277fdb5', 'Waiting. Inle, Myanmar.'],
+		['http://farm6.staticflickr.com/5307/5550050190_1888583a6c', 'A small cyclone. Bagan, Myanmar.'],
+		['http://farm6.staticflickr.com/5060/5549654799_133b7a01b9', 'Buddha. Bagan, Myanmar.'],
+		['http://farm6.staticflickr.com/5310/5549255197_04987158c9', 'A beer, a bridge, and a sunset. Amarapura, Myanmar.'],
+		['http://farm6.staticflickr.com/5295/5549283203_8788873e85', 'Friends. Myanmar.'],
+		['http://farm6.staticflickr.com/5016/5477376287_17c40af8b2', 'Carrying the flame. Kathmandu, Nepal.'],
+		['http://farm6.staticflickr.com/5248/5377864421_102e21de85', 'Fear. Pokhara, Nepal.'],
+		['http://farm6.staticflickr.com/5166/5271301016_5e4f56ec9f', 'A splash of color in the gloom. Pai, Thailand.'],
+		['http://farm6.staticflickr.com/5242/5256994831_d019f387c3', 'Flaking gold leaf. Chiang Mai, Thailand.'],
+		['http://farm6.staticflickr.com/5043/5245546672_a5a88563d0', 'Horse in shadow. Lopburi, Thailand.'],
+		['http://farm6.staticflickr.com/5246/5244130012_d6afdedc3f', 'Angkor Wat at dawn. Angkor, Cambodia.'],
+		['http://farm6.staticflickr.com/5005/5244315160_e6851203cf', 'A snippet of Angkor. Angkor, Cambodia.']
 	];
 	var linksContainer = $('#links'), u;
 	$.each(photoDisp, function (index, value) {
