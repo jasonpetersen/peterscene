@@ -20,6 +20,7 @@ $socialArray = array(
 
 function createSocialButtons() {
 	global $socialArray;
+	global $shareTitle;
 	$strToPrint = '<div id="share">
 						<ul>';
 	foreach ($socialArray as $socBtn) {
