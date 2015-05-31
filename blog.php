@@ -255,6 +255,33 @@ if ($error == true) {
 						</ul>
 					</div>
 					<div>
+						<h4><span id="show-hide-tags">Tags&nbsp;<i class="fa fa-plus-square-o" title="Toggle tags view"></i></span></h4>
+						<ul id="tagsList" class="no-bullet <?php echo (BLOGAVENUE == 'tag' ? 'show-it' : 'hide-it') ?>">
+<?php
+
+foreach ($g as $eachTag) {
+	$allTagNumsStr .= $eachTag . ',';
+}
+
+$allTagNumsStr = rtrim(str_replace(',,', ',', $allTagNumsStr), ',');
+$allTagNumsArr = explode(',', $allTagNumsStr);
+$tagCount = array_count_values($allTagNumsArr);
+
+asort($tags);
+foreach ($tags as $tKey => $tValue) {
+	if ((BLOGAVENUE == "tag") && (BLOGTAG == strtolower($tValue))) {
+		$tagClass = "current-tag";
+	} else {
+		$tagClass = "";
+	}
+	if ($tagCount[$tKey] != "") echo '<li class="' . $tagClass . '"><a href="/blog/tag/' . strtolower($tValue) . '">' . $tValue . ' (' . $tagCount[$tKey] . ')</a></li>';
+}
+
+?>
+
+						</ul>
+					</div>
+					<div>
 						<h4>All Entries<i class="fa fa-minus-square-o collapse-all" title="Collapse All"></i><i class="fa fa-plus-square-o expand-all" title="Expand All"></i></h4>
 						<ul id="blogNav" class="archive_year">
 <?php
@@ -299,10 +326,5 @@ foreach ($blogNav as $level1) {
 		<!-- additional JS goes here -->
 		<script src="/js/blog.js"></script>
 		<script src="/js/share.js"></script>
-		<script>
-			if (<?php echo $error; ?> == true) {
-				$('.share').hide();
-			}
-		</script>
 	</body>
 </html>

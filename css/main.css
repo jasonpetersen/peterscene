@@ -88,6 +88,10 @@ h5, .h5 {
 	padding: 0;
 }
 
+.hide-it {
+	display: none;
+}
+
 .btn-default {
 	border-style: none;
 }
@@ -304,7 +308,7 @@ img {
 	padding-right: 6px;
 }
 
-/* BLOG NAVIGATION - element of sidebar */
+/* BLOG ADDITIONS TO SIDEBAR */
 
 #blogNav,
 #blogNav ul {
@@ -326,7 +330,8 @@ img {
 	margin-top: 0.5em;
 }
 
-#blogNav .mClick {
+#blogNav .mClick,
+#show-hide-tags {
 	cursor: pointer;
 }
 
@@ -334,7 +339,8 @@ img {
 	display: none;
 }
 
-#blogNav .current {
+#blogNav .current,
+.current-tag {
 	font-weight: bold;
 }
 
