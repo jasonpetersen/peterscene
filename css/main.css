@@ -304,26 +304,6 @@ img {
 	padding-right: 6px;
 }
 
-#sidebar .share a {
-	font-size: 1.2em;
-}
-
-#sidebar a.tweet:hover {
-	color: #00aced;
-}
-
-#sidebar a.fbShare:hover {
-	color: #3b5998;
-}
-
-#sidebar a.googleShare:hover {
-	color: #dd4b39;
-}
-
-#sidebar a.redditShare:hover {
-	color: #ff4500;
-}
-
 /* BLOG NAVIGATION - element of sidebar */
 
 #blogNav,
@@ -371,6 +351,40 @@ img {
 
 #blog a.inconspicuous-link p {
 	font-size: 95%;
+}
+
+/* BLOG SHARE BUTTONS */
+
+#share ul {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+	margin: 20px 0 -20px 0;
+}
+
+#share ul li {
+	display: inline-block;
+	margin-right: 0em;
+}
+
+#share a {
+	font-size: 1.4em;
+}
+
+#share a.tweet:hover {
+	color: #00aced;
+}
+
+#share a.fbShare:hover {
+	color: #3b5998;
+}
+
+#share a.googleShare:hover {
+	color: #dd4b39;
+}
+
+#share a.redditShare:hover {
+	color: #ff4500;
 }
 
 /* SPACIOUS STYLES - for how much breathing room text should have */
@@ -446,16 +460,7 @@ img {
 .spacious1 ul,
 .spacious2 ul,
 .spacious3 ul {
-	list-style: none;
-}
-
-.spacious0 li:before,
-.spacious1 li:before,
-.spacious2 li:before,
-.spacious3 li:before {
-	font-family: 'FontAwesome';
-	content: '\f101';
-	margin: 0 5px 0 -15px;
+	list-style-type: square;
 }
 
 /* CV PAGE */

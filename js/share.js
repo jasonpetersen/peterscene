@@ -6,10 +6,8 @@ var main = function() {
 		var loc = $(this).attr('href');
 		//We get the title of the link
 		var title = escape($(this).attr('page-title'));
-		//We get the referrer of the link (me)
-		var referrer = escape($(this).attr('via'));
 		//We trigger a new window with the Twitter dialog, in the middle of the page
-		window.open('http://twitter.com/share?url=' + loc + '&via=' + referrer + '&text=' + title, 'newwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		window.open('http://twitter.com/share?url=' + loc + '&via=JasonPetersen&text=' + title, 'newwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 	});
 	$('a.fbShare').click(function(e){
 		e.preventDefault();

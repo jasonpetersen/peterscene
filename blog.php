@@ -11,6 +11,34 @@ $bodyErrorNoEntry="<p>Blog entry not found.</p>";
 $bodyErrorNoTag="<p>Tag not found.</p>";
 $bodyErrorMajor="<p>Something rather serious has resulted in this error.</p>";
 
+$socialArray = array(
+	"0" => array("tweet", "Twitter", "fa-twitter"),
+	"1" => array("fbShare", "Facebook", "fa-facebook"),
+	"2" => array("googleShare", "Google+", "fa-google-plus"),
+	"3" => array("redditShare", "Reddit", "fa-reddit")
+);
+
+function createSocialButtons() {
+	global $socialArray;
+	$strToPrint = '<div id="share">
+						<ul>';
+	foreach ($socialArray as $socBtn) {
+		$strToPrint .= '
+							<li>
+								<a class="' . $socBtn[0] . '" title="' . $socBtn[1] . '" page-title="' . $shareTitle . '" href="' . ESCAPEDURL . '" target="_blank">
+									<span class="fa-stack">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa ' . $socBtn[2] . ' fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>';
+	}
+	$strToPrint .= '
+						</ul>
+					</div>';
+	return $strToPrint;
+}
+
 function createTagText($tagString) {
 	if ($tagString != "") {
 		global $tags;
@@ -151,6 +179,7 @@ if ($error == true) {
 					<h2><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '">' . $t[$o[1]] . '</a></h2>
 					' . $b[$o[1]] . '
 					' . createTagText($g[$o[1]]) . '
+					' . createSocialButtons() . '
 					<div class="hr-small"></div>
 					<h3>Recent entries:</h3>';
 			$r = 2;
@@ -175,9 +204,9 @@ if ($error == true) {
 					<h2>' . $t[$key]  . '</h2>
 					' . $b[$key] . '
 					' . createTagText($g[$key]) . '
-					<div class="spacer10"></div>
-					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
-			';
+					' . createSocialButtons() . '
+					<div class="spacer30"></div>
+					<a class="btn btn-default" href="/blog" role="button">Blog main</a>';
 			break;
 		case "tag":
 			echo '
@@ -201,13 +230,13 @@ if ($error == true) {
 			}
 			echo '
 					<div class="spacer10"></div>
-					<a class="btn btn-default" href="/blog" role="button">Blog main</a>
-			';
+					<a class="btn btn-default" href="/blog" role="button">Blog main</a>';
 			break;
 	}
 }
 
 ?>
+
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
@@ -217,43 +246,6 @@ if ($error == true) {
 					<div>
 						<h4>About</h4>
 						<p>Follow me as I write about science, technology, literature, film, and highfalutin philosophical nonsense.</p>
-					</div>
-					<div class="share">
-						<h4>Share</h4>
-						<ul class="side-h">
-							<li>
-								<a class="tweet" title="Twitter" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" via="JasonPetersen" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="fbShare" title="Facebook" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="googleShare" title="Google+" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a class="redditShare" title="Reddit" page-title="<?php echo $shareTitle; ?>" href="<?php echo ESCAPEDURL; ?>" target="_blank">
-									<span class="fa-stack">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-						</ul>
 					</div>
 					<div>
 						<h4>Connect</h4>
