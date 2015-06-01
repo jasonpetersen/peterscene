@@ -325,7 +325,10 @@ img {
 	margin-bottom: 1em;
 }
 
-#blogNav .months,
+#blogNav .months {
+	margin-top: 0.7em;
+}
+
 #blogNav .posts {
 	margin-top: 0.5em;
 }

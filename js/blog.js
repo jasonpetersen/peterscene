@@ -5,9 +5,6 @@ var main = function() {
 	$('.current').parent().show();
 	$('.current').parent().parent().find('i').removeClass('fa-plus-square-o');
 	$('.current').parent().parent().find('i').addClass('fa-minus-square-o');
-	//the tags are hidden unless you're viewing a tags page. display the correct plus/minus button.
-	$('.current-tag').parent().parent().find('i').removeClass('fa-plus-square-o');
-	$('.current-tag').parent().parent().find('i').addClass('fa-minus-square-o');
 	//make the all entries clicking work
 	$('.mClick').click(function() {
 		$(this).parent().find('ul').toggle();

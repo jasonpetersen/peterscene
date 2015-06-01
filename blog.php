@@ -255,8 +255,8 @@ if ($error == true) {
 						</ul>
 					</div>
 					<div>
-						<h4><span id="show-hide-tags">Tags&nbsp;<i class="fa fa-plus-square-o" title="Toggle tags view"></i></span></h4>
-						<ul id="tagsList" class="no-bullet <?php echo (BLOGAVENUE == 'tag' ? 'show-it' : 'hide-it') ?>">
+						<h4><span id="show-hide-tags">Tags&nbsp;<i class="fa <?php echo ((BLOGAVENUE == 'tag') && ($error == false) ? 'fa-minus-square-o' : 'fa-plus-square-o') ?>" title="Toggle tags view"></i></span></h4>
+						<ul id="tagsList" class="no-bullet <?php echo ((BLOGAVENUE == 'tag') && ($error == false) ? 'show-it' : 'hide-it') ?>">
 <?php
 
 foreach ($g as $eachTag) {
