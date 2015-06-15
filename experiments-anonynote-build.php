@@ -31,7 +31,6 @@ if ($db->connect_errno) {
 			$result = $db->query($sql);
 			if (mysqli_num_rows($result) > 0) {
 				echo '<div class="spacer20"></div>
-				<div class="table-responsive">
 				<table id="notes-table" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
@@ -70,7 +69,7 @@ if ($db->connect_errno) {
 									</span>
 								</a>
 							</td>
-							<td class="note-display">
+							<td class="note-display break-word">
 								<span class="note-short">' . nl2br($note) . '</span>
 								<span class="note-full hidden">' . nl2br($noteFull) . '</span>
 							</td>
@@ -78,8 +77,7 @@ if ($db->connect_errno) {
 					';
 				}
 				echo '</tbody>
-				</table>
-				</div>';
+				</table>';
 			}
 			break;
 		case "buildEdit":
