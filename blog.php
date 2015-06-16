@@ -176,9 +176,11 @@ if ($error == true) {
 } else {
 	switch (BLOGAVENUE) {
 		case "main":
-			echo '					<h5>' . $dDisp[$o[1]] . '</h5>
-					<h2><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '">' . $t[$o[1]] . '</a></h2>
-					' . $b[$o[1]] . '
+			echo '					<div itemscope itemtype="http://schema.org/Article">
+					<h5 itemprop="datePublished">' . $dDisp[$o[1]] . '</h5>
+					<h2><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '" itemprop="headline">' . $t[$o[1]] . '</a></h2>
+					<div itemprop="articleBody">' . $b[$o[1]] . '</div>
+					</div>
 					' . createTagText($g[$o[1]]) . '
 					' . createSocialButtons() . '
 					<div class="hr-small"></div>
@@ -201,9 +203,11 @@ if ($error == true) {
 			}
 			break;
 		case "entry":
-			echo '					<h5>' . $dDisp[$key] . '</h5>
-					<h2>' . $t[$key]  . '</h2>
-					' . $b[$key] . '
+			echo '					<div itemscope itemtype="http://schema.org/Article">
+					<h5 itemprop="datePublished">' . $dDisp[$key] . '</h5>
+					<h2 itemprop="headline">' . $t[$key]  . '</h2>
+					<div itemprop="articleBody">' . $b[$key] . '</div>
+					</div>
 					' . createTagText($g[$key]) . '
 					' . createSocialButtons() . '
 					<div class="spacer30"></div>

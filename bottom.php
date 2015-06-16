@@ -8,3 +8,17 @@
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="/js/main.js"></script>
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"name" : "Jason Petersen",
+			"url": "http://peterscene.com",
+			"logo": "http://peterscene.com/icons/android-chrome-192x192.png",
+			"sameAs" : [ "http://twitter.com/JasonPetersen",
+				"http://www.facebook.com/jpetersen13",
+				"http://www.linkedin.com/in/hellojasonpetersen",
+				"http://www.flickr.com/people/jasonpetersen",
+				"http://github.com/jasonpetersen"]
+		}
+		</script>

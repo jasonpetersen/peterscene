@@ -14,14 +14,14 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
-				<div class="<?php echo GRIDBUCKET; ?> spacious2">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2" itemscope itemtype="http://schema.org/Person">
 					<span class="pull-left">
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="150" height="150">
 					</span>
 					<p>Way back when, I took my Film &amp; Media Arts degree from Philadelphia to Hollywood and worked as a software engineer for Warner Bros. and Sony Pictures.</p>
 					<p>Hard times during the <a href="http://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%9308" target="_blank">financial crisis</a> proved to be a boon for my wandering spirit: I traveled the world for no small amount of time. There are an <a href="https://www.flickr.com/photos/jasonpetersen/sets/" target="_blank">avalanche of photos</a> documenting it.</p>
 					<p>In Asia I became caught up in the Tibetan cause and followed my newfound interest in Tibetan Buddhism to Woodstock NY, home of world-renowned <a href="http://www.kagyu.org/" target="_blank">KTD Monastery</a>. I served all IT and videography functions for the large community.</p>
-					<p>My latest move&mdash;driven by a continuing passion for spirituality, mindfulness, and community&mdash;took me across the river to the <a href="https://en.wikipedia.org/wiki/Omega_Institute_for_Holistic_Studies" target="_blank">Omega Institute</a>'s sprawling 190-acre campus, in the heart of the Hudson Valley. I work there today as an editor, cameraman, and livestream producer.</p>
+					<p>My latest move&mdash;driven by a continuing passion for spirituality, mindfulness, and community&mdash;took me across the river to the <a href="http://www.eomega.org/" target="_blank">Omega Institute</a>'s sprawling 190-acre campus, in the heart of the Hudson Valley. I work there today as an editor, cameraman, and livestream producer.</p>
 					<p>I am also a web developer, dedicated to clean, mobile-first designs.</p>
 					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent the prior summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
 					<div class="hr-small visible-xs"></div>
