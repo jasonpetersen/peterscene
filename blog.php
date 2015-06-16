@@ -178,7 +178,7 @@ if ($error == true) {
 		case "main":
 			echo '					<div itemscope itemtype="http://schema.org/Article">
 					<h5 itemprop="datePublished">' . $dDisp[$o[1]] . '</h5>
-					<h2><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '" itemprop="headline">' . $t[$o[1]] . '</a></h2>
+					<h2 itemprop="headline"><a class="inconspicuous-link" href="/blog/' . $l[$o[1]] . '" itemprop="url">' . $t[$o[1]] . '</a></h2>
 					<div itemprop="articleBody">' . $b[$o[1]] . '</div>
 					</div>
 					' . createTagText($g[$o[1]]) . '

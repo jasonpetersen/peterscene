@@ -14,7 +14,7 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
 		<div class="container">
 			<div class="row">
-				<div class="<?php echo GRIDBUCKET; ?> spacious2" itemscope itemtype="http://schema.org/Person">
+				<div class="<?php echo GRIDBUCKET; ?> spacious2">
 					<span class="pull-left">
 						<img src="/images/headshot.jpg" alt="JP" class="img-circle" width="150" height="150">
 					</span>

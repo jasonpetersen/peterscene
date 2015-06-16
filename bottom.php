@@ -14,7 +14,6 @@
 			"@type": "Person",
 			"name" : "Jason Petersen",
 			"url": "http://peterscene.com",
-			"logo": "http://peterscene.com/icons/android-chrome-192x192.png",
 			"sameAs" : [ "http://twitter.com/JasonPetersen",
 				"http://www.facebook.com/jpetersen13",
 				"http://www.linkedin.com/in/hellojasonpetersen",
