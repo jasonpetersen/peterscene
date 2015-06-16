@@ -77,5 +77,33 @@ $db->close();
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 		<!-- additional JS goes here -->
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"name": "Jason Petersen",
+			"url": "http://peterscene.com",
+			"image": "http://peterscene.com/images/headshot.jpg",
+			"sameAs": [
+				"http://twitter.com/JasonPetersen",
+				"http://www.facebook.com/jpetersen13",
+				"http://www.linkedin.com/in/hellojasonpetersen",
+				"http://www.flickr.com/people/jasonpetersen",
+				"http://github.com/jasonpetersen"
+			],
+			"jobTitle": [
+				"Web developer",
+				"Videographer",
+				"IT professional",
+				"Wordsmith"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Rhinebeck",
+				"addressRegion": "NY",
+				"postalCode": "12572"
+			}
+		}
+		</script>
 	</body>
 </html>
