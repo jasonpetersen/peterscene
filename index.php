@@ -3,7 +3,7 @@
 error_reporting(0);
 
 define("SITENAME", "Jason Petersen");
-define("CONTACTEMAIL", "xxx@yyy.zzz");
+define("CONTACTEMAIL", "someone@somewhere.com");
 define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Rhinebeck, NY.");
 
 define("THISURL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
@@ -13,12 +13,12 @@ define("GRIDBUCKET", "col-xs-12 col-sm-8");
 define("GRIDSIDEBAR", "col-xs-12 col-sm-3 col-sm-offset-1");
 
 define("HOSTNAME", "localhost");
-define("USERNAME", "wwwwwww");
-define("DBPASSWORD", "xxxxxxx");
-define("DBNAMEBLOG", "yyyyyyy");
-define("DBNAMEEXP", "zzzzzzz");
-define("USERTABLE1", "aaaaaaa");
-define("USERTABLE2", "bbbbbbb");
+define("USERNAME", "1111111");
+define("DBPASSWORD", "2222222");
+define("DBNAMEBLOG", "3333333");
+define("DBNAMEEXP", "4444444");
+define("USERTABLE1", "5555555");
+define("USERTABLE2", "6666666");
 
 $myExperiments[] = "anonynote";
 $myExperiments[] = "anonynote-build";
