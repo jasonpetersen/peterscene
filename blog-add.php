@@ -109,6 +109,11 @@ if ($_POST["submit"]) {
 				<div class="col-xs-12">
 					<form class="form-horizontal" role="form" method="post" action="/blog-add">
 						<div class="form-group">
+							<div class="col-sm-10 col-sm-offset-2">
+								<?php echo $result; ?>
+							</div>
+						</div>
+						<div class="form-group">
 							<label for="title" class="col-sm-2 control-label">Title</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="title" name="title" placeholder="Entry title" value="<?php echo htmlspecialchars($_POST['title']); ?>">
@@ -164,10 +169,12 @@ if ($_POST["submit"]) {
 									$rows[] = $row;
 								}
 								foreach ($rows as $row) {
-									echo '<span>' . $row["name"] . '&nbsp;&nbsp;</span><input type="checkbox" id="' . strtolower($row["name"]) . '" name="tags[]" value="' . $row["id"] . '" unchecked>&nbsp;&nbsp;&nbsp;&nbsp;';
+									echo '<span class="gray" style="margin: 0 5px; padding: 0 5px;"><span style="margin-right: 5px;">' . $row["name"] . '</span><input type="checkbox" id="' . strtolower($row["name"]) . '" name="tags[]" value="' . $row["id"] . '" unchecked></span>';
 								}
 								$db->close();
 								?>
+								<br /><br />
+								<p>Remember to re-check tags in the event of a failed publish.</p>
 							</div>
 						</div>
 						<div class="form-group">
@@ -187,11 +194,6 @@ if ($_POST["submit"]) {
 							<div class="col-sm-10 col-sm-offset-2">
 								<input id="submit" name="submit" type="submit" value="Publish" class="btn btn-primary">
 								<div id="previewBtn" class="btn btn-primary">Preview</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-10 col-sm-offset-2">
-								<?php echo $result; ?>
 							</div>
 						</div>
 					</form>
