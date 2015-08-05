@@ -73,12 +73,47 @@ define("PAGEDESC", "A film major by education, but a student of cinema 'in perpe
 					</div>
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-default">
-							<a class="panel-heading-wrap" href="#video-1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="video-1">
+							<a class="panel-heading-wrap collapsed" href="#video-1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-1">
 								<div class="panel-heading" role="tab" id="heading-1">
-									<h4 class="panel-title">Torma</h4>
+									<h4 class="panel-title">Omega 2015 Sizzle Reel</h4>
 								</div>
 							</a>
 							<div id="video-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+											<h4>Omega 2015 Sizzle Reel</h4>
+											<ul class="no-bullet">
+												<li><span class="ital">Promotional</span></li>
+												<li>Year: 2015</li>
+												<li>Client: Omega Institute for Holistic Studies</li>
+												<li>Organization website: <a href="http://www.eomega.org/" target="_blank">eomega.org&nbsp;<i class="fa fa-external-link"></i></a></li>
+											</ul>
+										</div>
+										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+											<div class="spacer20 visible-xs visible-sm"></div>
+											<div class="embed-responsive embed-responsive-16by9">
+												<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/XHfS3-cx-uI?rel=0" frameborder="no" allowfullscreen></iframe>
+											</div>
+										</div>
+									</div>
+									<div class="row spacious2">
+										<div class="col-xs-12">
+											<div class="hr-small"></div>
+											<p>I was on staff at the Omega Institute as a videographer during the summer of 2015. I cut this video together for internal use, to let other departments know what footage we had been accumulating thus far in the season. You get a brief slice of everything, presented in (mostly) chronological order. The material ranges from intimate interviews, to on-stage panel discussions, to off-campus shoots in the Hudson Valley area. I personally shot much of this material.</p>
+											<p>All footage is copyright the Omega Institute for Holistic Studies.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<a class="panel-heading-wrap" href="#video-2" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="video-2">
+								<div class="panel-heading" role="tab" id="heading-2">
+									<h4 class="panel-title">Torma</h4>
+								</div>
+							</a>
+							<div id="video-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
 								<div class="panel-body">
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -111,12 +146,12 @@ define("PAGEDESC", "A film major by education, but a student of cinema 'in perpe
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<a class="panel-heading-wrap collapsed" href="#video-2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-2">
-								<div class="panel-heading" role="tab" id="heading-2">
+							<a class="panel-heading-wrap collapsed" href="#video-3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-3">
+								<div class="panel-heading" role="tab" id="heading-3">
 									<h4 class="panel-title">KTD Monastery Giving Tuesday Campaign</h4>
 								</div>
 							</a>
-							<div id="video-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+							<div id="video-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
 								<div class="panel-body">
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -148,12 +183,12 @@ define("PAGEDESC", "A film major by education, but a student of cinema 'in perpe
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<a class="panel-heading-wrap collapsed" href="#video-3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-3">
-								<div class="panel-heading" role="tab" id="heading-3">
+							<a class="panel-heading-wrap collapsed" href="#video-4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-4">
+								<div class="panel-heading" role="tab" id="heading-4">
 									<h4 class="panel-title">Family Day at KTD Monastery</h4>
 								</div>
 							</a>
-							<div id="video-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+							<div id="video-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
 								<div class="panel-body">
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -185,12 +220,12 @@ define("PAGEDESC", "A film major by education, but a student of cinema 'in perpe
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<a class="panel-heading-wrap collapsed" href="#video-4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-4">
-								<div class="panel-heading" role="tab" id="heading-4">
+							<a class="panel-heading-wrap collapsed" href="#video-5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-5">
+								<div class="panel-heading" role="tab" id="heading-5">
 									<h4 class="panel-title">Sang Puja: a cleansing smoke offering</h4>
 								</div>
 							</a>
-							<div id="video-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+							<div id="video-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
 								<div class="panel-body">
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -221,12 +256,12 @@ define("PAGEDESC", "A film major by education, but a student of cinema 'in perpe
 							</div>
 						</div>
 						<div class="panel panel-default">
-							<a class="panel-heading-wrap collapsed" href="#video-5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-5">
-								<div class="panel-heading" role="tab" id="heading-5">
+							<a class="panel-heading-wrap collapsed" href="#video-6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="video-6">
+								<div class="panel-heading" role="tab" id="heading-6">
 									<h4 class="panel-title">Rent Check</h4>
 								</div>
 							</a>
-							<div id="video-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
+							<div id="video-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-6">
 								<div class="panel-body">
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">

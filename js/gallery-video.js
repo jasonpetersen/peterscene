@@ -31,6 +31,13 @@ $(function () {
 		event.preventDefault();
 		blueimp.Gallery([
 			{
+				title: 'Omega 2015 Sizzle Reel',
+				href: 'http://www.youtube.com/watch?v=XHfS3-cx-uI',
+				type: 'text/html',
+				youtube: 'XHfS3-cx-uI',
+				poster: '/images/omega2015.jpg'
+			},
+			{
 				title: 'Torma',
 				href: 'http://vimeo.com/112184942',
 				type: 'text/html',
