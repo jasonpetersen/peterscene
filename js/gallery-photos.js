@@ -75,7 +75,7 @@ $(function () {
 		['http://farm7.staticflickr.com/6191/6062014735_5f7ebfa6a6', 'A long way to the top. Mai Chau, Vietnam.'],
 		['http://farm7.staticflickr.com/6210/6087952635_ca9881535d', 'Looming above the concert hall. Hanoi, Vietnam.'],
 		['http://farm7.staticflickr.com/6062/6088459520_d4c480cc72', 'Silhouettes of the East. Hanoi, Vietnam.'],
-		['http://farm7.staticflickr.com/6077/6061467975_c89f24b48d', 'The tribe mingles. Hanoi, Vietnma.'],
+		['http://farm7.staticflickr.com/6077/6061467975_c89f24b48d', 'The tribe mingles. Hanoi, Vietnam.'],
 		['http://farm7.staticflickr.com/6142/5950703927_3ac2501d5e', 'The bride and groom. Larnaca, Cyprus.'],
 		['http://farm7.staticflickr.com/6022/5951061554_3aeb4da632', 'Harry H. Larnaca, Cyprus.'],
 		['http://farm7.staticflickr.com/6014/5951029140_38666b5439', 'What! Cyprus.'],
