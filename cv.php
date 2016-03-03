@@ -14,13 +14,14 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 		<div class="cv">
 			<h2>Work Experience</h2>
 			<div class="cv-item">
-				<h3>Online Learning Assistant</h3>
+				<h3>Post Production / Content Editor</h3>
 				<h4>Omega Institute: Rhinebeck,&nbsp;NY</h4>
 				<h5>April 2015 &mdash; Present</h5>
 				<ul>
 					<li>Edit content for online sale and promotion</li>
 					<li>Serve as a grip and cameraman</li>
 					<li>Produce livestream video</li>
+					<li>Manage video archive in CatDV media management software</li>
 				</ul>
 			</div>
 			<div class="cv-item">
@@ -36,7 +37,7 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 			<div class="cv-item">
 				<h3>Online Manager</h3>
 				<h4>Redline Motorsports: North&nbsp;Wales,&nbsp;PA</h4>
-				<h5>March 2012 &mdash; Present</h5>
+				<h5>March 2012 &mdash; April 2015</h5>
 				<ul>
 					<li>Develop and manage new company e-commerce website for domestic and international sales</li>
 					<li>Manage company brand: graphic design of signs, shirts, hats, and promotional items</li>

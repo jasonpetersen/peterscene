@@ -14,10 +14,11 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 	</head>
 	<body id="experiments" class="body-bright">
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/top.php'; ?>
-		<div class="container bucket">
-			<div class="status hidden" style="background-color: #eeeeee;">
-				<p class="status-msg">&nbsp;</p>
+		<div class="container">
+			<div class="status">
+				<span class="status-msg"></span>
 			</div>
+			<div class="bucket"></div>
 		</div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/bottom.php'; ?>
 		<!-- additional JS goes here -->
@@ -36,8 +37,22 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 			});
 			// do not allow AJAX requests to be cached (because IE is silly)
 			$.ajaxSetup({ cache: false });
+			// function to update status window
+			function updateStatus(statusTxt) {
+				// create timestamp
+				var now = new Date();
+				var time = [ now.getHours(), now.getMinutes(), now.getSeconds() ];
+				// If seconds and minutes are less than 10, add a zero
+				for ( var i = 1; i < 3; i++ ) {
+					if ( time[i] < 10 ) {
+						time[i] = "0" + time[i];
+					}
+				}
+				$('.status-msg').html(time.join(":") + " " + statusTxt + "<br />" + $('.status-msg').html());
+			}
 			// function to create the first dialog window prompting the user to create or edit a notepad
 			function buildOpenDialog() {
+				updateStatus("Building home page");
 				$('<div>', {
 					class: 'open-dialog'
 				}).appendTo('.bucket');
@@ -89,6 +104,7 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 					}
 				});
 				if ($('.active-div').length) {
+					updateStatus("Scrubbing prior notepad");
 					$('.active-div').fadeOut(speed, function() {
 						$('.active-div').remove();
 						$('.open-dialog').fadeIn(speed, function() {
@@ -108,7 +124,6 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 				if (pad == "") {
 					$('.open-error').html('You must enter something here.');
 				} else {
-					$('.active-div').css('pointer-events', 'none');
 					$.ajax({
 						// The URL for the request
 						url: buildURL,
@@ -120,10 +135,15 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 						// Whether this is a POST or GET request
 						type: "GET",
 						// The type of data we expect back
-						//dataType : "json",
-						// Code to run if the request succeeds;
-						// the response is passed to the function
+						dataType : "html",
+						// Code to run before the request begins
+						beforeSend: function() {
+							$('.active-div').css('pointer-events', 'none');
+							updateStatus("Loading notepad...");
+						},
+						// Code to run if the request succeeds
 						success: function(result) {
+							updateStatus("Notepad '" + pad + "' loaded successfully!");
 							$('<div>', {
 								class: 'notepad-main'
 							}).appendTo('.bucket');
@@ -148,7 +168,6 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 									update: function(event, ui) {
 										var newOrder = $('#sortable').sortable("toArray");
 										reorderEntry(newOrder);
-										$('.status-msg').html("Re-ordering...");
 									}
 								});
 								//$('#sortable').disableSelection();
@@ -167,25 +186,21 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 								$('.notepad-main').addClass('active-div');
 								defineWidths();
 							}
+						},
+						// Code to run if the request fails
+						error: function(xhr, status, errorThrown) {
+							$('.active-div').css('pointer-events', '');
+							updateStatus("Error loading notepad: " + errorThrown);
 						}
-						// Code to run if the request fails; the raw request and
-						// status codes are passed to the function
-						//error: function( xhr, status, errorThrown ) {
-						//	alert( "Sorry, there was a problem!" );
-						//	console.log( "Error: " + errorThrown );
-						//	console.log( "Status: " + status );
-						//	console.dir( xhr );
-						//}
 						// Code to run regardless of success or failure
-						//complete: function( xhr, status ) {
-							//alert( "The request is complete!" );
+						//complete: function(xhr, status) {
+						//	updateStatus("Status: " + status);
 						//}
 					});
 				}
 			}
 			// function to create the edit note dialog
 			function buildEdit(npad, nid) {
-				$('.active-div').css('pointer-events', 'none');
 				$.ajax({
 					url: buildURL,
 					data: {
@@ -194,7 +209,13 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 						noteid: nid
 					},
 					type: "GET",
+					dataType : "html",
+					beforeSend: function() {
+						$('.active-div').css('pointer-events', 'none');
+						updateStatus("Building edit window...");
+					},
 					success: function(result) {
+						updateStatus("Edit window built successfully!");
 						$('<div>', {
 							class: 'edit-note'
 						}).appendTo('.bucket');
@@ -213,6 +234,10 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 								$('.edit-note').addClass('active-div');
 							});
 						});
+					},
+					error: function(xhr, status, errorThrown) {
+						$('.active-div').css('pointer-events', '');
+						updateStatus("Error building edit window: " + errorThrown);
 					}
 				});
 			}
@@ -221,28 +246,34 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 				if ($('#note-text').val() == "") {
 					$('.note-error').html('You must enter something here.');
 				} else {
-					$('.active-div').css('pointer-events', 'none');
 					$.ajax({
 						url: buildURL,
 						data: {
 							method: "saveNote",
 							notepad: ntpad,
 							noteid: ntid,
-							notetext: $('#note-text').val(),
+							notetext: encodeURIComponent($('#note-text').val()),
 							notecolor: $('#colorselector').val()
 						},
 						type: "GET",
+						dataType : "html",
+						beforeSend: function() {
+							$('.active-div').css('pointer-events', 'none');
+							updateStatus("Saving note...");
+						},
 						success: function(result) {
-							$('.status-msg').html(codeToText(result));
+							updateStatus("Note saved successfully!");
 							buildNotepad(ntpad, 'fade');
+						},
+						error: function(xhr, status, errorThrown) {
+							$('.active-div').css('pointer-events', '');
+							updateStatus("Error saving note: " + errorThrown);
 						}
 					});
 				}
 			}
 			// function to delete a note
 			function deleteNote(targetid) {
-				$('.active-div').css('pointer-events', 'none');
-				$('.status-msg').html("Deleting...");
 				$.ajax({
 					url: buildURL,
 					data: {
@@ -250,6 +281,11 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 						noteid: targetid
 					},
 					type: "GET",
+					dataType : "html",
+					beforeSend: function() {
+						$('.active-div').css('pointer-events', 'none');
+						updateStatus("Deleting note...");
+					},
 					success: function(result) {
 						$('#id-' + targetid).fadeOut(speed, function() {
 							$('#id-' + targetid).remove();
@@ -257,14 +293,17 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 								$('#notes-table').remove();
 							}
 							$('.active-div').css('pointer-events', '');
-							$('.status-msg').html(codeToText(result));
+							updateStatus("Note successfully deleted!");
 						});
+					},
+					error: function(xhr, status, errorThrown) {
+						$('.active-div').css('pointer-events', '');
+						updateStatus("Error deleting note: " + errorThrown);
 					}
 				});
 			}
 			// function to move an entry up or down in the order
 			function reorderEntry(orderStr) {
-				$('.active-div').css('pointer-events', 'none');
 				$.ajax({
 					url: buildURL,
 					data: {
@@ -273,8 +312,18 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 						noteorder: orderStr
 					},
 					type: "GET",
+					dataType : "html",
+					beforeSend: function() {
+						$('.active-div').css('pointer-events', 'none');
+						updateStatus("Reordering notes...");
+					},
 					success: function(result) {
-						$('.status-msg').html(codeToText(result));
+						updateStatus("Notes reordered successfully!");
+					},
+					error: function(xhr, status, errorThrown) {
+						updateStatus("Error reordering notes: " + errorThrown);
+					},
+					complete: function() {
 						$('.active-div').css('pointer-events', '');
 					}
 				});
@@ -283,20 +332,6 @@ define("PAGEDESC", "A lightweight web app for anonymously saving and organizing 
 			function readMore(whichid) {
 				$('#id-'+whichid).find('.note-short').addClass('hidden');
 				$('#id-'+whichid).find('.note-full').removeClass('hidden');
-			}
-			// function to interpret runtime codes as text
-			function codeToText(codeid) {
-				switch (codeid) {
-					case "0":
-						return "Something went wrong. Try again?";
-						break;
-					case "1":
-						return "Success!";
-						break;
-					case "2":
-						return "Something went wrong - reordering not saved.";
-						break;
-				}
 			}
 			// Define table cell widths. This is necessary for dragging to display correctly.
 			function defineWidths() {

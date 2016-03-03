@@ -1,7 +1,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="hr-banner-footer"></div>
-				<span>&copy; 2015 Jason Petersen</span>
+				<span>&copy; 2016 Jason Petersen</span>
 				<span id="backToTop"><a href="#"><i class="fa fa-arrow-up"></i>&nbsp;Top</a></span>
 			</div>
 		</footer>

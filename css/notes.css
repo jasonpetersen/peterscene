@@ -1,3 +1,11 @@
+.status {
+	background-color: #eeeeee;
+	overflow: scroll;
+	height: 150px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
 .bucket h1, .bucket .h1,
 .bucket h2, .bucket .h2,
 .bucket h3, .bucket .h3,

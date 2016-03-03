@@ -136,7 +136,7 @@ if ($db->connect_errno) {
 			break;
 		case "saveNote":
 			$pad = addslashes($_GET['notepad']);
-			$text = addslashes($_GET['notetext']);
+			$text = addslashes(urldecode($_GET['notetext']));
 			$color = $_GET['notecolor'];
 			if ($_GET['noteid'] == "") {
 				$sql1="SELECT MAX(`org`) FROM `notes` WHERE notepad='" . $pad . "'";
