@@ -23,7 +23,7 @@ define("PAGEDESC", "Web developer, videographer, photographer, wordsmith, world 
 					<p>In Asia I became caught up in the Tibetan cause and followed my newfound interest in Tibetan Buddhism to Woodstock NY, home of world-renowned <a href="http://www.kagyu.org/" target="_blank">KTD Monastery</a>. I served all IT and videography functions for the large community.</p>
 					<p>My latest move&mdash;driven by a continuing passion for spirituality, mindfulness, and community&mdash;took me across the river to the <a href="http://www.eomega.org/" target="_blank">Omega Institute</a>'s sprawling 190-acre campus, in the heart of the Hudson Valley. I work there today as an editor, cameraman, and livestream producer.</p>
 					<p>I am also a web developer, dedicated to clean, mobile-first designs.</p>
-					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent the prior summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
+					<p>And I still make time for filmmaking pursuits&mdash;most recently having spent a summer in Thailand editing a documentary, which you can <a href="https://vimeo.com/tormafilm/torma" target="_blank">watch here</a>.</p>
 					<div class="hr-small visible-xs"></div>
 				</div>
 				<div id="sidebar" class="<?php echo GRIDSIDEBAR; ?>">
