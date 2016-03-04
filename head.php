@@ -9,7 +9,7 @@
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="/css/main.css" rel="stylesheet" />
-		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
 		<meta property="og:title" content="<?php echo PAGETITLE; ?>" />
 		<meta property="og:description" content="<?php echo PAGEDESC; ?>" />
 		<meta property="fb:admins" content="8209912" />
