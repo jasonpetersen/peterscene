@@ -4,7 +4,7 @@ error_reporting(0);
 
 define("SITENAME", "Jason Petersen");
 define("CONTACTEMAIL", "someone@somewhere.com");
-define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Rhinebeck, NY.");
+define("STOCKPLUG", "I'm Jason Petersen, a web developer, videographer, IT professional, and wordsmith living in Poughkeepsie, NY.");
 
 define("THISURL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
